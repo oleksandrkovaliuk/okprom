@@ -1,0 +1,179 @@
+/* section 1 start */
+.section-1 {
+    padding-inline: 40px;
+    margin-bottom: 120px;
+}
+
+.section-1 .glide {
+    padding-block: 16px 40px;
+    border-radius: 16px;
+    background-color: var(--background-black);
+    overflow: hidden;
+}
+
+.glide .glide__slides {
+    display: flex;
+}
+
+.glide__slide {
+    display: flex;
+    padding-inline: 40px 16px;
+    gap: 16px;
+    margin-bottom: 40px;
+}
+
+.glide__slide .card-left-block {
+    padding-bottom: 32px;
+    border-bottom: 1px solid #36383C;
+    max-width: 552px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.card-left-block .main-text {
+    color: var(--text-white);
+    margin-bottom: 32px;
+}
+
+.card-left-block ul {
+    list-style: none;
+    margin-bottom: 88px;
+    max-width: 451px;
+    margin-right: auto;
+    width: 100%;
+}
+
+.card-left-block ul li {
+    display: flex;
+    justify-content: space-between;
+    padding-block: 12px;
+    border-bottom: 1px solid #36383C;
+}
+
+.card-left-block ul li .discription-for-product,
+.card-left-block ul li .discription-for-product-numbers {
+    color: var(--text-gray-dark-bg);
+
+    font-family: var(--font-Golos);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.card-left-block .price {
+    color: var(--text-white);
+
+    font-feature-settings: 'liga' off;
+    font-family: var(--font-Golos);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0.24px;
+}
+
+.glide__slide .card-left-img {
+    flex-grow: 1;
+}
+
+.card-left-img img {
+    width: 100%;
+}
+
+.glide .more-and-arrows-btn {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 40px;
+    align-items: center;
+}
+
+.more-and-arrows-btn .more {
+    padding: 12px 20px;
+    color: var(--text-black);
+    font-family: var(--font-Golos);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.more-and-arrows-btn button {
+    padding: 10px;
+    border-radius: 8px;
+    background: var(--text-white);
+    border: unset;
+    cursor: pointer;
+}
+
+.more-and-arrows-btn .glide__arrows {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* section 1 end */
+/* section 2 start */
+.section-2 {
+    padding-inline: 40px;
+}
+
+.section-2 .text-top {
+    text-align: left;
+    max-width: 852px;
+    margin-right: auto;
+}
+
+.text-top .main-text {
+    margin-bottom: 20px;
+    color: var(--text-black);
+}
+
+.text-top .discription {
+    color: var(--text-gray-light-bg);
+    font-family: var(--font-Golos);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 60px;
+}
+
+.product-types-container .product-types-wrap {
+    display: flex;
+    gap: 16px;
+}
+
+.product-types-container .product-types-wrap:not(:last-of-type) {
+    margin-bottom: 16px;
+}
+
+.product-types-wrap .product-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 24px;
+    max-width: 389px;
+    border-radius: 16px;
+    background-color: var(--background-gray);
+    text-decoration: none;
+    min-height: 384px;
+    cursor: pointer;
+}
+
+.product-card .name-of-type {
+    color: var(--text-black);
+    font-feature-settings: 'liga' off;
+
+    font-family: var(--font-Golos);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0.24px;
+    text-align: left;
+}
+
+/* section 2 end */
