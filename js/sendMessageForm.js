@@ -10,8 +10,13 @@ const validationNumber = /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/;
 function showConfetti(){
 
     confetti({
-        particleCount:150,
-        spread: 60
+        particleCount: 150,
+        startVelocity: 30,
+        spread: 360,
+        origin: {
+          x: Math.random(),
+          y: Math.random() - 0.2
+        }
     })
 }
 function checkingForm(event) {
