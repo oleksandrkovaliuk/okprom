@@ -117,6 +117,7 @@
 /* section 2 start */
 .section-2 {
     padding-inline: 40px;
+    margin-bottom: 120px;
 }
 
 .section-2 .text-top {
@@ -177,3 +178,314 @@
 }
 
 /* section 2 end */
+/* section 3 start */
+.section-3 {
+    padding-inline: 40px;
+    margin-bottom: 120px;
+}
+
+.section-3 .main-text {
+    max-width: 852px;
+    margin-right: auto;
+    margin-bottom: 60px;
+}
+
+.section-3 .bonus-blocks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.bonus-blocks svg {
+    flex-shrink: 0;
+}
+
+.bonus-blocks .block {
+    display: flex;
+    gap: 16px;
+    max-width: 389px;
+}
+
+.block .text-in-block {
+    text-align: left;
+}
+
+.text-in-block .block-name {
+    color: var(--text-black);
+
+    font-family: var(--font-Golos);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.6px;
+    margin-bottom: 8px;
+}
+
+.text-in-block .bonus-discription {
+    color: var(--text-gray-light-bg);
+
+    font-family: var(--font-Golos);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+/* section 3 end */
+/* section 4 start */
+.section-4 {
+    padding-inline: 40px;
+    margin-bottom: 120px;
+}
+
+.section-4 .our-clients-container {
+    display: flex;
+    gap: 16px;
+}
+
+.our-clients-container .why-we {
+    max-width: 592px;
+    min-height: 390px;
+    width: 100%;
+    border-radius: 16px;
+    background-color: var(--background-gray);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.why-we .discription {
+    color: var(--text-gray-light-bg);
+
+    font-family: var(--font-Golos);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.our-clients-container .our-clients-blocks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.our-clients-blocks .our-client-block {
+    max-width: 187px;
+    width: 100%;
+    max-height: 187px;
+    border-radius: 16px;
+    padding: 32px;
+    background-color: var(--background-gray);
+}
+
+.our-client-block.withtxt {
+    padding-inline: 0px;
+    display: flex;
+    flex-direction: column;
+    max-width: 186px;
+}
+
+.our-client-block.withtxt img {
+    max-width: 89px;
+    margin: auto;
+    margin-bottom: 12px;
+}
+
+.our-client-block.withtxt .company-group {
+    color: var(--text-black);
+    text-align: center;
+    font-family: var(--font-Roboto);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 16px;
+}
+
+.our-client-block.withtxt .company-name {
+    color: var(--text-black);
+    text-align: center;
+    font-family: var(--font-Roboto);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 18px;
+}
+
+.our-client-block.stadium {
+    padding: 0px;
+    display: flex;
+}
+
+.our-client-block.stadium img {
+    margin: auto;
+}
+
+.our-client-block.vtm {
+    padding-inline: 41px;
+}
+
+.our-client-block.vtm img {
+    margin-bottom: 12px;
+}
+
+.our-client-block.vtm .company-name {
+    color: var(--text-black);
+    text-align: center;
+    font-family: var(--font-Roboto);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+.our-client-block.onlytxt {
+    padding-inline: 29px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: center;
+    max-width: 186px;
+}
+
+.our-client-block.onlytxt .company-name {
+    color: var(--text-black);
+    text-align: center;
+    font-family: var(--font-Roboto);
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px;
+}
+
+.our-client-block.onlytxt .company-discription {
+    color: var(--text-black);
+    text-align: center;
+    font-family: var(--font-Roboto);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 14px;
+}
+
+.our-client-block.vtor4ment {
+    padding-block: 65px 64px;
+    padding-inline: 19px 18px
+}
+
+/* section 4 end */
+/* section 5 start */
+.section-5 {
+    padding-inline: 40px;
+    margin-bottom: 120px;
+}
+
+.section-5 .send-message-container {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 20px;
+    background-color: var(--background-black);
+    padding: 60px 40px;
+    gap:clamp(16px , 10vw , 117px)
+}
+
+.send-message-container .send-message-text {
+    max-width: 451px;
+}
+
+.send-message-text .main-text {
+    color: var(--text-white);
+    margin-bottom: 20px;
+
+}
+
+.send-message-text .discription {
+    color: var(--text-gray-dark-bg);
+
+    font-family: var(--font-Golos);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.send-message-container .send-message-form {
+    width: 100%;
+}
+
+.send-message-form .form-field-wrap {
+    position: relative;
+    margin-bottom: 20px;
+    width:100%;
+}
+
+.send-message-form .form-field-wrap:last-of-type {
+    margin-bottom: 40px;
+}
+
+.form-field-wrap .send-message-input {
+    padding-block: 16px;
+    background: unset;
+    border: none;
+    border-bottom: 2px solid var(--text-white);
+    width:100%;
+
+    color: var(--text-gray-dark-bg);
+    font-family: var(--font-Golos);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+.send-message-input::placeholder{
+    color: var(--text-gray-dark-bg);
+    font-family: var(--font-Golos);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+.form-field-wrap .send-message-input:active,
+.form-field-wrap .send-message-input:focus {
+    outline: none;
+}
+
+.form-field-wrap .send-message-input:active+.send-message-label,
+.form-field-wrap .send-message-input:focus+.send-message-label,
+.form-field-wrap .send-message-input:not(:placeholder-shown)+.send-message-label {
+    display: none;
+}
+
+.form-field-wrap .send-message-label {
+    position: absolute;
+    top: 16px;
+    left: 0;
+
+    color: var(--text-gray-dark-bg);
+    font-family: var(--font-Golos);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    pointer-events: none;
+}
+
+.send-message-form button {
+    padding: 12px 20px;
+    background-color: var(--text-white);
+    border: none;
+    border-radius: 8px;
+
+
+    color: var(--text-black);
+    font-family: var(--font-Golos);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+/* section 5 end */
