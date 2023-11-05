@@ -1,186 +1,190 @@
 :root {
-    --font-Golos: 'Golos Text', sans-serif;
-    --font-Roboto: 'Roboto', sans-serif;
-    --text-black: #161616;
-    --text-white: #FFF;
-    --text-gray-light-bg: #757575;
-    --text-gray-dark-bg: #9F9F9F;
-    --background-black: #202226;
-    --background-gray: #F4F5F8;
-    --border-or-devider-light-bg: #E9E9E9;
-    --border-or-devider-dark-bg: #36383C;
-    --tags-red: #D21924;
-    --tags-blue: #2949B5;
-    --tags-green: #308D77;
+  --font-Golos: "Golos Text", sans-serif;
+  --font-Roboto: "Roboto", sans-serif;
+  --text-black: #161616;
+  --text-white: #fff;
+  --text-gray-light-bg: #757575;
+  --text-gray-dark-bg: #9f9f9f;
+  --background-black: #202226;
+  --background-gray: #f4f5f8;
+  --border-or-devider-light-bg: #e9e9e9;
+  --border-or-devider-dark-bg: #36383c;
+  --tags-red: #d21924;
+  --tags-blue: #2949b5;
+  --tags-green: #308d77;
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus {
+    border-bottom: 2px solid white !important;
+    -webkit-text-fill-color: #9f9f9f;
+    -webkit-box-shadow: 0 0 0px 1000px rgb(32 34 38) inset;
 }
 
 img {
-    display: block;
-    max-width: 100%;
+  display: block;
+  max-width: 100%;
 }
 
 .page-width {
-    max-width: 1280px;
-    margin: auto;
+  max-width: 1280px;
+  margin: auto;
 }
 
 .main-text {
-    font-family: var(--font-Golos);
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 48px;
+  font-family: var(--font-Golos);
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 48px;
 }
 
-/* header start */
-header {}
-
 header .header-top-block {
-    padding: 12px 40px;
-    background-color: var(--background-gray);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 28px;
+  padding: 12px 40px;
+  background-color: var(--background-gray);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
 }
 
 .header-top-block .logo {
-    cursor: pointer;
-    text-decoration: none;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .header-top-block .information {
-    display: flex;
-    align-items: center;
-    gap: 80px;
+  display: flex;
+  align-items: center;
+  gap: 80px;
 }
 
 .information ul {
-    display: flex;
-    gap: 32px;
-    align-items: center;
-    list-style: none;
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  list-style: none;
 }
 
 .information ul li {
-    color: var(--text-gray-light-bg);
-    font-family: var(--font-Golos);
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 16px;
+  color: var(--text-gray-light-bg);
+  font-family: var(--font-Golos);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
 }
 
 header .header-bottom-block {
-    display: flex;
-    justify-content: space-between;
-    padding-inline: 40px;
-    margin-bottom: 32px;
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 40px;
+  margin-bottom: 32px;
 }
 
 .header-bottom-block ul {
-    display: flex;
-    gap: 8px;
-    list-style: none;
-    align-items: center;
+  display: flex;
+  gap: 8px;
+  list-style: none;
+  align-items: center;
 }
 
 .header-bottom-block ul button {
-    color: var(--text-black);
-    font-family: var(--font-Golos);
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 20px;
+  color: var(--text-black);
+  font-family: var(--font-Golos);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
 
-
-    padding: 12px 20px;
-    background-color: var(--background-gray);
-    border-radius: 8px;
-    cursor: pointer;
-    border: none;
+  padding: 12px 20px;
+  background-color: var(--background-gray);
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
 }
 
 .header-bottom-block ul .cart-search-btn {
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    position: relative;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  position: relative;
 }
 .header-bottom-block ul .cart-search-btn.searching {
-    padding: 0px;
-    outline: none;
+  padding: 0px;
+  outline: none;
 }
 .cart-search-btn .search {
-    z-index: 4;
-    background-color: var(--background-gray);
-    border-radius: 8px;
-    margin:10px;
+  z-index: 4;
+  background-color: var(--background-gray);
+  border-radius: 8px;
+  margin: 10px;
 }
 
 .cart-search-btn form {
-    position: absolute;
-    right:4px;
+  position: absolute;
+  right: 4px;
 }
 
 .cart-search-btn form .searching-input {
-    position: relative;
+  position: relative;
 }
 
 .searching-input .input-for-seacrh {
-    padding: 12px 20px;
-    background-color: var(--background-gray);
-    border-radius: 8px;
-    cursor: pointer;
-    border: none;
-    min-height: 44px;
-    width: 0px;
-    transition: width 0.7s ease-in-out;
-    z-index: 3;
-    pointer-events: none;
-    color: var(--text-black);
-    font-family: var(--font-Golos);
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 20px;
+  padding: 12px 20px;
+  background-color: var(--background-gray);
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  min-height: 44px;
+  width: 0px;
+  transition: width 0.7s ease-in-out;
+  z-index: 3;
+  pointer-events: none;
+  color: var(--text-black);
+  font-family: var(--font-Golos);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
 }
 
 .searching-input .input-for-seacrh:active,
 .searching-input .input-for-seacrh:focus {
-    outline: none;
+  outline: none;
 }
 
-.searching-input .input-for-seacrh:active+.label-for-search,
-.searching-input .input-for-seacrh:focus+.label-for-search,
-.searching-input .input-for-seacrh:not(:placeholder-shown)+.label-for-search {
-    display: none;
+.searching-input .input-for-seacrh:active + .label-for-search,
+.searching-input .input-for-seacrh:focus + .label-for-search,
+.searching-input .input-for-seacrh:not(:placeholder-shown) + .label-for-search {
+  display: none;
 }
 
 .searching-input .label-for-search {
-    position: absolute;
-    left: 20px;
-    top: 12px;
+  position: absolute;
+  left: 20px;
+  top: 12px;
 }
 
 .header-bottom-block ul .ask-for-support {
-    background-color: var(--background-black);
-    color: var(--text-white);
+  background-color: var(--background-black);
+  color: var(--text-white);
 }
 /* .non-clickable {
     pointer-events: none;
     user-select: none;
     cursor: default;
   } */
-  
-  .follow-cursor {
-    position: absolute;
-    transition: transform 0.1s ease;
-  }
+
+.follow-cursor {
+  position: absolute;
+  transition: transform 0.1s ease;
+}
 /* header end */
