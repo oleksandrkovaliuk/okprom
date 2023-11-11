@@ -38,9 +38,16 @@ img {
     line-height: 48px;
 }
 
-/* header start */
-header {}
+.discription {
+    color: var(--text-gray-light-bg);
+    font-family: var(--font-Golos);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
 
+/* header start */
 header .header-top-block {
     padding: 12px 40px;
     background-color: var(--background-gray);
@@ -91,7 +98,15 @@ header .header-bottom-block {
     align-items: center;
 }
 
-.header-bottom-block ul button {
+.header-bottom-block button {
+    padding: 12px 20px;
+    background-color: var(--background-gray);
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+}
+.header-bottom-block button a{
+    text-decoration: none;
     color: var(--text-black);
     font-family: var(--font-Golos);
     font-size: 16px;
@@ -100,33 +115,29 @@ header .header-bottom-block {
     line-height: 20px;
 
 
-    padding: 12px 20px;
-    background-color: var(--background-gray);
-    border-radius: 8px;
-    cursor: pointer;
-    border: none;
 }
-
 .header-bottom-block ul .cart-search-btn {
     padding: 10px;
     display: flex;
     align-items: center;
     position: relative;
 }
+
 .header-bottom-block ul .cart-search-btn.searching {
     padding: 0px;
     outline: none;
 }
+
 .cart-search-btn .search {
     z-index: 4;
     background-color: var(--background-gray);
     border-radius: 8px;
-    margin:10px;
+    margin: 10px;
 }
 
 .cart-search-btn form {
     position: absolute;
-    right:4px;
+    right: 4px;
 }
 
 .cart-search-btn form .searching-input {
@@ -169,18 +180,416 @@ header .header-bottom-block {
     top: 12px;
 }
 
-.header-bottom-block ul .ask-for-support {
-    background-color: var(--background-black);
-    color: var(--text-white);
+.header-bottom-block .ask-for-support  , .ask-for-support-inUl{
+    background-color: var(--background-black)!important;
+    color: var(--text-white)!important;
 }
-/* .non-clickable {
-    pointer-events: none;
-    user-select: none;
-    cursor: default;
-  } */
-  
-  .follow-cursor {
+
+.follow-cursor {
     position: absolute;
     transition: transform 0.1s ease;
-  }
+}
+
 /* header end */
+/* bonus block */
+.bonus-blocks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.bonus-blocks svg {
+    flex-shrink: 0;
+}
+
+.bonus-blocks .block {
+    display: flex;
+    gap: 16px;
+    max-width: 389px;
+}
+
+.block .text-in-block {
+    text-align: left;
+}
+
+.text-in-block .block-name {
+    color: var(--text-black);
+
+    font-family: var(--font-Golos);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.6px;
+    margin-bottom: 8px;
+}
+
+.text-in-block .bonus-discription {
+    color: var(--text-gray-light-bg);
+
+    font-family: var(--font-Golos);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+/* bonus block */
+/* form */
+.form{
+    padding-inline: 40px;
+    margin-bottom: 120px;
+}
+
+.form .send-message-container {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 20px;
+    background-color: var(--background-black);
+    padding: 60px 40px;
+    gap: clamp(16px, 10vw, 117px)
+}
+
+.send-message-container .send-message-text {
+    max-width: 451px;
+}
+
+.send-message-text .main-text {
+    color: var(--text-white);
+    margin-bottom: 20px;
+
+}
+
+.send-message-text .discription {
+    color: var(--text-gray-dark-bg);
+
+    font-family: var(--font-Golos);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.send-message-container .send-message-form {
+    width: 100%;
+}
+
+.send-message-form .form-field-wrap {
+    position: relative;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.send-message-form .form-field-wrap:last-of-type {
+    margin-bottom: 40px;
+}
+
+.form-field-wrap .send-message-input {
+    padding-block: 16px;
+    background: unset;
+    border: none;
+    border-bottom: 2px solid var(--text-white);
+    width: 100%;
+
+    color: var(--text-gray-dark-bg);
+    font-family: var(--font-Golos);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.send-message-input::placeholder {
+    color: var(--text-gray-dark-bg);
+    font-family: var(--font-Golos);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.form-field-wrap .send-message-input:active,
+.form-field-wrap .send-message-input:focus {
+    outline: none;
+}
+
+.form-field-wrap .send-message-input:active+.send-message-label,
+.form-field-wrap .send-message-input:focus+.send-message-label,
+.form-field-wrap .send-message-input:not(:placeholder-shown)+.send-message-label {
+    display: none;
+}
+
+.form-field-wrap .send-message-label {
+    position: absolute;
+    top: 16px;
+    left: 0;
+
+    color: var(--text-gray-dark-bg);
+    font-family: var(--font-Golos);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    pointer-events: none;
+}
+
+.send-message-form button {
+    padding: 12px 20px;
+    background-color: var(--text-white);
+    border: none;
+    border-radius: 8px;
+
+
+    color: var(--text-black);
+    font-family: var(--font-Golos);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+    border-bottom: 1px solid var(--text-white);
+    -webkit-text-fill-color: var(--text-gray-dark-bg);
+    -webkit-box-shadow: 0 0 0px 1000px var(--background-black) inset;
+}
+/* form */
+/* footer start */
+footer {
+    background-color: var(--background-gray);
+    padding-inline: 40px;
+}
+
+footer .logo {
+    width: 100%;
+    border-bottom: 1px solid var(--border-or-devider-light-bg);
+    padding-block: 24px;
+}
+
+.logo img {
+    margin-right: auto;
+}
+
+footer .information-container {
+    display: flex;
+    justify-content: space-between;
+    padding-block: 42px;
+    border-bottom: 1px solid var(--border-or-devider-light-bg);
+}
+
+.information-container .left-block-with-info {
+    max-width: 389px;
+}
+
+.left-block-with-info .adress-number-email {
+    color: var(--text-black);
+    font-feature-settings: 'liga' off;
+    font-family: var(--font-Golos);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0.24px;
+    margin-bottom: 24px;
+    text-align: left;
+}
+
+.adress-number-email.number {
+    margin-bottom: 8px;
+}
+
+.left-block-with-info .social-media-btn {
+    display: flex;
+    gap: 9px;
+    margin-bottom: 60px;
+}
+
+.social-media-btn button {
+    padding: 12px 20px;
+    background-color: var(--background-black);
+    border-radius: 8px;
+    border: none;
+    color: var(--text-white);
+
+    font-family: var(--font-Golos);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+.left-block-with-info .subscribe-on-our-social {
+    display: flex;
+}
+
+.subscribe-on-our-social a:not(:last-of-type) {
+    text-decoration: none;
+    cursor: pointer;
+    margin-right: 8px;
+}
+
+.subscribe-on-our-social .discription {
+    color: var(--text-gray-light-bg);
+    text-align: left;
+    margin-left: 24px;
+}
+
+.information-container .right-block-with-info {
+    display: flex;
+    gap: 16px;
+}
+
+.right-block-with-info ul {
+    list-style: none;
+}
+
+ul .product-and-info {
+    color: var(--text-black);
+    font-family: var(--font-Golos);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    margin-bottom: 12px;
+}
+
+ul .product-and-info:last-child {
+    margin-bottom: 0px;
+}
+
+ul .product-and-info.main {
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.6px;
+    margin-bottom: 32px;
+}
+
+footer .copyright-info {
+    display: flex;
+    padding: 24px 40px;
+    justify-content: space-between;
+}
+.burger{
+    display:none;
+}
+.header-bottom-block .ask-for-support{
+    display:none;
+}
+/* footer end */
+
+@media(max-width:1024px) {
+    header .header-bottom-block {
+        flex-wrap: wrap;
+        row-gap: 8px;
+    }
+   .ask-for-support-inUl {
+        display:none;
+    }
+    .header-bottom-block .ask-for-support{
+        display:block;
+    }
+}
+
+@media(max-width:768px) {
+    .information ul {
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+    }
+
+    header .header-bottom-block {
+        justify-content: unset;
+        gap: 8px;
+    }
+
+    footer .information-container {
+        flex-direction: column;
+        row-gap: 62px;
+    }
+
+    .left-block-with-info .social-media-btn {
+        margin-bottom: 32px;
+    }
+
+  .bonus-blocks {
+        justify-content: center;
+    }
+
+    .section-5 .send-message-container {
+        flex-direction: column;
+        padding-inline: 16px;
+    }
+}
+
+@media(max-width:700px) {
+    .main-text {
+        font-family: var(--font-Golos);
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px;
+    }
+
+    .discription {
+        font-family: var(--font-Golos);
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 16px;
+    }
+
+    .header-bottom-block ul.menu-list {
+        display: none;
+
+    }
+
+    .information ul.deliver-atc {
+        display: none;
+    }
+
+    header .header-bottom-block {
+        justify-content: space-between;
+        padding-inline: 16px
+    }
+}
+
+@media(max-width:500px) {
+    .form {
+        padding-inline: 16px !important;
+    }
+    header .header-top-block {
+        padding-inline: 16px;
+    }
+    .header-bottom-block .ask-for-support {
+        display:none;
+    }
+    .burger{
+        display:block;
+    }
+    footer {
+        padding-inline: 16px;
+    }
+
+    .information-container .right-block-with-info {
+        flex-direction: column;
+        gap: 52px;
+    }
+
+    .information-container .right-block-with-info {
+        flex-direction: column;
+        padding-inline: 0;
+        gap: 8px;
+    }
+
+    .bonus-blocks .block {
+        max-width: unset !important;
+    }
+    footer .copyright-info {
+        flex-direction: column;
+        padding-inline: 0px;
+        gap: 8px;
+    }
+}

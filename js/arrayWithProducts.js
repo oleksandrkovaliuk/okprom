@@ -1,4 +1,4 @@
-const products = [
+const sliderProduct = [
     {
         id:1,
         title:"Новый зверь для всех типов кабелей",
@@ -26,4 +26,150 @@ const products = [
         price:"359 000 ₽",
         img:"./img/sg-006.png" 
     }
+]
+
+const ourProduct = [{
+    type:"guard-press",
+    name:"S2-3 Автоматический мини",
+    img:"./img/S2-3.png",
+    weightDiscription:"16кг",
+    engineDiscription:"190Вт",
+    diametrDiscription:"от 3 до 35мм",
+    price:"54 990 ₽"
+},
+{
+    type:"sale-guard-press",
+    name:"SG-007-1 Станок для разделки кабеля (Автоматический)",
+    img:"./img/sg-007.png",
+    weightDiscription:"13кг",
+    engineDiscription:"180Вт",
+    diametrDiscription:"от 1.5 до 25мм",
+    price:"34 990 ₽",
+    priceBefore:"24 990 ₽"
+},
+{
+    type:"regular",
+    name:"SG-008-1 Станок для разделки кабеля",
+    img:"./img/sg-008.png",
+    weightDiscription:"13кг",
+    engineDiscription:"180Вт",
+    diametrDiscription:"от 1.5 до 25мм",
+    price:"34 990 ₽",
+    priceBefore:"24 990 ₽"
+},
+{
+    type:"guard-press",
+    name:"S2-3 Автоматический мини",
+    img:"./img/S2-3.png",
+    weightDiscription:"16кг",
+    engineDiscription:"190Вт",
+    diametrDiscription:"от 3 до 35мм",
+    price:"54 990 ₽"
+},
+{
+    type:"regular",
+    name:"SG-008-1 Станок для разделки кабеля",
+    img:"./img/sg-008.png",
+    weightDiscription:"13кг",
+    engineDiscription:"180Вт",
+    diametrDiscription:"от 1.5 до 25мм",
+    price:"34 990 ₽",
+    priceBefore:"24 990 ₽"
+},
+{
+    type:"sale-guard-press",
+    name:"SG-007-1 Станок для разделки кабеля (Автоматический)",
+    img:"./img/sg-007.png",
+    weightDiscription:"13кг",
+    engineDiscription:"180Вт",
+    diametrDiscription:"от 1.5 до 25мм",
+    price:"34 990 ₽",
+    priceBefore:"24 990 ₽"
+},
+{
+    type:"regular",
+    name:"SG-008-1 Станок для разделки кабеля",
+    img:"./img/sg-008.png",
+    weightDiscription:"13кг",
+    engineDiscription:"180Вт",
+    diametrDiscription:"от 1.5 до 25мм",
+    price:"34 990 ₽",
+    priceBefore:"24 990 ₽"
+},
+{
+    type:"sale-guard-press",
+    name:"SG-007-1 Станок для разделки кабеля (Автоматический)",
+    img:"./img/sg-007.png",
+    weightDiscription:"13кг",
+    engineDiscription:"180Вт",
+    diametrDiscription:"от 1.5 до 25мм",
+    price:"84 990 ₽",
+    priceBefore:"74 990 ₽"
+},
+{
+    type:"guard-press",
+    name:"S2-3 Автоматический мини",
+    img:"./img/S2-3.png",
+    weightDiscription:"16кг",
+    engineDiscription:"190Вт",
+    diametrDiscription:"от 3 до 35мм",
+    price:"54 990 ₽"
+},{
+    type:"guard-press",
+    name:"S2-3 Автоматический мини",
+    img:"./img/S2-3.png",
+    weightDiscription:"16кг",
+    engineDiscription:"190Вт",
+    diametrDiscription:"от 3 до 35мм",
+    price:"54 990 ₽"
+},
+{
+    type:"sale-guard-press",
+    name:"SG-007-1 Станок для разделки кабеля (Автоматический)",
+    img:"./img/sg-007.png",
+    weightDiscription:"13кг",
+    engineDiscription:"180Вт",
+    diametrDiscription:"от 1.5 до 25мм",
+    price:"34 990 ₽",
+    priceBefore:"24 990 ₽"
+},
+{
+    type:"regular",
+    name:"SG-008-1 Станок для разделки кабеля",
+    img:"./img/sg-008.png",
+    weightDiscription:"13кг",
+    engineDiscription:"180Вт",
+    diametrDiscription:"от 1.5 до 25мм",
+    price:"34 990 ₽",
+    priceBefore:"24 990 ₽"
+},
+{
+    type:"guard-press",
+    name:"S2-3 Автоматический мини",
+    img:"./img/S2-3.png",
+    weightDiscription:"16кг",
+    engineDiscription:"190Вт",
+    diametrDiscription:"от 3 до 35мм",
+    price:"54 990 ₽"
+},
+{
+    type:"regular",
+    name:"SG-008-1 Станок для разделки кабеля",
+    img:"./img/sg-008.png",
+    weightDiscription:"13кг",
+    engineDiscription:"180Вт",
+    diametrDiscription:"от 1.5 до 25мм",
+    price:"34 990 ₽",
+    priceBefore:"24 990 ₽"
+},
+{
+    type:"sale-guard-press",
+    name:"SG-007-1 Станок для разделки кабеля (Автоматический)",
+    img:"./img/sg-007.png",
+    weightDiscription:"13кг",
+    engineDiscription:"180Вт",
+    diametrDiscription:"от 1.5 до 25мм",
+    price:"34 990 ₽",
+    priceBefore:"24 990 ₽"
+}
 ]

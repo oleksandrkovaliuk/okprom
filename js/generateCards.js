@@ -1,12 +1,12 @@
-const cardTitle = document.querySelector('#title');
-const listWithDiscription = document.querySelector('.list-with-discription');
-const productPrice = document.querySelector('.price');
-const glideSlidesContainer = document.querySelector('.glide__slides');
+const cardTitle = document.querySelector("#title");
+const listWithDiscription = document.querySelector(".list-with-discription");
+const productPrice = document.querySelector(".price");
+const glideSlidesContainer = document.querySelector(".glide__slides");
 
-function renderingSliderProductCards(products){
-    let markUp = "";
-    products.forEach((element) => {
-        markUp += ` <li class="glide__slide">
+function renderingSliderProductCards(sliderProduct) {
+  let markUp = "";
+  sliderProduct.forEach((element) => {
+    markUp += ` <li class="glide__slide">
         <div class="card-left-block">
         <h2 id="title" class="main-text">
           ${element.title}
@@ -32,10 +32,71 @@ function renderingSliderProductCards(products){
       <div class="card-left-img">
         <img src=${element.img} alt="machine" />
       </div>
-      </li>`
-    });
-    return markUp;
+      </li>`;
+  });
+  return markUp;
 }
 
-const rendered = renderingSliderProductCards(products);
-glideSlidesContainer.innerHTML = rendered;
+const rendered = renderingSliderProductCards(sliderProduct);
+if (glideSlidesContainer) {
+  glideSlidesContainer.innerHTML = rendered;
+}
+
+// generate  all products cards
+const productBLockWrap = document.querySelector(".product-block-wrap");
+const firstNineProduct = ourProduct.slice(0,9);
+console.log(firstNineProduct , "nine");
+function generateALlProducts(ourProduct) {
+  let allMarkUp = "";
+  ourProduct.forEach((element) => {
+    allMarkUp += `<div class="products-block ${element.type}">
+          <div class="img-block">
+              <img src="${element.img}">
+              <div class="article-for-block">
+                  <button class="sale">-10%</button>
+                  <button class="type">Броня</button>
+                  <button class="press">Пресс</button>
+              </div>
+          </div>
+          <h2 class="name-of-the-product">${element.name}</h2>
+          <ul>
+              <li>
+                <h2 class="discription-for-product">
+                  Вес
+                </h2>
+                <h3 class="discription-for-product-numbers">${element.weightDiscription}</h3>
+              </li>
+              <li>
+                <h2 class="discription-for-product">Двигатель</h2>
+                <h3 class="discription-for-product-numbers">${element.engineDiscription}</h3>
+              </li>
+              <li>
+                <h2 class="discription-for-product">Диам. обраб.</h2>
+                <h3 class="discription-for-product-numbers">${element.diametrDiscription}</h3>
+              </li>
+            </ul>
+            <div class="price">
+              <h3>${element.price}</h3>
+              <a href="#">${element.priceBefore}</a>
+          </div>
+          <div class="buy">
+              <button>Купить</button>
+          </div>
+      </div>`;
+  });
+  return allMarkUp;
+}
+const renderALlProducts = generateALlProducts(ourProduct);
+// const renderNineProducts = generateALlProducts(firstNineProduct);
+productBLockWrap.innerHTML = renderALlProducts;
+// const showAllBtn = document.querySelector(".show-more");
+
+// showAllBtn.addEventListener("click", () => {
+//   if (productBLockWrap.classList.contains("notAll")) {
+//     productBLockWrap.innerHTML = renderALlProducts;
+//     productBLockWrap.classList.remove("notAll");
+//   } else {
+//     productBLockWrap.classList.add("notAll");
+//     productBLockWrap.innerHTML = renderNineProducts;
+//   }
+// });

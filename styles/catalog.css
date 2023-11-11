@@ -1,0 +1,314 @@
+header {
+    margin-bottom: 60px;
+}
+
+/* section 1 */
+.section-1 {
+    padding-inline: 40px;
+    margin-bottom: 60px;
+}
+
+/* section 1 */
+
+/* section 2 */
+.section-2 {
+    margin-bottom:120px;
+}
+
+.section-2 .top-text {
+    padding-inline: 40px;
+    display: flex;
+    gap: 24px;
+    margin-bottom: 40px;
+    position: relative;
+    align-items: flex-end;
+}
+
+.top-text .discription {
+    transform: translateY(-6px);
+}
+
+.top-text .main-text {
+    color: var(--text-black);
+}
+
+.section-2 .filter-and-product-blocks {
+    display: flex;
+    gap: 40px;
+    padding-inline: 28px;
+    align-items: flex-start;
+}
+
+.filter-and-product-blocks .left-filter-list {
+    list-style: none;
+    max-width: 274px;
+    width: 100%;
+    position: sticky;
+    top:20px;
+}
+
+.left-filter-list .filter-list button {
+    background-color: transparent;
+    border-radius: 8px;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    color: var(--text-black);
+    font-family: var(--font-Golos);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    margin-bottom: 8px;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in;
+    transform-origin: left;
+}
+
+.filter-list button:last-of-type {
+    margin-bottom: 0px;
+}
+
+.filter-list button svg path {
+    stroke: var(--text-black);
+}
+
+.filter-list.active button .sale path {
+    fill: var(--text-black);
+}
+
+.filter-list.active button {
+    background-color: var(--background-black);
+    color: var(--text-white);
+}
+
+.filter-list.active button svg path {
+    stroke: var(--text-white);
+}
+
+.filter-list.active button .sale path {
+    fill: var(--text-white);
+}
+
+.filter-and-product-blocks .right-products-blocks-container {
+
+}
+
+.right-products-blocks-container .show-more {
+    max-width:151px;
+    margin:auto;
+    width:100%;
+}
+.show-more button{
+    padding: 12px 20px;
+    background-color: var(--background-gray);
+    border-radius: 8px;
+
+    color: var(--text-black);
+    font-family: var(--font-Golos);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    cursor: pointer;
+    border: none;
+}
+.filter-and-product-blocks .product-block-wrap {
+    margin-bottom: 40px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    max-height:unset;
+    overflow: unset;
+    max-width:897px;
+    transition: all 0.5s ease-in;
+}
+
+.product-block-wrap .products-block {
+    max-width: 289px;
+    width: 100%;
+    border-radius: 16px;
+    background-color: var(--background-gray);
+    padding: 8px 8px 20px;
+}
+
+.products-block .img-block {
+    background-color: var(--text-white);
+    padding: 8px;
+    position: relative;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.img-block img {
+    margin: auto;
+}
+
+.img-block .article-for-block {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    position: absolute;
+    left: 8px;
+    top: 8px;
+}
+
+.article-for-block button {
+    padding: 4px 8px;
+    border-radius: 8px;
+    border: unset;
+
+    color: var(--text-white);
+
+    font-family: var(--font-Golos);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+.article-for-block button.sale {
+    background-color: var(--tags-red);
+}
+
+.article-for-block button.type {
+    background-color: var(--tags-blue);
+}
+
+.article-for-block button.press {
+    background-color: var(--tags-green);
+}
+
+.products-block .name-of-the-product {
+    color: var(--text-black);
+
+    font-family: var(--font-Golos);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    padding-inline: 12px;
+}
+
+.products-block ul {
+    list-style: none;
+    margin-bottom: 32px;
+    padding-inline: 12px;
+}
+
+.products-block ul li {
+    padding-block: 8px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border-or-devider-light-bg);
+}
+
+li .discription-for-product {
+    color: var(--text-gray-light-bg);
+    font-family: var(--font-Golos);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+li .discription-for-product-numbers {
+    color: #000;
+
+    font-family: var(--font-Golos);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+.products-block .price {
+    display: flex;
+    gap: 8px;
+    align-items: flex-end;
+    margin-bottom: 20px;
+    padding-inline: 12px;
+}
+
+.price h3 {
+    color: var(--text-black);
+    font-family: var(--font-Golos);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.6px;
+}
+
+.price a {
+    color: var(--text-gray-light-bg);
+    font-family: var(--font-Golos);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    text-decoration: line-through;
+}
+
+.products-block .buy {
+    margin: auto;
+    max-width: 249px;
+}
+
+.buy button {
+    padding: 12px 20px;
+    background-color: var(--background-black);
+    border-radius: 8px;
+    color: var(--text-white);
+    font-family: var(--font-Golos);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+}
+
+.products-block.regular .article-for-block button {
+    display: none;
+}
+
+.products-block.regular .price a {
+    display: none;
+}
+
+.products-block.guard-press .price a {
+    display: none;
+}
+
+.products-block.guard-press .article-for-block button.sale {
+    display: none;
+}
+.products-block.guard-press ul{
+    margin-bottom:52px;
+}
+.products-block.hide{
+    opacity:0;
+    display:none;
+    animation-name: hideBlocks ;
+    animation-duration: 2s;
+    animation-timing-function: forwards;
+}
+.product-block-wrap.notAll{
+    max-height: 1551px;
+    overflow: hidden;
+}
+@keyframes hideBlocks {
+    to {
+        opacity:0;
+        display:none;
+    }
+}
+/* section 2 */
