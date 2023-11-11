@@ -2,6 +2,10 @@ const cardTitle = document.querySelector("#title");
 const listWithDiscription = document.querySelector(".list-with-discription");
 const productPrice = document.querySelector(".price");
 const glideSlidesContainer = document.querySelector(".glide__slides");
+const productBLockWrap = document.querySelector(".product-block-wrap");
+
+let maxItems = 3;
+let dataType = '';
 
 function renderingSliderProductCards(sliderProduct) {
   let markUp = "";
@@ -37,15 +41,11 @@ function renderingSliderProductCards(sliderProduct) {
   return markUp;
 }
 
-const rendered = renderingSliderProductCards(sliderProduct);
 if (glideSlidesContainer) {
-  glideSlidesContainer.innerHTML = rendered;
+  glideSlidesContainer.innerHTML = renderingSliderProductCards(sliderProduct);
 }
 
 // generate  all products cards
-const productBLockWrap = document.querySelector(".product-block-wrap");
-const firstNineProduct = ourProduct.slice(0,9);
-console.log(firstNineProduct , "nine");
 function generateALlProducts(ourProduct) {
   let allMarkUp = "";
   ourProduct.forEach((element) => {
@@ -86,17 +86,5 @@ function generateALlProducts(ourProduct) {
   });
   return allMarkUp;
 }
-const renderALlProducts = generateALlProducts(ourProduct);
-// const renderNineProducts = generateALlProducts(firstNineProduct);
-productBLockWrap.innerHTML = renderALlProducts;
-// const showAllBtn = document.querySelector(".show-more");
 
-// showAllBtn.addEventListener("click", () => {
-//   if (productBLockWrap.classList.contains("notAll")) {
-//     productBLockWrap.innerHTML = renderALlProducts;
-//     productBLockWrap.classList.remove("notAll");
-//   } else {
-//     productBLockWrap.classList.add("notAll");
-//     productBLockWrap.innerHTML = renderNineProducts;
-//   }
-// });
+productBLockWrap.innerHTML = generateALlProducts(ourProduct.slice(0, maxItems));

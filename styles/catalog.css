@@ -77,25 +77,17 @@ header {
     stroke: var(--text-black);
 }
 
-.filter-list.active button .sale path {
-    fill: var(--text-black);
-}
-
-.filter-list.active button {
+.filter-list button.active {
     background-color: var(--background-black);
     color: var(--text-white);
 }
 
-.filter-list.active button svg path {
+.filter-list button.active svg path {
     stroke: var(--text-white);
 }
 
-.filter-list.active button .sale path {
+.filter-list button.active .sale path {
     fill: var(--text-white);
-}
-
-.filter-and-product-blocks .right-products-blocks-container {
-
 }
 
 .right-products-blocks-container .show-more {
@@ -300,10 +292,6 @@ li .discription-for-product-numbers {
     animation-name: hideBlocks ;
     animation-duration: 2s;
     animation-timing-function: forwards;
-}
-.product-block-wrap.notAll{
-    max-height: 1551px;
-    overflow: hidden;
 }
 @keyframes hideBlocks {
     to {
