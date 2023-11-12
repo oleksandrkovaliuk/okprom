@@ -1,8 +1,4 @@
-const cardTitle = document.querySelector("#title");
-const listWithDiscription = document.querySelector(".list-with-discription");
-const productPrice = document.querySelector(".price");
-const glideSlidesContainer = document.querySelector(".glide__slides");
-
+// generate slider products cards
 function renderingSliderProductCards(sliderProduct) {
   let markUp = "";
   sliderProduct.forEach((element) => {
@@ -37,16 +33,8 @@ function renderingSliderProductCards(sliderProduct) {
   return markUp;
 }
 
-const rendered = renderingSliderProductCards(sliderProduct);
-if (glideSlidesContainer) {
-  glideSlidesContainer.innerHTML = rendered;
-}
-
-// generate  all products cards
-const productBLockWrap = document.querySelector(".product-block-wrap");
-const firstNineProduct = ourProduct.slice(0,9);
-console.log(firstNineProduct , "nine");
-function generateALlProducts(ourProduct) {
+// generate markup products cards
+function generateMarkupProducts(ourProduct) {
   let allMarkUp = "";
   ourProduct.forEach((element) => {
     allMarkUp += `<div class="products-block ${element.type}">
@@ -86,17 +74,5 @@ function generateALlProducts(ourProduct) {
   });
   return allMarkUp;
 }
-const renderALlProducts = generateALlProducts(ourProduct);
-// const renderNineProducts = generateALlProducts(firstNineProduct);
-productBLockWrap.innerHTML = renderALlProducts;
-// const showAllBtn = document.querySelector(".show-more");
 
-// showAllBtn.addEventListener("click", () => {
-//   if (productBLockWrap.classList.contains("notAll")) {
-//     productBLockWrap.innerHTML = renderALlProducts;
-//     productBLockWrap.classList.remove("notAll");
-//   } else {
-//     productBLockWrap.classList.add("notAll");
-//     productBLockWrap.innerHTML = renderNineProducts;
-//   }
-// });
+export { renderingSliderProductCards, generateMarkupProducts };

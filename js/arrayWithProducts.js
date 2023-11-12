@@ -173,3 +173,5 @@ const ourProduct = [{
     priceBefore:"24 990 ₽"
 }
 ]
+
+export { sliderProduct, ourProduct };
