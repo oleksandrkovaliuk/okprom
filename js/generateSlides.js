@@ -6,12 +6,11 @@ import { renderingSliderProductCards } from "./markupFunctions.js";
 if (glideSlidesContainer) {
   glideSlidesContainer.innerHTML = renderingSliderProductCards(sliderProduct);
 
-  const GlideCarousel = new Glide(".glide", {
+  new Glide(".glide", {
     type: "carousel",
     startAt: 1,
     perView: 1,
     focusAt: "center",
     animationDuration: 600,
-  });
-  GlideCarousel.mount();
+  }).mount();
 }

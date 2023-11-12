@@ -33,8 +33,8 @@ function renderingSliderProductCards(sliderProduct) {
   return markUp;
 }
 
-// generate  all products cards
-function generateALlProducts(ourProduct) {
+// generate markup products cards
+function generateMarkupProducts(ourProduct) {
   let allMarkUp = "";
   ourProduct.forEach((element) => {
     allMarkUp += `<div class="products-block ${element.type}">
@@ -75,4 +75,4 @@ function generateALlProducts(ourProduct) {
   return allMarkUp;
 }
 
-export { renderingSliderProductCards, generateALlProducts };
+export { renderingSliderProductCards, generateMarkupProducts };

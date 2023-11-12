@@ -1,10 +1,9 @@
-const allProducts = document.querySelectorAll(".products-block");
 const filterBtns = document.querySelectorAll(".filter-list button");
 const showMore = document.querySelector(".show-more");
 
 import { FilterCards } from "./FilterCards.js";
 import { ourProduct } from "./arrayWithProducts.js";
-import { generateALlProducts } from "./markupFunctions.js";
+import { generateMarkupProducts } from "./markupFunctions.js";
 
 const filterCards = new FilterCards(null, 3, ourProduct);
 
@@ -19,7 +18,7 @@ function filterItem(event) {
 
   toggleActiveButtonCls(event.target);
 
-  document.querySelector(".product-block-wrap").innerHTML = generateALlProducts(
+  document.querySelector(".product-block-wrap").innerHTML = generateMarkupProducts(
     filterCards.getFilteredItems()
   );
 }
@@ -42,11 +41,12 @@ showMore.addEventListener("click", () => {
     filterCards.setUpLimit(ourProduct.length);
   }
 
-  document.querySelector(".product-block-wrap").innerHTML = generateALlProducts(
+  document.querySelector(".product-block-wrap").innerHTML = generateMarkupProducts(
     filterCards.getFilteredItems()
   );
 });
 
-document.querySelector(".product-block-wrap").innerHTML = generateALlProducts(
+// initial call
+document.querySelector(".product-block-wrap").innerHTML = generateMarkupProducts(
   filterCards.getFilteredItems()
 );
