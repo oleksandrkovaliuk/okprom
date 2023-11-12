@@ -1,12 +1,4 @@
-const cardTitle = document.querySelector("#title");
-const listWithDiscription = document.querySelector(".list-with-discription");
-const productPrice = document.querySelector(".price");
-const glideSlidesContainer = document.querySelector(".glide__slides");
-const productBLockWrap = document.querySelector(".product-block-wrap");
-
-let maxItems = 3;
-let dataType = '';
-
+// generate slider products cards
 function renderingSliderProductCards(sliderProduct) {
   let markUp = "";
   sliderProduct.forEach((element) => {
@@ -39,10 +31,6 @@ function renderingSliderProductCards(sliderProduct) {
       </li>`;
   });
   return markUp;
-}
-
-if (glideSlidesContainer) {
-  glideSlidesContainer.innerHTML = renderingSliderProductCards(sliderProduct);
 }
 
 // generate  all products cards
@@ -87,4 +75,4 @@ function generateALlProducts(ourProduct) {
   return allMarkUp;
 }
 
-productBLockWrap.innerHTML = generateALlProducts(ourProduct.slice(0, maxItems));
+export { renderingSliderProductCards, generateALlProducts };

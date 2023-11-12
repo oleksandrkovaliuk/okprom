@@ -2,28 +2,26 @@ const allProducts = document.querySelectorAll(".products-block");
 const filterBtns = document.querySelectorAll(".filter-list button");
 const showMore = document.querySelector(".show-more");
 
-const shows = document.querySelector(".show-more");
+import { FilterCards } from "./FilterCards.js";
+import { ourProduct } from "./arrayWithProducts.js";
+import { generateALlProducts } from "./markupFunctions.js";
+
+const filterCards = new FilterCards(null, 3, ourProduct);
 
 filterBtns.forEach((btn) => {
   btn.addEventListener("click", filterItem);
-  filters.filterItems()
 });
 
 function filterItem(event) {
   const dataInfo = event.target.dataset["f"];
-  let items = ourProduct;
-  if (dataInfo) {
-    items = generateALlProducts(
-      items.filter((item) => item.type === dataInfo).slice(0, maxItems)
-    );
-  } else {
-    console.log(ourProduct, ourProduct.slice(0, maxItems), " ourProduct");
-    items = generateALlProducts(ourProduct.slice(0, maxItems));
-  }
+
+  filterCards.setUpType(dataInfo);
 
   toggleActiveButtonCls(event.target);
 
-  document.querySelector(".product-block-wrap").innerHTML = items;
+  document.querySelector(".product-block-wrap").innerHTML = generateALlProducts(
+    filterCards.getFilteredItems()
+  );
 }
 
 function toggleActiveButtonCls(activeBtn) {
@@ -39,8 +37,16 @@ showMore.addEventListener("click", () => {
   showMore.classList.toggle("active");
 
   if (showMore.classList.contains("active")) {
-    maxItems = 6;
+    filterCards.setUpLimit(3);
   } else {
-    maxItems = ourProduct.length;
+    filterCards.setUpLimit(ourProduct.length);
   }
+
+  document.querySelector(".product-block-wrap").innerHTML = generateALlProducts(
+    filterCards.getFilteredItems()
+  );
 });
+
+document.querySelector(".product-block-wrap").innerHTML = generateALlProducts(
+  filterCards.getFilteredItems()
+);
