@@ -184,7 +184,25 @@ header .header-bottom-block {
     background-color: var(--background-black)!important;
     color: var(--text-white)!important;
 }
-
+#counter{
+    background-color:var(--background-gray);
+    border:1px solid var(--background-black );
+    width:20px;
+    height:20px;
+    border-radius: 50%;
+    position:absolute;
+    right:-5px;
+    bottom:-7px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    color:var(--text-black);
+    font-family: var(--font-Golos);
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 13px;
+}
 .follow-cursor {
     position: absolute;
     transition: transform 0.1s ease;

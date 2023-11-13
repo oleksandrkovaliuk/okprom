@@ -29,6 +29,7 @@ const sliderProduct = [
 ]
 
 const ourProduct = [{
+    id:1,
     type:"guard-press",
     name:"S2-3 Автоматический мини",
     img:"./img/S2-3.png",
@@ -38,6 +39,7 @@ const ourProduct = [{
     price:"54 990 ₽"
 },
 {
+    id:20,
     type:"sale-guard-press",
     name:"SG-007-1 Станок для разделки кабеля (Автоматический)",
     img:"./img/sg-007.png",
@@ -48,6 +50,7 @@ const ourProduct = [{
     priceBefore:"24 990 ₽"
 },
 {
+    id:33,
     type:"regular",
     name:"SG-008-1 Станок для разделки кабеля",
     img:"./img/sg-008.png",
@@ -58,6 +61,7 @@ const ourProduct = [{
     priceBefore:"24 990 ₽"
 },
 {
+    id:15,
     type:"guard-press",
     name:"S2-3 Автоматический мини",
     img:"./img/S2-3.png",
@@ -67,6 +71,7 @@ const ourProduct = [{
     price:"54 990 ₽"
 },
 {
+    id:25,
     type:"regular",
     name:"SG-008-1 Станок для разделки кабеля",
     img:"./img/sg-008.png",
@@ -77,6 +82,7 @@ const ourProduct = [{
     priceBefore:"24 990 ₽"
 },
 {
+    id:55,
     type:"sale-guard-press",
     name:"SG-007-1 Станок для разделки кабеля (Автоматический)",
     img:"./img/sg-007.png",
@@ -87,6 +93,7 @@ const ourProduct = [{
     priceBefore:"24 990 ₽"
 },
 {
+    id:12,
     type:"regular",
     name:"SG-008-1 Станок для разделки кабеля",
     img:"./img/sg-008.png",
@@ -97,6 +104,7 @@ const ourProduct = [{
     priceBefore:"24 990 ₽"
 },
 {
+    id:13,
     type:"sale-guard-press",
     name:"SG-007-1 Станок для разделки кабеля (Автоматический)",
     img:"./img/sg-007.png",
@@ -107,6 +115,7 @@ const ourProduct = [{
     priceBefore:"74 990 ₽"
 },
 {
+    id:14,
     type:"guard-press",
     name:"S2-3 Автоматический мини",
     img:"./img/S2-3.png",
@@ -115,6 +124,7 @@ const ourProduct = [{
     diametrDiscription:"от 3 до 35мм",
     price:"54 990 ₽"
 },{
+    id:11,
     type:"guard-press",
     name:"S2-3 Автоматический мини",
     img:"./img/S2-3.png",
@@ -124,6 +134,7 @@ const ourProduct = [{
     price:"54 990 ₽"
 },
 {
+    id:47,
     type:"sale-guard-press",
     name:"SG-007-1 Станок для разделки кабеля (Автоматический)",
     img:"./img/sg-007.png",
@@ -134,6 +145,7 @@ const ourProduct = [{
     priceBefore:"24 990 ₽"
 },
 {
+    id:5,
     type:"regular",
     name:"SG-008-1 Станок для разделки кабеля",
     img:"./img/sg-008.png",
@@ -144,6 +156,7 @@ const ourProduct = [{
     priceBefore:"24 990 ₽"
 },
 {
+    id:3,
     type:"guard-press",
     name:"S2-3 Автоматический мини",
     img:"./img/S2-3.png",
@@ -153,6 +166,7 @@ const ourProduct = [{
     price:"54 990 ₽"
 },
 {
+    id:87,
     type:"regular",
     name:"SG-008-1 Станок для разделки кабеля",
     img:"./img/sg-008.png",
@@ -163,6 +177,7 @@ const ourProduct = [{
     priceBefore:"24 990 ₽"
 },
 {
+    id:90,
     type:"sale-guard-press",
     name:"SG-007-1 Станок для разделки кабеля (Автоматический)",
     img:"./img/sg-007.png",

@@ -5,7 +5,7 @@ import { FilterCards } from "./FilterCards.js";
 import { ourProduct } from "./arrayWithProducts.js";
 import { generateMarkupProducts } from "./markupFunctions.js";
 
-const filterCards = new FilterCards(null, 3, ourProduct);
+const filterCards = new FilterCards(null, 9, ourProduct);
 
 filterBtns.forEach((btn) => {
   btn.addEventListener("click", filterItem);
@@ -36,7 +36,7 @@ showMore.addEventListener("click", () => {
   showMore.classList.toggle("active");
 
   if (showMore.classList.contains("active")) {
-    filterCards.setUpLimit(3);
+    filterCards.setUpLimit(9);
   } else {
     filterCards.setUpLimit(ourProduct.length);
   }
@@ -50,3 +50,4 @@ showMore.addEventListener("click", () => {
 document.querySelector(".product-block-wrap").innerHTML = generateMarkupProducts(
   filterCards.getFilteredItems()
 );
+

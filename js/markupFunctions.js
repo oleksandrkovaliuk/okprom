@@ -68,7 +68,7 @@ function generateMarkupProducts(ourProduct) {
               <a href="#">${element.priceBefore}</a>
           </div>
           <div class="buy">
-              <button>Купить</button>
+              <button id="buyBtn" data-id="${element.id}" >Купить</button>
           </div>
       </div>`;
   });
