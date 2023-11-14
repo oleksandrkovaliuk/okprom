@@ -105,7 +105,8 @@ header .header-bottom-block {
     cursor: pointer;
     border: none;
 }
-.header-bottom-block button a{
+
+.header-bottom-block button a {
     text-decoration: none;
     color: var(--text-black);
     font-family: var(--font-Golos);
@@ -116,6 +117,7 @@ header .header-bottom-block {
 
 
 }
+
 .header-bottom-block ul .cart-search-btn {
     padding: 10px;
     display: flex;
@@ -180,29 +182,38 @@ header .header-bottom-block {
     top: 12px;
 }
 
-.header-bottom-block .ask-for-support  , .ask-for-support-inUl{
-    background-color: var(--background-black)!important;
-    color: var(--text-white)!important;
+.header-bottom-block .ask-for-support,
+.ask-for-support-inUl {
+    background-color: var(--background-black) !important;
+    color: var(--text-white) !important;
+    font-family: var(--font-Golos);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    /* 125% */
 }
-#counter{
-    background-color:var(--background-gray);
-    border:1px solid var(--background-black );
-    width:20px;
-    height:20px;
+
+#counter {
+    background-color: var(--background-gray);
+    border: 1px solid var(--background-black);
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
-    position:absolute;
-    right:-5px;
-    bottom:-7px;
-    display:flex;
+    position: absolute;
+    right: -5px;
+    bottom: -7px;
+    display: flex;
     align-items: center;
     justify-content: center;
-    color:var(--text-black);
+    color: var(--text-black);
     font-family: var(--font-Golos);
     font-size: 13px;
     font-style: normal;
     font-weight: 400;
     line-height: 13px;
 }
+
 .follow-cursor {
     position: absolute;
     transition: transform 0.1s ease;
@@ -251,9 +262,10 @@ header .header-bottom-block {
     font-weight: 400;
     line-height: 20px;
 }
+
 /* bonus block */
 /* form */
-.form{
+.form {
     padding-inline: 40px;
     margin-bottom: 120px;
 }
@@ -373,6 +385,14 @@ input:-webkit-autofill:focus {
     -webkit-text-fill-color: var(--text-gray-dark-bg);
     -webkit-box-shadow: 0 0 0px 1000px var(--background-black) inset;
 }
+
+.input-for-seacrh:-webkit-autofill,
+.input-for-seacrh:-webkit-autofill:hover,
+.input-for-seacrh:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px var(--background-gray) inset;
+    -webkit-text-fill-color: var(--text-black);
+}
+
 /* form */
 /* footer start */
 footer {
@@ -490,12 +510,15 @@ footer .copyright-info {
     padding: 24px 40px;
     justify-content: space-between;
 }
-.burger{
-    display:none;
+
+.burger {
+    display: none;
 }
-.header-bottom-block .ask-for-support{
-    display:none;
+
+.header-bottom-block .ask-for-support {
+    display: none;
 }
+
 /* footer end */
 
 @media(max-width:1024px) {
@@ -503,11 +526,13 @@ footer .copyright-info {
         flex-wrap: wrap;
         row-gap: 8px;
     }
-   .ask-for-support-inUl {
-        display:none;
+
+    .ask-for-support-inUl {
+        display: none;
     }
-    .header-bottom-block .ask-for-support{
-        display:block;
+
+    .header-bottom-block .ask-for-support {
+        display: block;
     }
 }
 
@@ -532,11 +557,11 @@ footer .copyright-info {
         margin-bottom: 32px;
     }
 
-  .bonus-blocks {
+    .bonus-blocks {
         justify-content: center;
     }
 
-    .section-5 .send-message-container {
+    .form .send-message-container {
         flex-direction: column;
         padding-inline: 16px;
     }
@@ -578,15 +603,19 @@ footer .copyright-info {
     .form {
         padding-inline: 16px !important;
     }
+
     header .header-top-block {
         padding-inline: 16px;
     }
+
     .header-bottom-block .ask-for-support {
-        display:none;
+        display: none;
     }
-    .burger{
-        display:block;
+
+    .burger {
+        display: block;
     }
+
     footer {
         padding-inline: 16px;
     }
@@ -605,6 +634,7 @@ footer .copyright-info {
     .bonus-blocks .block {
         max-width: unset !important;
     }
+
     footer .copyright-info {
         flex-direction: column;
         padding-inline: 0px;
