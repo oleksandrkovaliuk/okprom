@@ -1,13 +1,9 @@
 const filterBtns = document.querySelectorAll(".filter-list button");
 const showMore = document.querySelector(".show-more");
 
-// import { FilterCards } from "./FilterCards.js";
+import { filterCards, bindEventOnBuyBtn } from "./main.js";
 import { ourProduct } from "./arrayWithProducts.js";
-import { updatedProductBlock } from "./countItems.js";
-// import { Cart } from "./Cart.js";
-
-// const filterCards = new FilterCards(null, 9, ourProduct);
-// const Carts = new Cart();
+import { generateMarkupProducts } from "./markupFunctions.js";
 
 filterBtns.forEach((btn) => {
   btn.addEventListener("click", filterItem);
@@ -19,9 +15,11 @@ function filterItem(event) {
   filterCards.setUpType(dataInfo);
 
   toggleActiveButtonCls(event.target);
-  updatedProductBlock();
-  // document.querySelector(".product-block-wrap").innerHTML =
-  //   generateMarkupProducts(filterCards.getFilteredItems());
+
+  document.querySelector(".product-block-wrap").innerHTML =
+    generateMarkupProducts(filterCards.getFilteredItems());
+
+  bindEventOnBuyBtn(document.querySelectorAll(".buyBtn"));
 }
 
 function toggleActiveButtonCls(activeBtn) {
@@ -41,12 +39,8 @@ showMore.addEventListener("click", () => {
   } else {
     filterCards.setUpLimit(ourProduct.length);
   }
-  updatedProductBlock();
-  // document.querySelector(".product-block-wrap").innerHTML =
-  //   generateMarkupProducts(filterCards.getFilteredItems());
+  document.querySelector(".product-block-wrap").innerHTML =
+    generateMarkupProducts(filterCards.getFilteredItems());
+
+  bindEventOnBuyBtn(document.querySelectorAll(".buyBtn"));
 });
-
-// initial call
-
-
-updatedProductBlock();
