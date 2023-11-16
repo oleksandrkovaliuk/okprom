@@ -5,9 +5,7 @@ import { generateMarkupProducts } from "./markupFunctions.js";
 
 const counter = document.querySelector("#counter");
 const productBlockWrap = document.querySelector(".product-block-wrap");
-
 const cart = new Cart();
-
 const filterCards = new FilterCards(null, 9, ourProduct);
 
 function bindEventOnBuyBtn(productBuyBtn) {
@@ -20,14 +18,13 @@ function bindEventOnBuyBtn(productBuyBtn) {
     });
   });
 }
-
 // initial load
 productBlockWrap.innerHTML = generateMarkupProducts(
   filterCards.getFilteredItems()
 );
 
-counter.textContent = cart.countItems;
+ counter.textContent = cart.countItems;
 
 bindEventOnBuyBtn(document.querySelectorAll(".buyBtn"));
 
-export { filterCards, bindEventOnBuyBtn }
+export { filterCards, bindEventOnBuyBtn}

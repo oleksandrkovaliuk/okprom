@@ -188,5 +188,5 @@ const ourProduct = [{
     priceBefore:"24 990 ₽"
 }
 ]
-
-export { sliderProduct, ourProduct };
+localStorage.setItem('ourProduct' , JSON.stringify(ourProduct))
+export { sliderProduct, ourProduct};

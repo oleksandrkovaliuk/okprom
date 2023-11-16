@@ -74,5 +74,25 @@ function generateMarkupProducts(ourProduct) {
   });
   return allMarkUp;
 }
+// generate product in cart
+function generateProductInCart(ourProduct){
+  let cartMarkUp = '';
 
-export { renderingSliderProductCards, generateMarkupProducts };
+  ourProduct.forEach((element) => {
+    cartMarkUp += `<tr class="product">
+    <td class="img"><img src="${element.img}"></img></td>
+    <td>${element.name}</td>
+    <td class="id">${element.id}</td>
+    <td class="plus-number">
+      <input type="text" value="1" class="total-item"/>
+      <div class="plus-minus">
+          <span class="plus">+</span>
+          <span class="minus">-</span>
+      </div>
+  </td>
+  <td class="price">${element.price}</td>
+  <td class="total-price">${element.price}</td>
+  </tr>`
+  })
+}
+export { renderingSliderProductCards, generateMarkupProducts , generateProductInCart};
