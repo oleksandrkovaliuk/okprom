@@ -17,6 +17,7 @@ minus.forEach((element) => {
       .querySelector(".total-item");
     if (closestInput.value >= 2) {
       closestInput.value = parseInt(closestInput.value) - 1;
+      
     } else {
       closestInput.value = 1;
     }

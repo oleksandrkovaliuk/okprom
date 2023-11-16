@@ -19,9 +19,11 @@ function bindEventOnBuyBtn(productBuyBtn) {
   });
 }
 // initial load
-productBlockWrap.innerHTML = generateMarkupProducts(
-  filterCards.getFilteredItems()
-);
+if(productBlockWrap){
+  productBlockWrap.innerHTML = generateMarkupProducts(
+    filterCards.getFilteredItems()
+  );
+}
 
  counter.textContent = cart.countItems;
 
