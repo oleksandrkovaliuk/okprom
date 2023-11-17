@@ -1,5 +1,5 @@
 
-const storedOurProduct = JSON.parse(localStorage.getItem('ourProduct'));
+const storedOurProduct = JSON.parse(localStorage.getItem('product'));
 const relocateToCart = document.querySelector('#cart');
 relocateToCart.addEventListener('click', () => {
     window.location.href = "./cart.html";
