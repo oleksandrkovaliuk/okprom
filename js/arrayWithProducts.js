@@ -194,7 +194,7 @@ const ourProductOld = [
 const ourProduct = [
   {
     id: 1,
-    type: " sale-guard-press",
+    type: "sale-guard-press",
     name: "S2-3 Автоматический мини",
     img: "./img/S2-3.png",
     weightDiscription: "16кг",
@@ -218,7 +218,7 @@ const ourProduct = [
   },
   {
     id: 3,
-    type: " sale-guard-press",
+    type: "sale-guard-press",
     name: "S2-3 Автоматический мини",
     img: "./img/S2-3.png",
     weightDiscription: "16кг",
@@ -266,7 +266,7 @@ const ourProduct = [
   },
   {
     id: 7,
-    type: " sale-guard-press",
+    type: "sale-guard-press",
     name: "S2-3 Автоматический мини",
     img: "./img/S2-3.png",
     weightDiscription: "16кг",
@@ -350,7 +350,7 @@ const ourProduct = [
   },
   {
     id: 14,
-    type: " sale-guard-press",
+    type: "sale-guard-press",
     name: "S2-3 Автоматический мини",
     img: "./img/S2-3.png",
     weightDiscription: "16кг",
@@ -386,7 +386,7 @@ const ourProduct = [
   },
   {
     id: 17,
-    type: " sale-guard-press",
+    type: "sale-guard-press",
     name: "S2-3 Автоматический мини",
     img: "./img/S2-3.png",
     weightDiscription: "16кг",
@@ -422,7 +422,7 @@ const ourProduct = [
   },
   {
     id: 20,
-    type: " sale-guard-press",
+    type: "sale-guard-press",
     name: "S2-3 Автоматический мини",
     img: "./img/S2-3.png",
     weightDiscription: "16кг",
@@ -434,7 +434,7 @@ const ourProduct = [
   },
   {
     id: 21,
-    type: " sale-guard-press",
+    type: "sale-guard-press",
     name: "S2-3 Автоматический мини",
     img: "./img/S2-3.png",
     weightDiscription: "16кг",
@@ -458,7 +458,7 @@ const ourProduct = [
   },
   {
     id: 23,
-    type: " sale-guard-press",
+    type: "sale-guard-press",
     name: "S2-3 Автоматический мини",
     img: "./img/S2-3.png",
     weightDiscription: "16кг",
@@ -494,7 +494,7 @@ const ourProduct = [
   },
   {
     id: 26,
-    type: " sale-guard-press",
+    type: "sale-guard-press",
     name: "S2-3 Автоматический мини",
     img: "./img/S2-3.png",
     weightDiscription: "16кг",
@@ -518,7 +518,7 @@ const ourProduct = [
   },
   {
     id: 28,
-    type: " sale-guard-press",
+    type: "sale-guard-press",
     name: "S2-3 Автоматический мини",
     img: "./img/S2-3.png",
     weightDiscription: "16кг",
@@ -530,7 +530,7 @@ const ourProduct = [
   },
   {
     id: 29,
-    type: " sale-guard-press",
+    type: "sale-guard-press",
     name: "S2-3 Автоматический мини",
     img: "./img/S2-3.png",
     weightDiscription: "16кг",
@@ -542,7 +542,7 @@ const ourProduct = [
   },
   {
     id: 30,
-    type: " sale-guard-press",
+    type: "sale-guard-press",
     name: "S2-3 Автоматический мини",
     img: "./img/S2-3.png",
     weightDiscription: "16кг",
@@ -590,7 +590,7 @@ const ourProduct = [
   },
   {
     id: 34,
-    type: " sale-guard-press",
+    type: "sale-guard-press",
     name: "S2-3 Автоматический мини",
     img: "./img/S2-3.png",
     weightDiscription: "16кг",
@@ -650,7 +650,7 @@ const ourProduct = [
   },
   {
     id: 39,
-    type: " sale-guard-press",
+    type: "sale-guard-press",
     name: "S2-3 Автоматический мини",
     img: "./img/S2-3.png",
     weightDiscription: "16кг",
@@ -662,7 +662,7 @@ const ourProduct = [
   },
   {
     id: 40,
-    type: " sale-guard-press",
+    type: "sale-guard-press",
     name: "S2-3 Автоматический мини",
     img: "./img/S2-3.png",
     weightDiscription: "16кг",
@@ -686,7 +686,7 @@ const ourProduct = [
   },
   {
     id: 42,
-    type: " sale-guard-press",
+    type: "sale-guard-press",
     name: "S2-3 Автоматический мини",
     img: "./img/S2-3.png",
     weightDiscription: "16кг",
@@ -734,7 +734,7 @@ const ourProduct = [
   },
   {
     id: 46,
-    type: " sale-guard-press",
+    type: "sale-guard-press",
     name: "S2-3 Автоматический мини",
     img: "./img/S2-3.png",
     weightDiscription: "16кг",
@@ -746,7 +746,7 @@ const ourProduct = [
   },
   {
     id: 47,
-    type: " sale-guard-press",
+    type: "sale-guard-press",
     name: "S2-3 Автоматический мини",
     img: "./img/S2-3.png",
     weightDiscription: "16кг",
@@ -806,7 +806,7 @@ const ourProduct = [
   },
   {
     id: 52,
-    type: " sale-guard-press",
+    type: "sale-guard-press",
     name: "S2-3 Автоматический мини",
     img: "./img/S2-3.png",
     weightDiscription: "16кг",
@@ -830,7 +830,7 @@ const ourProduct = [
   },
   {
     id: 54,
-    type: " sale-guard-press",
+    type: "sale-guard-press",
     name: "S2-3 Автоматический мини",
     img: "./img/S2-3.png",
     weightDiscription: "16кг",
@@ -842,7 +842,7 @@ const ourProduct = [
   },
   {
     id: 55,
-    type: " sale-guard-press",
+    type: "sale-guard-press",
     name: "S2-3 Автоматический мини",
     img: "./img/S2-3.png",
     weightDiscription: "16кг",
@@ -854,7 +854,7 @@ const ourProduct = [
   },
   {
     id: 56,
-    type: " sale-guard-press",
+    type: "sale-guard-press",
     name: "S2-3 Автоматический мини",
     img: "./img/S2-3.png",
     weightDiscription: "16кг",
@@ -866,7 +866,7 @@ const ourProduct = [
   },
   {
     id: 57,
-    type: " sale-guard-press",
+    type: "sale-guard-press",
     name: "S2-3 Автоматический мини",
     img: "./img/S2-3.png",
     weightDiscription: "16кг",
@@ -914,7 +914,7 @@ const ourProduct = [
   },
   {
     id: 61,
-    type: " sale-guard-press",
+    type: "sale-guard-press",
     name: "S2-3 Автоматический мини",
     img: "./img/S2-3.png",
     weightDiscription: "16кг",
@@ -926,7 +926,7 @@ const ourProduct = [
   },
   {
     id: 62,
-    type: " sale-guard-press",
+    type: "sale-guard-press",
     name: "S2-3 Автоматический мини",
     img: "./img/S2-3.png",
     weightDiscription: "16кг",
@@ -950,7 +950,7 @@ const ourProduct = [
   },
   {
     id: 64,
-    type: " sale-guard-press",
+    type: "sale-guard-press",
     name: "S2-3 Автоматический мини",
     img: "./img/S2-3.png",
     weightDiscription: "16кг",
@@ -986,7 +986,7 @@ const ourProduct = [
   },
   {
     id: 67,
-    type: " sale-guard-press",
+    type: "sale-guard-press",
     name: "S2-3 Автоматический мини",
     img: "./img/S2-3.png",
     weightDiscription: "16кг",
@@ -1070,7 +1070,7 @@ const ourProduct = [
   },
   {
     id: 74,
-    type: " sale-guard-press",
+    type: "sale-guard-press",
     name: "S2-3 Автоматический мини",
     img: "./img/S2-3.png",
     weightDiscription: "16кг",
@@ -1118,7 +1118,7 @@ const ourProduct = [
   },
   {
     id: 78,
-    type: " sale-guard-press",
+    type: "sale-guard-press",
     name: "S2-3 Автоматический мини",
     img: "./img/S2-3.png",
     weightDiscription: "16кг",
@@ -1154,7 +1154,7 @@ const ourProduct = [
   },
   {
     id: 81,
-    type: " sale-guard-press",
+    type: "sale-guard-press",
     name: "S2-3 Автоматический мини",
     img: "./img/S2-3.png",
     weightDiscription: "16кг",
@@ -1202,7 +1202,7 @@ const ourProduct = [
   },
   {
     id: 85,
-    type: " sale-guard-press",
+    type: "sale-guard-press",
     name: "S2-3 Автоматический мини",
     img: "./img/S2-3.png",
     weightDiscription: "16кг",
@@ -1238,7 +1238,7 @@ const ourProduct = [
   },
   {
     id: 88,
-    type: " sale-guard-press",
+    type: "sale-guard-press",
     name: "S2-3 Автоматический мини",
     img: "./img/S2-3.png",
     weightDiscription: "16кг",
@@ -1274,7 +1274,7 @@ const ourProduct = [
   },
   {
     id: 91,
-    type: " sale-guard-press",
+    type: "sale-guard-press",
     name: "S2-3 Автоматический мини",
     img: "./img/S2-3.png",
     weightDiscription: "16кг",
@@ -1298,7 +1298,7 @@ const ourProduct = [
   },
   {
     id: 93,
-    type: " sale-guard-press",
+    type: "sale-guard-press",
     name: "S2-3 Автоматический мини",
     img: "./img/S2-3.png",
     weightDiscription: "16кг",
@@ -1346,7 +1346,7 @@ const ourProduct = [
   },
   {
     id: 97,
-    type: " sale-guard-press",
+    type: "sale-guard-press",
     name: "S2-3 Автоматический мини",
     img: "./img/S2-3.png",
     weightDiscription: "16кг",
