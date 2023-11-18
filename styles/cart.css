@@ -76,7 +76,6 @@ tr .plus-number input {
     border-radius: 8px;
     padding: 8px;
     color: var(--text-black);
-    font-feature-settings: 'liga' off;
     font-family: var(--font-Golos);
     font-size: 14px;
     font-style: normal;
@@ -90,16 +89,11 @@ tr .plus-number input {
     align-items: center;    
 }
 .plus-minus span{
-    color: var(--text-black);
-    font-feature-settings: 'liga' off;
-    font-family: var(--font-Golos);
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 14px;
-    letter-spacing: 0.24px;
-    padding:2px;
     cursor: pointer;
+    width: 16px;
+    height: 16px;
+    text-align: center;
+    color: var(--text-black);
 }
 .sum{
     font-family: var(--font-Golos);

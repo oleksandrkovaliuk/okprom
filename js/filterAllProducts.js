@@ -1,8 +1,7 @@
 const filterBtns = document.querySelectorAll(".filter-list button");
 const showMore = document.querySelector(".show-more");
-const buyBtn = document.querySelectorAll(".buyBtn")
 
-import { filterCards, bindEventOnBuyBtn } from "./main.js";
+import { filterCards, bindEventOnBuyBtn } from "./catalogMain.js";
 import { ourProduct } from "./arrayWithProducts.js";
 import { generateMarkupProducts } from "./markupFunctions.js";
 

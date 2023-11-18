@@ -1,639 +1,487 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/main.css" />
-    <link rel="stylesheet" href="./styles/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Golos+Text&family=Roboto:wght@500&display=swap"
-      rel="stylesheet"
-    />
-    <title>MainPage</title>
-  </head>
-  <body>
-    <main>
-      <div class="page-width">
-        <header>
-          <div class="header-top-block">
-            <a class="logo" href="./index.html">
-              <img src="./img/Logo.png" alt="logo" />
-            </a>
-            <div class="information">
-              <ul>
-                <li>okoprom@gmail.com</li>
-                <li>+7 (800) 707-31-01</li>
-              </ul>
-              <ul class="deliver-atc">
-                <li>Доставка и оплата</li>
-                <li>Гарантия</li>
-              </ul>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./styles/main.css" />
+  <link rel="stylesheet" href="./styles/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Golos+Text&family=Roboto:wght@500&display=swap"
+    rel="stylesheet" />
+  <title>MainPage</title>
+</head>
+
+<body>
+  <main>
+    <div class="page-width">
+      <header>
+        <div class="header-top-block">
+          <a class="logo" href="./index.html">
+            <img src="./img/Logo.png" alt="logo" />
+          </a>
+          <div class="information">
+            <ul>
+              <li>okoprom@gmail.com</li>
+              <li>+7 (800) 707-31-01</li>
+            </ul>
+            <ul class="deliver-atc">
+              <li>Доставка и оплата</li>
+              <li>Гарантия</li>
+            </ul>
+          </div>
+        </div>
+        <div class="header-bottom-block">
+          <ul class="menu-list">
+            <li><button><a href="./Catalog.html">Каталог</a></button></li>
+            <li><button><a href="#">Наше производство</a></button></li>
+            <li><button><a href="#">О компании</a></button></li>
+            <li><button><a href="#">Контакты</a></button></li>
+          </ul>
+          <ul>
+            <li>
+              <button class="cart-search-btn searching follow-cursor non-clickable">
+                <form class="searching-form">
+                  <div class="searching-input">
+                    <input placeholder="" type="text" id="search" name="search" class="input-for-seacrh" />
+                    <label for="search" class="label-for-search">...</label>
+                  </div>
+                </form>
+                <svg class="search" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <g id="Search" clip-path="url(#clip0_6353_385)">
+                    <path id="Vector"
+                      d="M18.031 16.617L22.314 20.899L20.899 22.314L16.617 18.031C15.0237 19.3082 13.042 20.0029 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2C15.968 2 20 6.032 20 11C20.0029 13.042 19.3082 15.0237 18.031 16.617ZM16.025 15.875C17.2941 14.5699 18.0029 12.8204 18 11C18 7.132 14.867 4 11 4C7.132 4 4 7.132 4 11C4 14.867 7.132 18 11 18C12.8204 18.0029 14.5699 17.2941 15.875 16.025L16.025 15.875Z"
+                      fill="#161616" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_6353_385">
+                      <rect width="24" height="24" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </button>
+            </li>
+            <li>
+              <a href='./Cart.html' id="cart" class="cart-search-btn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g id="Cart" clip-path="url(#clip0_6353_380)">
+                    <path id="Vector"
+                      d="M3.99984 6.41481L0.756836 3.17281L2.17184 1.75781L5.41384 5.00081H20.6558C20.8117 5.0008 20.9654 5.03723 21.1047 5.10718C21.244 5.17713 21.365 5.27868 21.4581 5.40371C21.5511 5.52874 21.6137 5.6738 21.6407 5.8273C21.6678 5.9808 21.6586 6.1385 21.6138 6.28781L19.2138 14.2878C19.1521 14.4939 19.0255 14.6746 18.853 14.803C18.6804 14.9315 18.471 15.0008 18.2558 15.0008H5.99984V17.0008H16.9998V19.0008H4.99984C4.73462 19.0008 4.48027 18.8955 4.29273 18.7079C4.10519 18.5204 3.99984 18.266 3.99984 18.0008V6.41481ZM5.99984 7.00081V13.0008H17.5118L19.3118 7.00081H5.99984ZM5.49984 23.0008C5.10201 23.0008 4.72048 22.8428 4.43918 22.5615C4.15787 22.2802 3.99984 21.8986 3.99984 21.5008C3.99984 21.103 4.15787 20.7215 4.43918 20.4402C4.72048 20.1588 5.10201 20.0008 5.49984 20.0008C5.89766 20.0008 6.27919 20.1588 6.5605 20.4402C6.8418 20.7215 6.99984 21.103 6.99984 21.5008C6.99984 21.8986 6.8418 22.2802 6.5605 22.5615C6.27919 22.8428 5.89766 23.0008 5.49984 23.0008ZM17.4998 23.0008C17.102 23.0008 16.7205 22.8428 16.4392 22.5615C16.1579 22.2802 15.9998 21.8986 15.9998 21.5008C15.9998 21.103 16.1579 20.7215 16.4392 20.4402C16.7205 20.1588 17.102 20.0008 17.4998 20.0008C17.8977 20.0008 18.2792 20.1588 18.5605 20.4402C18.8418 20.7215 18.9998 21.103 18.9998 21.5008C18.9998 21.8986 18.8418 22.2802 18.5605 22.5615C18.2792 22.8428 17.8977 23.0008 17.4998 23.0008Z"
+                      fill="#161616" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_6353_380">
+                      <rect width="24" height="24" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+                <span id="counter"></span>
+              </a>
+            </li>
+            <li>
+              <button class="ask-for-support-inUl">
+                Запросить консультацию
+              </button>
+            </li>
+          </ul>
+          <button class="ask-for-support">Запросить консультацию</button>
+          <svg class="burger" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="44" height="44" rx="8" fill="#F4F5F8" />
+            <g clip-path="url(#clip0_6501_4664)">
+              <path d="M13 14H31V16H13V14ZM13 21H31V23H13V21ZM13 28H31V30H13V28Z" fill="#161616" />
+            </g>
+            <defs>
+              <clipPath id="clip0_6501_4664">
+                <rect width="24" height="24" fill="white" transform="translate(10 10)" />
+              </clipPath>
+            </defs>
+          </svg>
+        </div>
+      </header>
+      <div class="section-1">
+        <div class="glide">
+          <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides"></ul>
+          </div>
+          <div class="more-and-arrows-btn">
+            <button class="more">Подробнее</button>
+            <div class="glide__arrows" data-glide-el="controls">
+              <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <g clip-path="url(#clip0_6353_3653)">
+                    <path
+                      d="M10.828 12.0007L15.778 16.9507L14.364 18.3647L8 12.0007L14.364 5.63672L15.778 7.05072L10.828 12.0007Z"
+                      fill="#161616" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_6353_3653">
+                      <rect width="24" height="24" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </button>
+              <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <g clip-path="url(#clip0_6353_3648)">
+                    <path
+                      d="M13.1717 12.0007L8.22168 7.05072L9.63568 5.63672L15.9997 12.0007L9.63568 18.3647L8.22168 16.9507L13.1717 12.0007Z"
+                      fill="#161616" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_6353_3648">
+                      <rect width="24" height="24" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </button>
             </div>
           </div>
-          <div class="header-bottom-block">
-            <ul class="menu-list">
-              <li><button><a href="./Catalog.html">Каталог</a></button></li>
-              <li><button><a href="#">Наше производство</a></button></li>
-              <li><button><a href="#">О компании</a></button></li>
-              <li><button><a href="#">Контакты</a></button></li>
-            </ul>
-            <ul>
-              <li>
-                <button class="cart-search-btn searching follow-cursor non-clickable">
-                  <form class="searching-form">
-                    <div class="searching-input">
-                      <input placeholder="" type="text" id="search" name="search" class="input-for-seacrh" />
-                      <label for="search" class="label-for-search">...</label>
-                    </div>
-                  </form>
-                  <svg class="search" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <g id="Search" clip-path="url(#clip0_6353_385)">
-                      <path id="Vector"
-                        d="M18.031 16.617L22.314 20.899L20.899 22.314L16.617 18.031C15.0237 19.3082 13.042 20.0029 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2C15.968 2 20 6.032 20 11C20.0029 13.042 19.3082 15.0237 18.031 16.617ZM16.025 15.875C17.2941 14.5699 18.0029 12.8204 18 11C18 7.132 14.867 4 11 4C7.132 4 4 7.132 4 11C4 14.867 7.132 18 11 18C12.8204 18.0029 14.5699 17.2941 15.875 16.025L16.025 15.875Z"
-                        fill="#161616" />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_6353_385">
-                        <rect width="24" height="24" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                </button>
-              </li>
-              <li>
-                <a href='./Cart.html' id="cart" class="cart-search-btn">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g id="Cart" clip-path="url(#clip0_6353_380)">
-                      <path id="Vector"
-                        d="M3.99984 6.41481L0.756836 3.17281L2.17184 1.75781L5.41384 5.00081H20.6558C20.8117 5.0008 20.9654 5.03723 21.1047 5.10718C21.244 5.17713 21.365 5.27868 21.4581 5.40371C21.5511 5.52874 21.6137 5.6738 21.6407 5.8273C21.6678 5.9808 21.6586 6.1385 21.6138 6.28781L19.2138 14.2878C19.1521 14.4939 19.0255 14.6746 18.853 14.803C18.6804 14.9315 18.471 15.0008 18.2558 15.0008H5.99984V17.0008H16.9998V19.0008H4.99984C4.73462 19.0008 4.48027 18.8955 4.29273 18.7079C4.10519 18.5204 3.99984 18.266 3.99984 18.0008V6.41481ZM5.99984 7.00081V13.0008H17.5118L19.3118 7.00081H5.99984ZM5.49984 23.0008C5.10201 23.0008 4.72048 22.8428 4.43918 22.5615C4.15787 22.2802 3.99984 21.8986 3.99984 21.5008C3.99984 21.103 4.15787 20.7215 4.43918 20.4402C4.72048 20.1588 5.10201 20.0008 5.49984 20.0008C5.89766 20.0008 6.27919 20.1588 6.5605 20.4402C6.8418 20.7215 6.99984 21.103 6.99984 21.5008C6.99984 21.8986 6.8418 22.2802 6.5605 22.5615C6.27919 22.8428 5.89766 23.0008 5.49984 23.0008ZM17.4998 23.0008C17.102 23.0008 16.7205 22.8428 16.4392 22.5615C16.1579 22.2802 15.9998 21.8986 15.9998 21.5008C15.9998 21.103 16.1579 20.7215 16.4392 20.4402C16.7205 20.1588 17.102 20.0008 17.4998 20.0008C17.8977 20.0008 18.2792 20.1588 18.5605 20.4402C18.8418 20.7215 18.9998 21.103 18.9998 21.5008C18.9998 21.8986 18.8418 22.2802 18.5605 22.5615C18.2792 22.8428 17.8977 23.0008 17.4998 23.0008Z"
-                        fill="#161616" />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_6353_380">
-                        <rect width="24" height="24" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                  <span id="counter"></span>
-                </a>
-              </li>
-              <li>
-                <button class="ask-for-support-inUl">
-                  Запросить консультацию
-                </button>
-              </li>
-            </ul>
-            <button class="ask-for-support">Запросить консультацию</button>
-            <svg class="burger" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="44" height="44" rx="8" fill="#F4F5F8" />
-              <g clip-path="url(#clip0_6501_4664)">
-                <path d="M13 14H31V16H13V14ZM13 21H31V23H13V21ZM13 28H31V30H13V28Z" fill="#161616" />
+        </div>
+      </div>
+      <div class="section-2">
+        <div class="text-top">
+          <h2 class="main-text">
+            Сепараторы, конвейеры, шнековые транспортеры и линии для
+            переработки
+          </h2>
+          <h3 class="discription">
+            Мы на связи всегда и разберемся с любыми вопросами возникшими во
+            время эксплуатации нашего оборудования.
+          </h3>
+        </div>
+        <div class="product-types-container">
+          <div class="product-types-wrap">
+            <a href="#" class="product-card">
+              <h3 class="name-of-type">Станки для разделки кабеля</h3>
+              <img src="./img/machine.png" alt="stanok" />
+            </a>
+            <a href="#" class="product-card">
+              <h3 class="name-of-type">Сепараторы</h3>
+              <img src="./img/separetor.png" alt="separator" />
+            </a>
+            <a href="#" class="product-card">
+              <h3 class="name-of-type">
+                Станок для разделки теплообменников
+              </h3>
+              <img src="./img/machine-for-warmexchanges.png" alt="machine-for-warm" />
+            </a>
+          </div>
+          <div class="product-types-wrap">
+            <a href="#" class="product-card">
+              <h3 class="name-of-type">Разделка радиаторов</h3>
+              <img src="./img/for-radiators.png" alt="radiator" />
+            </a>
+            <a href="#" class="product-card">
+              <h3 class="name-of-type">Запасные части</h3>
+              <img src="./img/parts.png" alt="parts" />
+            </a>
+            <a href="#" class="product-card">
+              <h3 class="name-of-type">Другое</h3>
+              <img src="./img/other.png" alt="others" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="section-3">
+        <h2 class="main-text">
+          Ваша рост – наш интерес, ведь тогда нам будет к чему стремиться
+        </h2>
+        <div class="bonus-blocks">
+          <div class="block">
+            <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="0.5" y="0.5" width="59" height="59" rx="7.5" stroke="#E9E9E9" />
+              <g clip-path="url(#clip0_108_3200)">
+                <path
+                  d="M37.938 26.0009H39C39.5304 26.0009 40.0391 26.2116 40.4142 26.5867C40.7893 26.9617 41 27.4704 41 28.0009V32.0009C41 32.5313 40.7893 33.04 40.4142 33.4151C40.0391 33.7902 39.5304 34.0009 39 34.0009H37.938C37.6942 35.9342 36.7533 37.7121 35.2917 39.0009C33.8302 40.2897 31.9486 41.0008 30 41.0009V39.0009C31.5913 39.0009 33.1174 38.3687 34.2426 37.2435C35.3679 36.1183 36 34.5922 36 33.0009V27.0009C36 25.4096 35.3679 23.8835 34.2426 22.7582C33.1174 21.633 31.5913 21.0009 30 21.0009C28.4087 21.0009 26.8826 21.633 25.7574 22.7582C24.6321 23.8835 24 25.4096 24 27.0009V34.0009H21C20.4696 34.0009 19.9609 33.7902 19.5858 33.4151C19.2107 33.04 19 32.5313 19 32.0009V28.0009C19 27.4704 19.2107 26.9617 19.5858 26.5867C19.9609 26.2116 20.4696 26.0009 21 26.0009H22.062C22.306 24.0678 23.2471 22.2901 24.7086 21.0016C26.1701 19.713 28.0516 19.002 30 19.002C31.9484 19.002 33.8299 19.713 35.2914 21.0016C36.7529 22.2901 37.694 24.0678 37.938 26.0009ZM21 28.0009V32.0009H22V28.0009H21ZM38 28.0009V32.0009H39V28.0009H38ZM25.76 33.7859L26.82 32.0899C27.7731 32.6869 28.8754 33.0027 30 33.0009C31.1246 33.0027 32.2269 32.6869 33.18 32.0899L34.24 33.7859C32.9693 34.582 31.4995 35.0032 30 35.0009C28.5005 35.0032 27.0307 34.582 25.76 33.7859Z"
+                  fill="#161616" />
               </g>
               <defs>
-                <clipPath id="clip0_6501_4664">
-                  <rect width="24" height="24" fill="white" transform="translate(10 10)" />
+                <clipPath id="clip0_108_3200">
+                  <rect width="24" height="24" fill="white" transform="translate(18 18)" />
                 </clipPath>
               </defs>
             </svg>
-          </div>
-        </header>
-        <div class="section-1">
-          <div class="glide">
-            <div class="glide__track" data-glide-el="track">
-              <ul class="glide__slides"></ul>
-            </div>
-            <div class="more-and-arrows-btn">
-              <button class="more">Подробнее</button>
-              <div class="glide__arrows" data-glide-el="controls">
-                <button
-                  class="glide__arrow glide__arrow--left"
-                  data-glide-dir="<"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                  >
-                    <g clip-path="url(#clip0_6353_3653)">
-                      <path
-                        d="M10.828 12.0007L15.778 16.9507L14.364 18.3647L8 12.0007L14.364 5.63672L15.778 7.05072L10.828 12.0007Z"
-                        fill="#161616"
-                      />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_6353_3653">
-                        <rect width="24" height="24" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                </button>
-                <button
-                  class="glide__arrow glide__arrow--right"
-                  data-glide-dir=">"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                  >
-                    <g clip-path="url(#clip0_6353_3648)">
-                      <path
-                        d="M13.1717 12.0007L8.22168 7.05072L9.63568 5.63672L15.9997 12.0007L9.63568 18.3647L8.22168 16.9507L13.1717 12.0007Z"
-                        fill="#161616"
-                      />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_6353_3648">
-                        <rect width="24" height="24" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="section-2">
-          <div class="text-top">
-            <h2 class="main-text">
-              Сепараторы, конвейеры, шнековые транспортеры и линии для
-              переработки
-            </h2>
-            <h3 class="discription">
-              Мы на связи всегда и разберемся с любыми вопросами возникшими во
-              время эксплуатации нашего оборудования.
-            </h3>
-          </div>
-          <div class="product-types-container">
-            <div class="product-types-wrap">
-              <a href="#" class="product-card">
-                <h3 class="name-of-type">Станки для разделки кабеля</h3>
-                <img src="./img/machine.png" alt="stanok" />
-              </a>
-              <a href="#" class="product-card">
-                <h3 class="name-of-type">Сепараторы</h3>
-                <img src="./img/separetor.png" alt="separator" />
-              </a>
-              <a href="#" class="product-card">
-                <h3 class="name-of-type">
-                  Станок для разделки теплообменников
-                </h3>
-                <img
-                  src="./img/machine-for-warmexchanges.png"
-                  alt="machine-for-warm"
-                />
-              </a>
-            </div>
-            <div class="product-types-wrap">
-              <a href="#" class="product-card">
-                <h3 class="name-of-type">Разделка радиаторов</h3>
-                <img src="./img/for-radiators.png" alt="radiator" />
-              </a>
-              <a href="#" class="product-card">
-                <h3 class="name-of-type">Запасные части</h3>
-                <img src="./img/parts.png" alt="parts" />
-              </a>
-              <a href="#" class="product-card">
-                <h3 class="name-of-type">Другое</h3>
-                <img src="./img/other.png" alt="others" />
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="section-3">
-          <h2 class="main-text">
-            Ваша рост – наш интерес, ведь тогда нам будет к чему стремиться
-          </h2>
-          <div class="bonus-blocks">
-            <div class="block">
-              <svg
-                width="60"
-                height="60"
-                viewBox="0 0 60 60"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect
-                  x="0.5"
-                  y="0.5"
-                  width="59"
-                  height="59"
-                  rx="7.5"
-                  stroke="#E9E9E9"
-                />
-                <g clip-path="url(#clip0_108_3200)">
-                  <path
-                    d="M37.938 26.0009H39C39.5304 26.0009 40.0391 26.2116 40.4142 26.5867C40.7893 26.9617 41 27.4704 41 28.0009V32.0009C41 32.5313 40.7893 33.04 40.4142 33.4151C40.0391 33.7902 39.5304 34.0009 39 34.0009H37.938C37.6942 35.9342 36.7533 37.7121 35.2917 39.0009C33.8302 40.2897 31.9486 41.0008 30 41.0009V39.0009C31.5913 39.0009 33.1174 38.3687 34.2426 37.2435C35.3679 36.1183 36 34.5922 36 33.0009V27.0009C36 25.4096 35.3679 23.8835 34.2426 22.7582C33.1174 21.633 31.5913 21.0009 30 21.0009C28.4087 21.0009 26.8826 21.633 25.7574 22.7582C24.6321 23.8835 24 25.4096 24 27.0009V34.0009H21C20.4696 34.0009 19.9609 33.7902 19.5858 33.4151C19.2107 33.04 19 32.5313 19 32.0009V28.0009C19 27.4704 19.2107 26.9617 19.5858 26.5867C19.9609 26.2116 20.4696 26.0009 21 26.0009H22.062C22.306 24.0678 23.2471 22.2901 24.7086 21.0016C26.1701 19.713 28.0516 19.002 30 19.002C31.9484 19.002 33.8299 19.713 35.2914 21.0016C36.7529 22.2901 37.694 24.0678 37.938 26.0009ZM21 28.0009V32.0009H22V28.0009H21ZM38 28.0009V32.0009H39V28.0009H38ZM25.76 33.7859L26.82 32.0899C27.7731 32.6869 28.8754 33.0027 30 33.0009C31.1246 33.0027 32.2269 32.6869 33.18 32.0899L34.24 33.7859C32.9693 34.582 31.4995 35.0032 30 35.0009C28.5005 35.0032 27.0307 34.582 25.76 33.7859Z"
-                    fill="#161616"
-                  />
-                </g>
-                <defs>
-                  <clipPath id="clip0_108_3200">
-                    <rect
-                      width="24"
-                      height="24"
-                      fill="white"
-                      transform="translate(18 18)"
-                    />
-                  </clipPath>
-                </defs>
-              </svg>
-              <div class="text-in-block">
-                <h2 class="block-name">Всегда на связи</h2>
-                <h3 class="bonus-discription">
-                  Консультируем при покупке и в дальнейшем при эксплуатации
-                  нашего оборудования
-                </h3>
-              </div>
-            </div>
-            <div class="block">
-              <svg
-                width="60"
-                height="60"
-                viewBox="0 0 60 60"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect
-                  x="0.5"
-                  y="0.5"
-                  width="59"
-                  height="59"
-                  rx="7.5"
-                  stroke="#E9E9E9"
-                />
-                <g clip-path="url(#clip0_108_3171)">
-                  <path
-                    d="M25 23V20C25 19.7348 25.1054 19.4804 25.2929 19.2929C25.4804 19.1054 25.7348 19 26 19H34C34.2652 19 34.5196 19.1054 34.7071 19.2929C34.8946 19.4804 35 19.7348 35 20V23H39C39.2652 23 39.5196 23.1054 39.7071 23.2929C39.8946 23.4804 40 23.7348 40 24V38C40 38.2652 39.8946 38.5196 39.7071 38.7071C39.5196 38.8946 39.2652 39 39 39H21C20.7348 39 20.4804 38.8946 20.2929 38.7071C20.1054 38.5196 20 38.2652 20 38V24C20 23.7348 20.1054 23.4804 20.2929 23.2929C20.4804 23.1054 20.7348 23 21 23H25ZM22 34V37H38V34H22ZM22 32H38V25H22V32ZM27 21V23H33V21H27ZM29 29H31V31H29V29Z"
-                    fill="#161616"
-                  />
-                </g>
-                <defs>
-                  <clipPath id="clip0_108_3171">
-                    <rect
-                      width="24"
-                      height="24"
-                      fill="white"
-                      transform="translate(18 18)"
-                    />
-                  </clipPath>
-                </defs>
-              </svg>
-              <div class="text-in-block">
-                <h2 class="block-name">Опыт в сфере</h2>
-                <h3 class="bonus-discription">
-                  Большой опыт в переработке вторсырья позволяет глубоко изучать
-                  проблемы и находить лучшие решения
-                </h3>
-              </div>
-            </div>
-            <div class="block">
-              <svg
-                width="60"
-                height="60"
-                viewBox="0 0 60 60"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect
-                  x="0.5"
-                  y="0.5"
-                  width="59"
-                  height="59"
-                  rx="7.5"
-                  stroke="#E9E9E9"
-                />
-                <g clip-path="url(#clip0_108_3178)">
-                  <path
-                    d="M30 19L39.5 24.5V35.5L30 41L20.5 35.5V24.5L30 19ZM30 21.311L22.5 25.653V34.347L30 38.689L37.5 34.347V25.653L30 21.311ZM30 34C28.9391 34 27.9217 33.5786 27.1716 32.8284C26.4214 32.0783 26 31.0609 26 30C26 28.9391 26.4214 27.9217 27.1716 27.1716C27.9217 26.4214 28.9391 26 30 26C31.0609 26 32.0783 26.4214 32.8284 27.1716C33.5786 27.9217 34 28.9391 34 30C34 31.0609 33.5786 32.0783 32.8284 32.8284C32.0783 33.5786 31.0609 34 30 34ZM30 32C30.5304 32 31.0391 31.7893 31.4142 31.4142C31.7893 31.0391 32 30.5304 32 30C32 29.4696 31.7893 28.9609 31.4142 28.5858C31.0391 28.2107 30.5304 28 30 28C29.4696 28 28.9609 28.2107 28.5858 28.5858C28.2107 28.9609 28 29.4696 28 30C28 30.5304 28.2107 31.0391 28.5858 31.4142C28.9609 31.7893 29.4696 32 30 32Z"
-                    fill="#161616"
-                  />
-                </g>
-                <defs>
-                  <clipPath id="clip0_108_3178">
-                    <rect
-                      width="24"
-                      height="24"
-                      fill="white"
-                      transform="translate(18 18)"
-                    />
-                  </clipPath>
-                </defs>
-              </svg>
-              <div class="text-in-block">
-                <h2 class="block-name">Наличие запчастей</h2>
-                <h3 class="bonus-discription">
-                  Преимуществом производства своими силами является замена любых
-                  комплектующих и ремонт при поломке
-                </h3>
-              </div>
-            </div>
-            <div class="block">
-              <svg
-                width="60"
-                height="60"
-                viewBox="0 0 60 60"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect
-                  x="0.5"
-                  y="0.5"
-                  width="59"
-                  height="59"
-                  rx="7.5"
-                  stroke="#E9E9E9"
-                />
-                <g clip-path="url(#clip0_108_3207)">
-                  <path
-                    d="M26.965 36C26.8461 36.8343 26.4302 37.5977 25.7937 38.1499C25.1571 38.7022 24.3427 39.0063 23.5 39.0063C22.6573 39.0063 21.8429 38.7022 21.2063 38.1499C20.5698 37.5977 20.1539 36.8343 20.035 36H19V24C19 23.7348 19.1054 23.4804 19.2929 23.2929C19.4804 23.1054 19.7348 23 20 23H34C34.2652 23 34.5196 23.1054 34.7071 23.2929C34.8946 23.4804 35 23.7348 35 24V26H38L41 30.056V36H38.965C38.8461 36.8343 38.4302 37.5977 37.7937 38.1499C37.1571 38.7022 36.3427 39.0063 35.5 39.0063C34.6573 39.0063 33.8429 38.7022 33.2063 38.1499C32.5698 37.5977 32.1539 36.8343 32.035 36H26.965ZM33 25H21V33.05C21.3946 32.6472 21.8806 32.3457 22.4168 32.1711C22.9529 31.9966 23.5233 31.9541 24.0794 32.0474C24.6355 32.1407 25.1608 32.3669 25.6106 32.7069C26.0604 33.0469 26.4215 33.4905 26.663 34H32.337C32.505 33.647 32.73 33.326 33 33.05V25ZM35 31H39V30.715L36.992 28H35V31ZM35.5 37C35.898 37 36.2796 36.8419 36.561 36.5605C36.8424 36.2791 37.0005 35.8975 37.0005 35.4995C37.0005 35.1015 36.8424 34.7199 36.561 34.4385C36.2796 34.1571 35.898 33.999 35.5 33.999C35.102 33.999 34.7204 34.1571 34.439 34.4385C34.1576 34.7199 33.9995 35.1015 33.9995 35.4995C33.9995 35.8975 34.1576 36.2791 34.439 36.5605C34.7204 36.8419 35.102 37 35.5 37ZM25 35.5C25 35.303 24.9612 35.108 24.8858 34.926C24.8104 34.744 24.6999 34.5786 24.5607 34.4393C24.4214 34.3001 24.256 34.1896 24.074 34.1142C23.892 34.0388 23.697 34 23.5 34C23.303 34 23.108 34.0388 22.926 34.1142C22.744 34.1896 22.5786 34.3001 22.4393 34.4393C22.3001 34.5786 22.1896 34.744 22.1142 34.926C22.0388 35.108 22 35.303 22 35.5C22 35.8978 22.158 36.2794 22.4393 36.5607C22.7206 36.842 23.1022 37 23.5 37C23.8978 37 24.2794 36.842 24.5607 36.5607C24.842 36.2794 25 35.8978 25 35.5Z"
-                    fill="#161616"
-                  />
-                </g>
-                <defs>
-                  <clipPath id="clip0_108_3207">
-                    <rect
-                      width="24"
-                      height="24"
-                      fill="white"
-                      transform="translate(18 18)"
-                    />
-                  </clipPath>
-                </defs>
-              </svg>
-              <div class="text-in-block">
-                <h2 class="block-name">Доставка по всей России</h2>
-                <h3 class="bonus-discription">
-                  Отправим товар транспортной компанией или почтовым
-                  отправлением (оплата при получении)
-                </h3>
-              </div>
-            </div>
-            <div class="block">
-              <svg
-                width="60"
-                height="60"
-                viewBox="0 0 60 60"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect
-                  x="0.5"
-                  y="0.5"
-                  width="59"
-                  height="59"
-                  rx="7.5"
-                  stroke="#E9E9E9"
-                />
-                <g clip-path="url(#clip0_108_3185)">
-                  <path
-                    d="M30 40C24.477 40 20 35.523 20 30C20 24.477 24.477 20 30 20C35.523 20 40 24.477 40 30C40 35.523 35.523 40 30 40ZM30 38C32.1217 38 34.1566 37.1571 35.6569 35.6569C37.1571 34.1566 38 32.1217 38 30C38 27.8783 37.1571 25.8434 35.6569 24.3431C34.1566 22.8429 32.1217 22 30 22C27.8783 22 25.8434 22.8429 24.3431 24.3431C22.8429 25.8434 22 27.8783 22 30C22 32.1217 22.8429 34.1566 24.3431 35.6569C25.8434 37.1571 27.8783 38 30 38ZM25 27L28 23.5L31 27H29V31H27V27H25ZM35 33L32 36.5L29 33H31V29H33V33H35Z"
-                    fill="#161616"
-                  />
-                </g>
-                <defs>
-                  <clipPath id="clip0_108_3185">
-                    <rect
-                      width="24"
-                      height="24"
-                      fill="white"
-                      transform="translate(18 18)"
-                    />
-                  </clipPath>
-                </defs>
-              </svg>
-              <div class="text-in-block">
-                <h2 class="block-name">Аренда станков</h2>
-                <h3 class="bonus-discription">
-                  Станки можно брать на временное использование с залогом
-                </h3>
-              </div>
-            </div>
-            <div class="block">
-              <svg
-                width="60"
-                height="60"
-                viewBox="0 0 60 60"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect
-                  x="0.5"
-                  y="0.5"
-                  width="59"
-                  height="59"
-                  rx="7.5"
-                  stroke="#E9E9E9"
-                />
-                <g clip-path="url(#clip0_108_3192)">
-                  <path
-                    d="M35 33.246V40.118C35 40.2064 34.9766 40.2933 34.932 40.3697C34.8875 40.4462 34.8235 40.5094 34.7465 40.5531C34.6696 40.5967 34.5824 40.6191 34.4939 40.618C34.4055 40.6169 34.3189 40.5924 34.243 40.547L30 38.001L25.757 40.547C25.681 40.5925 25.5944 40.617 25.5058 40.618C25.4173 40.6191 25.33 40.5965 25.253 40.5528C25.176 40.5091 25.112 40.4457 25.0676 40.3691C25.0231 40.2925 24.9998 40.2055 25 40.117V33.247C23.7061 32.211 22.766 30.7988 22.3095 29.2055C21.8529 27.6121 21.9026 25.9163 22.4515 24.3524C23.0004 22.7885 24.0216 21.4337 25.3738 20.4752C26.726 19.5168 28.3425 19.002 30 19.002C31.6575 19.002 33.274 19.5168 34.6262 20.4752C35.9784 21.4337 36.9996 22.7885 37.5485 24.3524C38.0974 25.9163 38.1471 27.6121 37.6905 29.2055C37.234 30.7988 36.2939 32.211 35 33.247V33.246ZM27 34.419V37.469L30 35.669L33 37.469V34.419C32.0468 34.8044 31.0282 35.0021 30 35.001C28.9718 35.0021 27.9532 34.8044 27 34.419ZM30 33.001C31.5913 33.001 33.1174 32.3688 34.2426 31.2436C35.3679 30.1184 36 28.5922 36 27.001C36 25.4097 35.3679 23.8835 34.2426 22.7583C33.1174 21.6331 31.5913 21.001 30 21.001C28.4087 21.001 26.8826 21.6331 25.7574 22.7583C24.6321 23.8835 24 25.4097 24 27.001C24 28.5922 24.6321 30.1184 25.7574 31.2436C26.8826 32.3688 28.4087 33.001 30 33.001Z"
-                    fill="#161616"
-                  />
-                </g>
-                <defs>
-                  <clipPath id="clip0_108_3192">
-                    <rect
-                      width="24"
-                      height="24"
-                      fill="white"
-                      transform="translate(18 18)"
-                    />
-                  </clipPath>
-                </defs>
-              </svg>
-              <div class="text-in-block">
-                <h2 class="block-name">Гарантия на всё</h2>
-                <h3 class="bonus-discription">
-                  Предоставляется гарантия сроком до 1 года со дня приобретения
-                  товара
-                </h3>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="section-4">
-          <div class="our-clients-container">
-            <div class="why-we">
-              <h2 class="main-text">Почему именно мы?</h2>
-              <p class="discription">
-                За долгое время работы в этой области у нас более одной тысячи
-                клиентов в базе в том числе и представленные выше. В основном
-                это компании по переработке вторсырья. Мы уже прошли тот путь
-                который вам предстоит пройти после приобретения нашей продукции
-                и лучше подскажем: что вам лучше подойдет, чего надо избегать и
-                как более эффективно использовать то что есть.
-              </p>
-            </div>
-            <div class="our-clients-blocks">
-              <div class="our-client-block iff">
-                <img src="./img/iff-logo.png" alt="iff-logo" />
-              </div>
-              <div class="our-client-block withtxt">
-                <img src="./img/logo-mkm.png" alt="logo-mkm" />
-                <h2 class="company-group">Группа компаний</h2>
-                <h3 class="company-name">МОСКАБЕЛЬМЕТ</h3>
-              </div>
-              <div class="our-client-block stadium">
-                <img src="./img/stadium-logo.png" alt="stadium" />
-              </div>
-              <div class="our-client-block vtm">
-                <img src="./img/Logo-VTM-1-_1_ 2.png" alt="logo-vtm" />
-                <h2 class="company-name">ВторТехМикс</h2>
-              </div>
-              <div class="our-client-block onlytxt">
-                <h2 class="company-name">УМЗ</h2>
-                <h3 class="company-discription">
-                  Урюпинский машиностроительный завод
-                </h3>
-              </div>
-              <div class="our-client-block vtor4ment">
-                <img src="./img/vto4ermet.png" alt="vto4ermet" />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="form">
-          <div class="send-message-container">
-            <div class="send-message-text">
-              <h2 class="main-text">
-                Будем рады ответить на все интересующие вопросы
-              </h2>
-              <h3 class="discription">
-                Оставьте заявку и мы вам вскоре позвоним и проконсультируем по
-                всем интересующим вопросам
+            <div class="text-in-block">
+              <h2 class="block-name">Всегда на связи</h2>
+              <h3 class="bonus-discription">
+                Консультируем при покупке и в дальнейшем при эксплуатации
+                нашего оборудования
               </h3>
             </div>
-            <form
-              class="send-message-form"
-              onsubmit="return checkingForm(event)"
-            >
-              <div class="form-field-wrap">
-                <input
-                  placeholder=""
-                  type="text"
-                  id="name"
-                  name="name"
-                  class="send-message-input"
-                />
-                <label class="send-message-label" for="name">Ваше имя</label>
-              </div>
-              <div class="form-field-wrap phone">
-                <input
-                  placeholder="+ 7 (___) __ __"
-                  max-length="16"
-                  type="tel"
-                  id="number"
-                  name="number"
-                  class="send-message-input"
-                />
-                <label class="send-message-label" for="number"></label>
-              </div>
-              <div class="form-field-wrap">
-                <input
-                  placeholder=""
-                  type="email"
-                  id="email"
-                  name="email"
-                  class="send-message-input"
-                />
-                <label class="send-message-label" for="email"
-                  >E-mail (необязательно)</label
-                >
-              </div>
-              <button type="submit" onclick="showConfeti()">Отправить</button>
-            </form>
+          </div>
+          <div class="block">
+            <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="0.5" y="0.5" width="59" height="59" rx="7.5" stroke="#E9E9E9" />
+              <g clip-path="url(#clip0_108_3171)">
+                <path
+                  d="M25 23V20C25 19.7348 25.1054 19.4804 25.2929 19.2929C25.4804 19.1054 25.7348 19 26 19H34C34.2652 19 34.5196 19.1054 34.7071 19.2929C34.8946 19.4804 35 19.7348 35 20V23H39C39.2652 23 39.5196 23.1054 39.7071 23.2929C39.8946 23.4804 40 23.7348 40 24V38C40 38.2652 39.8946 38.5196 39.7071 38.7071C39.5196 38.8946 39.2652 39 39 39H21C20.7348 39 20.4804 38.8946 20.2929 38.7071C20.1054 38.5196 20 38.2652 20 38V24C20 23.7348 20.1054 23.4804 20.2929 23.2929C20.4804 23.1054 20.7348 23 21 23H25ZM22 34V37H38V34H22ZM22 32H38V25H22V32ZM27 21V23H33V21H27ZM29 29H31V31H29V29Z"
+                  fill="#161616" />
+              </g>
+              <defs>
+                <clipPath id="clip0_108_3171">
+                  <rect width="24" height="24" fill="white" transform="translate(18 18)" />
+                </clipPath>
+              </defs>
+            </svg>
+            <div class="text-in-block">
+              <h2 class="block-name">Опыт в сфере</h2>
+              <h3 class="bonus-discription">
+                Большой опыт в переработке вторсырья позволяет глубоко изучать
+                проблемы и находить лучшие решения
+              </h3>
+            </div>
+          </div>
+          <div class="block">
+            <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="0.5" y="0.5" width="59" height="59" rx="7.5" stroke="#E9E9E9" />
+              <g clip-path="url(#clip0_108_3178)">
+                <path
+                  d="M30 19L39.5 24.5V35.5L30 41L20.5 35.5V24.5L30 19ZM30 21.311L22.5 25.653V34.347L30 38.689L37.5 34.347V25.653L30 21.311ZM30 34C28.9391 34 27.9217 33.5786 27.1716 32.8284C26.4214 32.0783 26 31.0609 26 30C26 28.9391 26.4214 27.9217 27.1716 27.1716C27.9217 26.4214 28.9391 26 30 26C31.0609 26 32.0783 26.4214 32.8284 27.1716C33.5786 27.9217 34 28.9391 34 30C34 31.0609 33.5786 32.0783 32.8284 32.8284C32.0783 33.5786 31.0609 34 30 34ZM30 32C30.5304 32 31.0391 31.7893 31.4142 31.4142C31.7893 31.0391 32 30.5304 32 30C32 29.4696 31.7893 28.9609 31.4142 28.5858C31.0391 28.2107 30.5304 28 30 28C29.4696 28 28.9609 28.2107 28.5858 28.5858C28.2107 28.9609 28 29.4696 28 30C28 30.5304 28.2107 31.0391 28.5858 31.4142C28.9609 31.7893 29.4696 32 30 32Z"
+                  fill="#161616" />
+              </g>
+              <defs>
+                <clipPath id="clip0_108_3178">
+                  <rect width="24" height="24" fill="white" transform="translate(18 18)" />
+                </clipPath>
+              </defs>
+            </svg>
+            <div class="text-in-block">
+              <h2 class="block-name">Наличие запчастей</h2>
+              <h3 class="bonus-discription">
+                Преимуществом производства своими силами является замена любых
+                комплектующих и ремонт при поломке
+              </h3>
+            </div>
+          </div>
+          <div class="block">
+            <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="0.5" y="0.5" width="59" height="59" rx="7.5" stroke="#E9E9E9" />
+              <g clip-path="url(#clip0_108_3207)">
+                <path
+                  d="M26.965 36C26.8461 36.8343 26.4302 37.5977 25.7937 38.1499C25.1571 38.7022 24.3427 39.0063 23.5 39.0063C22.6573 39.0063 21.8429 38.7022 21.2063 38.1499C20.5698 37.5977 20.1539 36.8343 20.035 36H19V24C19 23.7348 19.1054 23.4804 19.2929 23.2929C19.4804 23.1054 19.7348 23 20 23H34C34.2652 23 34.5196 23.1054 34.7071 23.2929C34.8946 23.4804 35 23.7348 35 24V26H38L41 30.056V36H38.965C38.8461 36.8343 38.4302 37.5977 37.7937 38.1499C37.1571 38.7022 36.3427 39.0063 35.5 39.0063C34.6573 39.0063 33.8429 38.7022 33.2063 38.1499C32.5698 37.5977 32.1539 36.8343 32.035 36H26.965ZM33 25H21V33.05C21.3946 32.6472 21.8806 32.3457 22.4168 32.1711C22.9529 31.9966 23.5233 31.9541 24.0794 32.0474C24.6355 32.1407 25.1608 32.3669 25.6106 32.7069C26.0604 33.0469 26.4215 33.4905 26.663 34H32.337C32.505 33.647 32.73 33.326 33 33.05V25ZM35 31H39V30.715L36.992 28H35V31ZM35.5 37C35.898 37 36.2796 36.8419 36.561 36.5605C36.8424 36.2791 37.0005 35.8975 37.0005 35.4995C37.0005 35.1015 36.8424 34.7199 36.561 34.4385C36.2796 34.1571 35.898 33.999 35.5 33.999C35.102 33.999 34.7204 34.1571 34.439 34.4385C34.1576 34.7199 33.9995 35.1015 33.9995 35.4995C33.9995 35.8975 34.1576 36.2791 34.439 36.5605C34.7204 36.8419 35.102 37 35.5 37ZM25 35.5C25 35.303 24.9612 35.108 24.8858 34.926C24.8104 34.744 24.6999 34.5786 24.5607 34.4393C24.4214 34.3001 24.256 34.1896 24.074 34.1142C23.892 34.0388 23.697 34 23.5 34C23.303 34 23.108 34.0388 22.926 34.1142C22.744 34.1896 22.5786 34.3001 22.4393 34.4393C22.3001 34.5786 22.1896 34.744 22.1142 34.926C22.0388 35.108 22 35.303 22 35.5C22 35.8978 22.158 36.2794 22.4393 36.5607C22.7206 36.842 23.1022 37 23.5 37C23.8978 37 24.2794 36.842 24.5607 36.5607C24.842 36.2794 25 35.8978 25 35.5Z"
+                  fill="#161616" />
+              </g>
+              <defs>
+                <clipPath id="clip0_108_3207">
+                  <rect width="24" height="24" fill="white" transform="translate(18 18)" />
+                </clipPath>
+              </defs>
+            </svg>
+            <div class="text-in-block">
+              <h2 class="block-name">Доставка по всей России</h2>
+              <h3 class="bonus-discription">
+                Отправим товар транспортной компанией или почтовым
+                отправлением (оплата при получении)
+              </h3>
+            </div>
+          </div>
+          <div class="block">
+            <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="0.5" y="0.5" width="59" height="59" rx="7.5" stroke="#E9E9E9" />
+              <g clip-path="url(#clip0_108_3185)">
+                <path
+                  d="M30 40C24.477 40 20 35.523 20 30C20 24.477 24.477 20 30 20C35.523 20 40 24.477 40 30C40 35.523 35.523 40 30 40ZM30 38C32.1217 38 34.1566 37.1571 35.6569 35.6569C37.1571 34.1566 38 32.1217 38 30C38 27.8783 37.1571 25.8434 35.6569 24.3431C34.1566 22.8429 32.1217 22 30 22C27.8783 22 25.8434 22.8429 24.3431 24.3431C22.8429 25.8434 22 27.8783 22 30C22 32.1217 22.8429 34.1566 24.3431 35.6569C25.8434 37.1571 27.8783 38 30 38ZM25 27L28 23.5L31 27H29V31H27V27H25ZM35 33L32 36.5L29 33H31V29H33V33H35Z"
+                  fill="#161616" />
+              </g>
+              <defs>
+                <clipPath id="clip0_108_3185">
+                  <rect width="24" height="24" fill="white" transform="translate(18 18)" />
+                </clipPath>
+              </defs>
+            </svg>
+            <div class="text-in-block">
+              <h2 class="block-name">Аренда станков</h2>
+              <h3 class="bonus-discription">
+                Станки можно брать на временное использование с залогом
+              </h3>
+            </div>
+          </div>
+          <div class="block">
+            <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="0.5" y="0.5" width="59" height="59" rx="7.5" stroke="#E9E9E9" />
+              <g clip-path="url(#clip0_108_3192)">
+                <path
+                  d="M35 33.246V40.118C35 40.2064 34.9766 40.2933 34.932 40.3697C34.8875 40.4462 34.8235 40.5094 34.7465 40.5531C34.6696 40.5967 34.5824 40.6191 34.4939 40.618C34.4055 40.6169 34.3189 40.5924 34.243 40.547L30 38.001L25.757 40.547C25.681 40.5925 25.5944 40.617 25.5058 40.618C25.4173 40.6191 25.33 40.5965 25.253 40.5528C25.176 40.5091 25.112 40.4457 25.0676 40.3691C25.0231 40.2925 24.9998 40.2055 25 40.117V33.247C23.7061 32.211 22.766 30.7988 22.3095 29.2055C21.8529 27.6121 21.9026 25.9163 22.4515 24.3524C23.0004 22.7885 24.0216 21.4337 25.3738 20.4752C26.726 19.5168 28.3425 19.002 30 19.002C31.6575 19.002 33.274 19.5168 34.6262 20.4752C35.9784 21.4337 36.9996 22.7885 37.5485 24.3524C38.0974 25.9163 38.1471 27.6121 37.6905 29.2055C37.234 30.7988 36.2939 32.211 35 33.247V33.246ZM27 34.419V37.469L30 35.669L33 37.469V34.419C32.0468 34.8044 31.0282 35.0021 30 35.001C28.9718 35.0021 27.9532 34.8044 27 34.419ZM30 33.001C31.5913 33.001 33.1174 32.3688 34.2426 31.2436C35.3679 30.1184 36 28.5922 36 27.001C36 25.4097 35.3679 23.8835 34.2426 22.7583C33.1174 21.6331 31.5913 21.001 30 21.001C28.4087 21.001 26.8826 21.6331 25.7574 22.7583C24.6321 23.8835 24 25.4097 24 27.001C24 28.5922 24.6321 30.1184 25.7574 31.2436C26.8826 32.3688 28.4087 33.001 30 33.001Z"
+                  fill="#161616" />
+              </g>
+              <defs>
+                <clipPath id="clip0_108_3192">
+                  <rect width="24" height="24" fill="white" transform="translate(18 18)" />
+                </clipPath>
+              </defs>
+            </svg>
+            <div class="text-in-block">
+              <h2 class="block-name">Гарантия на всё</h2>
+              <h3 class="bonus-discription">
+                Предоставляется гарантия сроком до 1 года со дня приобретения
+                товара
+              </h3>
+            </div>
           </div>
         </div>
-        <footer>
-          <div class="logo">
-            <img src="./img/Logo.png" alt="okprom" />
-          </div>
-          <div class="information-container">
-            <div class="left-block-with-info">
-              <h2 class="adress-number-email">
-                Тураевское шоссе дом 17, д. Островцы, Раменский район, МО,
-                Россия
-              </h2>
-              <h3 class="adress-number-email number">+7 (800) 707-31-01</h3>
-              <h4 class="adress-number-email">okoprom@gmail.com</h4>
-              <div class="social-media-btn">
-                <button>Whatsapp</button>
-                <button>Telegram</button>
-              </div>
-              <div class="subscribe-on-our-social">
-                <a href="#">
-                  <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="0.5" y="0.5" width="43" height="43" rx="7.5" stroke="#E9E9E9"/>
-                    <g clip-path="url(#clip0_6475_3570)">
-                    <path d="M22 12C24.717 12 25.056 12.01 26.122 12.06C27.187 12.11 27.912 12.277 28.55 12.525C29.21 12.779 29.766 13.123 30.322 13.678C30.8305 14.1779 31.224 14.7826 31.475 15.45C31.722 16.087 31.89 16.813 31.94 17.878C31.987 18.944 32 19.283 32 22C32 24.717 31.99 25.056 31.94 26.122C31.89 27.187 31.722 27.912 31.475 28.55C31.2247 29.2178 30.8311 29.8226 30.322 30.322C29.822 30.8303 29.2173 31.2238 28.55 31.475C27.913 31.722 27.187 31.89 26.122 31.94C25.056 31.987 24.717 32 22 32C19.283 32 18.944 31.99 17.878 31.94C16.813 31.89 16.088 31.722 15.45 31.475C14.7823 31.2245 14.1775 30.8309 13.678 30.322C13.1694 29.8222 12.7759 29.2175 12.525 28.55C12.277 27.913 12.11 27.187 12.06 26.122C12.013 25.056 12 24.717 12 22C12 19.283 12.01 18.944 12.06 17.878C12.11 16.812 12.277 16.088 12.525 15.45C12.7752 14.7822 13.1688 14.1773 13.678 13.678C14.1777 13.1692 14.7824 12.7757 15.45 12.525C16.088 12.277 16.812 12.11 17.878 12.06C18.944 12.013 19.283 12 22 12ZM22 17C20.6739 17 19.4021 17.5268 18.4645 18.4645C17.5268 19.4021 17 20.6739 17 22C17 23.3261 17.5268 24.5979 18.4645 25.5355C19.4021 26.4732 20.6739 27 22 27C23.3261 27 24.5979 26.4732 25.5355 25.5355C26.4732 24.5979 27 23.3261 27 22C27 20.6739 26.4732 19.4021 25.5355 18.4645C24.5979 17.5268 23.3261 17 22 17ZM28.5 16.75C28.5 16.4185 28.3683 16.1005 28.1339 15.8661C27.8995 15.6317 27.5815 15.5 27.25 15.5C26.9185 15.5 26.6005 15.6317 26.3661 15.8661C26.1317 16.1005 26 16.4185 26 16.75C26 17.0815 26.1317 17.3995 26.3661 17.6339C26.6005 17.8683 26.9185 18 27.25 18C27.5815 18 27.8995 17.8683 28.1339 17.6339C28.3683 17.3995 28.5 17.0815 28.5 16.75ZM22 19C22.7956 19 23.5587 19.3161 24.1213 19.8787C24.6839 20.4413 25 21.2044 25 22C25 22.7956 24.6839 23.5587 24.1213 24.1213C23.5587 24.6839 22.7956 25 22 25C21.2044 25 20.4413 24.6839 19.8787 24.1213C19.3161 23.5587 19 22.7956 19 22C19 21.2044 19.3161 20.4413 19.8787 19.8787C20.4413 19.3161 21.2044 19 22 19Z" fill="#161616"/>
-                    </g>
-                    <defs>
-                    <clipPath id="clip0_6475_3570">
-                    <rect width="24" height="24" fill="white" transform="translate(10 10)"/>
-                    </clipPath>
-                    </defs>
-                    </svg>
-                </a>
-                <a href="#">
-                  <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="0.5" y="0.5" width="43" height="43" rx="7.5" stroke="#E9E9E9"/>
-                    <g clip-path="url(#clip0_0_32)">
-                    <path d="M31.543 16.498C32 18.28 32 22 32 22C32 22 32 25.72 31.543 27.502C31.289 28.487 30.546 29.262 29.605 29.524C27.896 30 22 30 22 30C22 30 16.107 30 14.395 29.524C13.45 29.258 12.708 28.484 12.457 27.502C12 25.72 12 22 12 22C12 22 12 18.28 12.457 16.498C12.711 15.513 13.454 14.738 14.395 14.476C16.107 14 22 14 22 14C22 14 27.896 14 29.605 14.476C30.55 14.742 31.292 15.516 31.543 16.498ZM20 25.5L26 22L20 18.5V25.5Z" fill="#161616"/>
-                    </g>
-                    <defs>
-                    <clipPath id="clip0_0_32">
-                    <rect width="24" height="24" fill="white" transform="translate(10 10)"/>
-                    </clipPath>
-                    </defs>
-                    </svg>
-                  </a>
-                    <h2 class="discription">Подписывайтесь на нас в социальных сетях</h2>
-              </div>
-            </div>
-            <div class="right-block-with-info">
-              <ul>
-                <li class="product-and-info main">Наша продукция</li>
-                <li class="product-and-info">Станки для разделки кабеля</li>
-                <li class="product-and-info">Сепараторы</li>
-                <li class="product-and-info">Станок для разделки теплообменников</li>
-                <li class="product-and-info">Разделка радиаторов</li>
-                <li class="product-and-info">Запасные части</li>
-                <li class="product-and-info">Другое</li>
-              </ul>
-              <ul>
-                <li class="product-and-info main">Информация</li>
-                <li class="product-and-info">Доставка и оплата</li>
-                <li class="product-and-info">Гарантия</li>
-                <li class="product-and-info">Служба контроля качества</li>
-                <li class="product-and-info">Наше производство</li>
-                <li class="product-and-info">О компании</li>
-                <li class="product-and-info">Контакты</li>
-              </ul>
-            </div>
-          </div>
-          <div class="copyright-info">
-            <h3 class="discription">Интернет магазин "Окопром" © 2021 Все права защищены</h3>
-            <h4 class="discription">Политика конфиденциальности</h4>
-          </div>
-        </footer>
       </div>
-    </main>
-    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.0/dist/confetti.browser.min.js"></script>
+      <div class="section-4">
+        <div class="our-clients-container">
+          <div class="why-we">
+            <h2 class="main-text">Почему именно мы?</h2>
+            <p class="discription">
+              За долгое время работы в этой области у нас более одной тысячи
+              клиентов в базе в том числе и представленные выше. В основном
+              это компании по переработке вторсырья. Мы уже прошли тот путь
+              который вам предстоит пройти после приобретения нашей продукции
+              и лучше подскажем: что вам лучше подойдет, чего надо избегать и
+              как более эффективно использовать то что есть.
+            </p>
+          </div>
+          <div class="our-clients-blocks">
+            <div class="our-client-block iff">
+              <img src="./img/iff-logo.png" alt="iff-logo" />
+            </div>
+            <div class="our-client-block withtxt">
+              <img src="./img/logo-mkm.png" alt="logo-mkm" />
+              <h2 class="company-group">Группа компаний</h2>
+              <h3 class="company-name">МОСКАБЕЛЬМЕТ</h3>
+            </div>
+            <div class="our-client-block stadium">
+              <img src="./img/stadium-logo.png" alt="stadium" />
+            </div>
+            <div class="our-client-block vtm">
+              <img src="./img/Logo-VTM-1-_1_ 2.png" alt="logo-vtm" />
+              <h2 class="company-name">ВторТехМикс</h2>
+            </div>
+            <div class="our-client-block onlytxt">
+              <h2 class="company-name">УМЗ</h2>
+              <h3 class="company-discription">
+                Урюпинский машиностроительный завод
+              </h3>
+            </div>
+            <div class="our-client-block vtor4ment">
+              <img src="./img/vto4ermet.png" alt="vto4ermet" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form">
+        <div class="send-message-container">
+          <div class="send-message-text">
+            <h2 class="main-text">
+              Будем рады ответить на все интересующие вопросы
+            </h2>
+            <h3 class="discription">
+              Оставьте заявку и мы вам вскоре позвоним и проконсультируем по
+              всем интересующим вопросам
+            </h3>
+          </div>
+          <form class="send-message-form" onsubmit="return checkingForm(event)">
+            <div class="form-field-wrap">
+              <input placeholder="" type="text" id="name" name="name" class="send-message-input" />
+              <label class="send-message-label" for="name">Ваше имя</label>
+            </div>
+            <div class="form-field-wrap phone">
+              <input placeholder="+ 7 (___) __ __" max-length="16" type="tel" id="number" name="number"
+                class="send-message-input" />
+              <label class="send-message-label" for="number"></label>
+            </div>
+            <div class="form-field-wrap">
+              <input placeholder="" type="email" id="email" name="email" class="send-message-input" />
+              <label class="send-message-label" for="email">E-mail (необязательно)</label>
+            </div>
+            <button type="submit" onclick="showConfeti()">Отправить</button>
+          </form>
+        </div>
+      </div>
+      <footer>
+        <div class="logo">
+          <img src="./img/Logo.png" alt="okprom" />
+        </div>
+        <div class="information-container">
+          <div class="left-block-with-info">
+            <h2 class="adress-number-email">
+              Тураевское шоссе дом 17, д. Островцы, Раменский район, МО,
+              Россия
+            </h2>
+            <h3 class="adress-number-email number">+7 (800) 707-31-01</h3>
+            <h4 class="adress-number-email">okoprom@gmail.com</h4>
+            <div class="social-media-btn">
+              <button>Whatsapp</button>
+              <button>Telegram</button>
+            </div>
+            <div class="subscribe-on-our-social">
+              <a href="#">
+                <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="0.5" y="0.5" width="43" height="43" rx="7.5" stroke="#E9E9E9" />
+                  <g clip-path="url(#clip0_6475_3570)">
+                    <path
+                      d="M22 12C24.717 12 25.056 12.01 26.122 12.06C27.187 12.11 27.912 12.277 28.55 12.525C29.21 12.779 29.766 13.123 30.322 13.678C30.8305 14.1779 31.224 14.7826 31.475 15.45C31.722 16.087 31.89 16.813 31.94 17.878C31.987 18.944 32 19.283 32 22C32 24.717 31.99 25.056 31.94 26.122C31.89 27.187 31.722 27.912 31.475 28.55C31.2247 29.2178 30.8311 29.8226 30.322 30.322C29.822 30.8303 29.2173 31.2238 28.55 31.475C27.913 31.722 27.187 31.89 26.122 31.94C25.056 31.987 24.717 32 22 32C19.283 32 18.944 31.99 17.878 31.94C16.813 31.89 16.088 31.722 15.45 31.475C14.7823 31.2245 14.1775 30.8309 13.678 30.322C13.1694 29.8222 12.7759 29.2175 12.525 28.55C12.277 27.913 12.11 27.187 12.06 26.122C12.013 25.056 12 24.717 12 22C12 19.283 12.01 18.944 12.06 17.878C12.11 16.812 12.277 16.088 12.525 15.45C12.7752 14.7822 13.1688 14.1773 13.678 13.678C14.1777 13.1692 14.7824 12.7757 15.45 12.525C16.088 12.277 16.812 12.11 17.878 12.06C18.944 12.013 19.283 12 22 12ZM22 17C20.6739 17 19.4021 17.5268 18.4645 18.4645C17.5268 19.4021 17 20.6739 17 22C17 23.3261 17.5268 24.5979 18.4645 25.5355C19.4021 26.4732 20.6739 27 22 27C23.3261 27 24.5979 26.4732 25.5355 25.5355C26.4732 24.5979 27 23.3261 27 22C27 20.6739 26.4732 19.4021 25.5355 18.4645C24.5979 17.5268 23.3261 17 22 17ZM28.5 16.75C28.5 16.4185 28.3683 16.1005 28.1339 15.8661C27.8995 15.6317 27.5815 15.5 27.25 15.5C26.9185 15.5 26.6005 15.6317 26.3661 15.8661C26.1317 16.1005 26 16.4185 26 16.75C26 17.0815 26.1317 17.3995 26.3661 17.6339C26.6005 17.8683 26.9185 18 27.25 18C27.5815 18 27.8995 17.8683 28.1339 17.6339C28.3683 17.3995 28.5 17.0815 28.5 16.75ZM22 19C22.7956 19 23.5587 19.3161 24.1213 19.8787C24.6839 20.4413 25 21.2044 25 22C25 22.7956 24.6839 23.5587 24.1213 24.1213C23.5587 24.6839 22.7956 25 22 25C21.2044 25 20.4413 24.6839 19.8787 24.1213C19.3161 23.5587 19 22.7956 19 22C19 21.2044 19.3161 20.4413 19.8787 19.8787C20.4413 19.3161 21.2044 19 22 19Z"
+                      fill="#161616" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_6475_3570">
+                      <rect width="24" height="24" fill="white" transform="translate(10 10)" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </a>
+              <a href="#">
+                <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="0.5" y="0.5" width="43" height="43" rx="7.5" stroke="#E9E9E9" />
+                  <g clip-path="url(#clip0_0_32)">
+                    <path
+                      d="M31.543 16.498C32 18.28 32 22 32 22C32 22 32 25.72 31.543 27.502C31.289 28.487 30.546 29.262 29.605 29.524C27.896 30 22 30 22 30C22 30 16.107 30 14.395 29.524C13.45 29.258 12.708 28.484 12.457 27.502C12 25.72 12 22 12 22C12 22 12 18.28 12.457 16.498C12.711 15.513 13.454 14.738 14.395 14.476C16.107 14 22 14 22 14C22 14 27.896 14 29.605 14.476C30.55 14.742 31.292 15.516 31.543 16.498ZM20 25.5L26 22L20 18.5V25.5Z"
+                      fill="#161616" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_0_32">
+                      <rect width="24" height="24" fill="white" transform="translate(10 10)" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </a>
+              <h2 class="discription">Подписывайтесь на нас в социальных сетях</h2>
+            </div>
+          </div>
+          <div class="right-block-with-info">
+            <ul>
+              <li class="product-and-info main">Наша продукция</li>
+              <li class="product-and-info">Станки для разделки кабеля</li>
+              <li class="product-and-info">Сепараторы</li>
+              <li class="product-and-info">Станок для разделки теплообменников</li>
+              <li class="product-and-info">Разделка радиаторов</li>
+              <li class="product-and-info">Запасные части</li>
+              <li class="product-and-info">Другое</li>
+            </ul>
+            <ul>
+              <li class="product-and-info main">Информация</li>
+              <li class="product-and-info">Доставка и оплата</li>
+              <li class="product-and-info">Гарантия</li>
+              <li class="product-and-info">Служба контроля качества</li>
+              <li class="product-and-info">Наше производство</li>
+              <li class="product-and-info">О компании</li>
+              <li class="product-and-info">Контакты</li>
+            </ul>
+          </div>
+        </div>
+        <div class="copyright-info">
+          <h3 class="discription">Интернет магазин "Окопром" © 2021 Все права защищены</h3>
+          <h4 class="discription">Политика конфиденциальности</h4>
+        </div>
+      </footer>
+    </div>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.0/dist/confetti.browser.min.js"></script>
 
-    <script type="module" src="./js/generateSlides.js"></script>
+  <script type="module" src="./js/generateSlides.js"></script>
 
-    <script type="module" src="./js/main.js"></script>
+  <script>
+    const counter = document.querySelector("#counter");
+    counter.textContent = JSON.parse(localStorage.getItem("cart")).length || 0
+  </script>
 
-    <script src="./js/showSearchingInput.js"></script>
-    <script src="./js/sendMessageForm.js"></script>
-  </body>
+  <script src="./js/showSearchingInput.js"></script>
+  <script src="./js/sendMessageForm.js"></script>
+</body>
+
 </html>
