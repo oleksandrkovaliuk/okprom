@@ -1,39 +1,55 @@
+const storedOurProduct = JSON.parse(localStorage.getItem("cart")) || [];
+
 const plus = document.querySelectorAll(".plus");
 const minus = document.querySelectorAll(".minus");
-const sum = [];
-const finallSum = document.querySelector('.sum');
-let totalSum = 0;
+const finallSum = document.querySelector(".sum");
 
-function updatedSum(){
-  finallSum.textContent = `ИТОГИ: ${totalSum} ₽`;
-}
+// implement count of all total price
 
 plus.forEach((element) => {
-  const closestInput = element
-  .closest(".plus-number")
-  .querySelector(".total-item");
-    const totalPrice = element.closest(".product").querySelector(".total-price");
-    const totalOfPrice = parseFloat(totalPrice.textContent.replace(/[^\d.-]/g, ""));
-    sum.push(totalOfPrice);
-    finallSum.textContent = `ИТОГИ: ${totalSum} ₽`
+  const productItem = element.closest(".product");
+  const productId = productItem.id;
+  const inputValue = element
+    .closest(".plus-number")
+    .querySelector(".total-item");
+  const totalPrice = productItem.querySelector(".total-price");
+
+  const productPrice = storedOurProduct.find(
+    (item) => item.id === Number(productId)
+  ).price;
+
   element.addEventListener("click", () => {
-    const total = totalOfPrice * 2;
-    totalPrice.textContent = `${total} ₽`;
-    sum.push(total);
-    closestInput.value = parseInt(closestInput.value) + 1;
-    totalSum = sum.reduce((sum , currentValue) => sum + currentValue , 0)
-    updatedSum();
+    const count = Number(inputValue.value) + 1;
+    const total = productPrice * count;
+    inputValue.value = count;
+    totalPrice.textContent = total;
+    finallSum.textContent = `Total: ${total} ₽`;
   });
 });
+
 minus.forEach((element) => {
   element.addEventListener("click", () => {
-    const closestInput = element
+    const productItem = element.closest(".product");
+    const productId = productItem.id;
+    const inputValue = element
       .closest(".plus-number")
       .querySelector(".total-item");
-    if (closestInput.value >= 2) {
-      closestInput.value = parseInt(closestInput.value) - 1;
+
+    const totalPrice = productItem.querySelector(".total-price");
+
+    const productPrice = storedOurProduct.find(
+      (item) => item.id === Number(productId)
+    ).price;
+
+    if (inputValue.value >= 2) {
+      inputValue.value = parseInt(inputValue.value) - 1;
     } else {
-      closestInput.value = 1;
+      inputValue.value = 1;
     }
+
+    const total = Math.abs(productPrice - Number(totalPrice.textContent));
+
+    totalPrice.textContent = total;
+    finallSum.textContent = `Total: ${total} ₽`;
   });
 });

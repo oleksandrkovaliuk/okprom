@@ -7,20 +7,20 @@ const counter = document.querySelector("#counter");
 const productBlockWrap = document.querySelector(".product-block-wrap");
 const cart = new Cart();
 const filterCards = new FilterCards(null, 9, ourProduct);
-const localStorageItem = [];
+// const localStorageItem = [];
+
 function bindEventOnBuyBtn(productBuyBtn) {
   productBuyBtn.forEach((btn) => {
     btn.addEventListener("click", () => {
       const dataId = btn.getAttribute("data-id");
-      counter.textContent = cart.countItems;
       btn.setAttribute("disabled", true);
-      const filtered = ourProduct.filter(
-        (item) => item.id === parseInt(dataId, 10)
-      );
-      if (!localStorageItem.some((item) => item.id === filtered[0].id)) {
-        localStorageItem.push(filtered[0]);
-        cart.addItemInCounter(filtered[0]);
-      }
+      const item = ourProduct.find((item) => item.id === Number(dataId));
+      cart.addItem(item);
+      counter.textContent = cart.countItems;
+      // if (!localStorageItem.some((item) => item.id === filtered[0].id)) {
+      //   localStorageItem.push(filtered[0]);
+      //   cart.addItem(filtered[0]);
+      // }
     });
   });
 }

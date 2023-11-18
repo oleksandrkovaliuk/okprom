@@ -64,8 +64,8 @@ function generateMarkupProducts(ourProduct) {
               </li>
             </ul>
             <div class="price">
-              <h3>${element.price}</h3>
-              <a href="#">${element.priceBefore}</a>
+              <h3>${element.price} ${element.currency}</h3>
+              <a href="#">${element.discount} ${element.currency}</a>
           </div>
           <div class="buy">
               <button class="buyBtn" data-id="${element.id}" >Купить</button>
