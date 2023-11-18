@@ -12,7 +12,6 @@ function bindEventOnBuyBtn(productBuyBtn) {
   productBuyBtn.forEach((btn) => {
     btn.addEventListener("click", () => {
       const dataId = btn.getAttribute("data-id");
-      cart.addItemInCounter(dataId);
       counter.textContent = cart.countItems;
       btn.setAttribute("disabled", true);
       const filtered = ourProduct.filter(
@@ -20,8 +19,8 @@ function bindEventOnBuyBtn(productBuyBtn) {
       );
       if (!localStorageItem.some((item) => item.id === filtered[0].id)) {
         localStorageItem.push(filtered[0]);
+        cart.addItemInCounter(filtered[0]);
       }
-      localStorage.setItem("product", JSON.stringify(localStorageItem));
     });
   });
 }

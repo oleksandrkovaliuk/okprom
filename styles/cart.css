@@ -6,6 +6,7 @@ table {
     width:100%;
     background-color:var(--background-gray);
     border-radius:10px;
+    margin-bottom:40px;
 }
 table .product{
     border:1px solid var(--border-or-devider-dark-bg);
@@ -99,4 +100,14 @@ tr .plus-number input {
     letter-spacing: 0.24px;
     padding:2px;
     cursor: pointer;
+}
+.sum{
+    font-family: var(--font-Golos);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0.24px;
+    text-align: right;
+    width:100%;
 }
