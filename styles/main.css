@@ -129,7 +129,13 @@ header .header-bottom-block {
     padding: 0px;
     outline: none;
 }
-
+.header-bottom-block ul li #cart{
+    padding: 10px;
+    background-color: var(--background-gray);
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+}
 .cart-search-btn .search {
     z-index: 4;
     background-color: var(--background-gray);

@@ -19,8 +19,8 @@ for (let item of storedOurProduct) {
               <span class="minus">-</span>
           </div>
       </td>
-      <td class="price"><span>${item.price}</span>$</td>
-      <td class="total-price"><span>${item.price}</span> $</td>
+      <td class="price"><span>${item.price}</span> ₽</td>
+      <td class="total-price"><span>${item.price}</span> ₽</td>
       </tr>`;
 }
 if (containerForSavedProducts) {

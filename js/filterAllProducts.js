@@ -1,7 +1,7 @@
 const filterBtns = document.querySelectorAll(".filter-list button");
 const showMore = document.querySelector(".show-more");
 
-import { filterCards, bindEventOnBuyBtn } from "./catalogMain.js";
+import { filterCards, bindEventOnBuyBtn , checkItemInCart} from "./catalogMain.js";
 import { ourProduct } from "./arrayWithProducts.js";
 import { generateMarkupProducts } from "./markupFunctions.js";
 
@@ -20,6 +20,7 @@ function filterItem(event) {
     generateMarkupProducts(filterCards.getFilteredItems());
 
   bindEventOnBuyBtn(document.querySelectorAll(".buyBtn"));
+  checkItemInCart();
 }
 
 function toggleActiveButtonCls(activeBtn) {
@@ -43,4 +44,5 @@ showMore.addEventListener("click", () => {
     generateMarkupProducts(filterCards.getFilteredItems());
 
   bindEventOnBuyBtn(document.querySelectorAll(".buyBtn"));
+  checkItemInCart();
 });

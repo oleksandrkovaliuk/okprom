@@ -192,7 +192,9 @@ header {
     margin-bottom: 32px;
     padding-inline: 12px;
 }
-
+/* .products-block.sale-guard-press ul{
+    margin-bottom: 52px; 
+} */
 .products-block ul li {
     padding-block: 8px;
     display: flex;
@@ -289,9 +291,9 @@ li .discription-for-product-numbers {
 .products-block.guard-press .article-for-block button.sale {
     display: none;
 }
-.products-block.guard-press ul{
+/* .products-block.guard-press ul{
     margin-bottom:52px;
-}
+} */
 .products-block.hide{
     opacity:0;
     display:none;
