@@ -374,7 +374,7 @@
               всем интересующим вопросам
             </h3>
           </div>
-          <form class="send-message-form" onsubmit="return checkingForm(event)">
+          <form class="send-message-form">
             <div class="form-field-wrap">
               <input placeholder="" type="text" id="name" name="name" class="send-message-input" />
               <label class="send-message-label" for="name">Ваше имя</label>
@@ -388,7 +388,7 @@
               <input placeholder="" type="email" id="email" name="email" class="send-message-input" />
               <label class="send-message-label" for="email">E-mail (необязательно)</label>
             </div>
-            <button type="submit">Отправить</button>
+            <button type="button" id='submit-user-feedback'>Отправить</button>
           </form>
         </div>
       </div>
@@ -473,15 +473,16 @@
   <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.0/dist/confetti.browser.min.js"></script>
 
-  <script type="module" src="./js/generateSlides.js"></script>
+  <script type="module" defer src="./js/generateSlides.js"></script>
+  <script type='module' defer src='./js/validationHelp.js'></script>
+  <script type='module' defer src="./js/sendMessageForm.js"></script>
 
   <script>
     const counter = document.querySelector("#counter");
-    counter.textContent = JSON.parse(localStorage.getItem("cart")).length || 0
+    counter.textContent = JSON.parse(localStorage.getItem("cart"))?.length || 0
   </script>
 
   <script src="./js/showSearchingInput.js"></script>
-  <script src="./js/sendMessageForm.js"></script>
 </body>
 
 </html>

@@ -1,39 +1,42 @@
+import { validateEmail, validateNumber } from "./validationHelp.js";
+
 const userInfo = [];
+const orderForm = document.querySelector("#order-form");
 const numberCart = document.querySelector("#number");
 const emailCart = document.querySelector("#email");
 const inputNameCart = document.querySelector("#name");
 const cityCart = document.querySelector("#city");
-const cartform = document.querySelector(".send-message-form");
-function getAllInfo(event) {
-  event.preventDefault();
-  const data = new FormData(cartform);
-  for (const [fieldCart, fieldValueCart] of data) {
+const submitOrder = document.querySelector("#submit-order");
+
+submitOrder.onclick = () => {
+  const formData = new FormData(orderForm);
+
+  // let allCondition = false;
+
+  for (const [fieldCart, fieldValueCart] of formData) {
     if (fieldCart === "name" && fieldValueCart.length <= 3) {
       inputNameCart.style.borderBottom = "2px solid red";
-      allCondition = false;
+      // allCondition = false;
     } else if (fieldCart === "name" && fieldValueCart.length >= 3) {
       inputNameCart.style.borderBottom = "2px solid var(--text-white)";
     }
 
-    if (fieldCart === "number" && !fieldValueCart.match(validationNumber)) {
+    if (fieldCart === "number" && !validateNumber(fieldValueCart)) {
       numberCart.style.borderBottom = "2px solid red";
-      allCondition = false;
-    } else if (
-      fieldCart === "number" &&
-      fieldValueCart.match(validationNumber)
-    ) {
+      // allCondition = false;
+    } else if (fieldCart === "number" && validateNumber(fieldValueCart)) {
       numberCart.style.borderBottom = "2px solid var(--text-white)";
     }
 
-    if (fieldCart === "email" && !fieldValueCart.match(validationEmail)) {
+    if (fieldCart === "email" && !validateEmail(fieldValueCart)) {
       emailCart.style.borderBottom = "2px solid red";
-      allCondition = false;
-    } else if (fieldCart === "email" && fieldValueCart.match(validationEmail)) {
+      // allCondition = false;
+    } else if (fieldCart === "email" && validateEmail(fieldValueCart)) {
       emailCart.style.borderBottom = "2px solid var(--text-white)";
     }
     if (fieldCart === "city" && fieldValueCart <= 1) {
       cityCart.style.borderBottom = "2px solid red";
-      allCondition = false;
+      // allCondition = false;
     } else if (fieldCart === "city" && fieldValueCart >= 1) {
       cityCart.style.borderBottom = "2px solid var(--text-white)";
     }
@@ -45,4 +48,4 @@ function getAllInfo(event) {
       localStorage.setItem("userOrderInf", JSON.stringify(userInfo));
     }
   }
-}
+};
