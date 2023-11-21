@@ -242,7 +242,7 @@ tr .plus-number input {
     cursor: pointer;
 }
 
-.delivery-methods .check-box:checked+.methods::before {
+.delivery-methods .check-box:checked +.methods::before {
     content: "";
     background-color: var(--background-black);
     border-radius: 50%;

@@ -1,4 +1,5 @@
 const storedOurProduct = JSON.parse(localStorage.getItem("cart")) || [];
+const storedDeliverInfo = JSON.parse(localStorage.getItem("userOrderInfo")) || []; 
 
 const plus = document.querySelectorAll(".plus");
 const minus = document.querySelectorAll(".minus");
@@ -13,13 +14,13 @@ const hashmapProducts = storedOurProduct.reduce(
   {}
 );
 
-function countTottalPrice() {
+ function countTottalPrice() {
   const totalSum = Array.from(allTotalPrice).reduce(
     (acc, current) => acc + Number(current.textContent),
     0
   );
-
   finallSum.textContent = totalSum;
+  return totalSum;
 }
 
 plus.forEach((element) => {
@@ -61,5 +62,7 @@ minus.forEach((element) => {
     }
   });
 });
-
 countTottalPrice();
+
+
+export{countTottalPrice , finallSum};
