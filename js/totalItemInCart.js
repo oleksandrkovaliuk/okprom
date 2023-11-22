@@ -1,11 +1,12 @@
+
+
 const storedOurProduct = JSON.parse(localStorage.getItem("cart")) || [];
-const storedDeliverInfo = JSON.parse(localStorage.getItem("userOrderInfo")) || []; 
+// const storedDeliverInfo = JSON.parse(localStorage.getItem("userOrderInfo")) || []; 
 
 const plus = document.querySelectorAll(".plus");
 const minus = document.querySelectorAll(".minus");
 const finallSum = document.querySelector(".sum span");
 const allTotalPrice = document.querySelectorAll(".total-price span");
-
 const hashmapProducts = storedOurProduct.reduce(
   (acc, current) => ({
     ...acc,
