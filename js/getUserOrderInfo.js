@@ -7,6 +7,7 @@ const emailCart = document.querySelector("#email");
 const inputNameCart = document.querySelector("#name");
 const cityCart = document.querySelector("#city");
 const submitOrder = document.querySelector("#submit-order");
+// delivery selector
 const deliver = document.querySelector("#deliver");
 const courier = document.querySelector("#courier");
 const courierValue = document.querySelector("#courierDelivery");
@@ -14,6 +15,12 @@ const deliveryValue = document.querySelector("#regularDelivery");
 let courierNum = +courierValue.textContent.match(/\b\d+\b/);
 let deliveryNum = +deliveryValue.textContent.match(/\b\d+\b/);
 const deliverySum = document.querySelector(".delivery-sum span");
+const visaCheck = document.querySelector("#visa");
+const payPallCheck = document.querySelector("#paypall");
+const AfterCheck = document.querySelector("#after");
+// const payTypeVisa = document.querySelector('#payTypeVisa');
+// const payTypePayPall = document.querySelector('#payTypePaypall');
+// const payTypeAfter = documetn.querySelector('#payTypeAfter');
 
 submitOrder.onclick = () => {
   const formData = new FormData(orderForm);
@@ -47,13 +54,18 @@ submitOrder.onclick = () => {
     } else if (fieldCart === "city" && fieldValueCart >= 1) {
       cityCart.style.borderBottom = "2px solid var(--text-white)";
     }
+    let pushingSum = `сумма: ${finallSum.textContent}`;
     const userTypeAndValueOfInfo = `${fieldCart}: ${fieldValueCart}`;
-    // console.log(userTypeAndValueOfInfo);
     if (!userInfo.some((item) => item.includes(userTypeAndValueOfInfo))) {
-      if (fieldValueCart.trim().length > 0)
+      if (fieldValueCart.trim().length > 0) {
         userInfo.push(userTypeAndValueOfInfo);
-    }
-    if (fieldValueCart.trim().length > 0) {
+      }
+      if (
+        !userInfo.includes(pushingSum) &&
+        userInfo.some((item) => item.includes(userTypeAndValueOfInfo))
+      ) {
+        userInfo.push(pushingSum);
+      }
       localStorage.setItem("userOrderInf", JSON.stringify(userInfo));
     }
   }
@@ -68,30 +80,6 @@ deliver.addEventListener("change", () => {
   if (deliver.checked) {
     finallSum.textContent = countTottalPrice() + 275;
     deliverySum.textContent = deliveryNum;
-    let UpdatedStorage = JSON.parse(localStorage.getItem("userOrderInf")) || [];
-    let pushingSum = `сумма: ${finallSum.textContent}`;
-    // let UpdatedStorageWithSum = UpdatedStorage.concat(pushingSum);
-let found = false;
-    for(let i = 0 ; i < UpdatedStorage.length; i++ ){
-      if(UpdatedStorage[i].startsWith(pushingSum)){
-        UpdatedStorage[i] = pushingSum;
-        found = true;
-        break;
-      }
-    }
-    if(!found){
-      UpdatedStorage.push(pushingSum)
-      localStorage.setItem(
-        "userOrderInf",
-        JSON.stringify(UpdatedStorage)
-      )
-    }
-    // if (!UpdatedStorage.includes(pushingSum) && UpdatedStorage.length > 0) {
-    //   localStorage.setItem(
-    //     "userOrderInf",
-    //     JSON.stringify(UpdatedStorageWithSum)
-    //   );
-    // }
   } else {
     finallSum.textContent = countTottalPrice();
     deliverySum.textContent = 0;
@@ -101,6 +89,7 @@ let found = false;
     deliver.checked = false;
   }
 });
+
 courier.addEventListener("change", () => {
   if (deliver.checked) {
     alert("Выберите только один метод доставки");
@@ -110,16 +99,6 @@ courier.addEventListener("change", () => {
   if (courier.checked) {
     finallSum.textContent = countTottalPrice() + 400;
     deliverySum.textContent = courierNum;
-    let UpdatedStorage = JSON.parse(localStorage.getItem("userOrderInf")) || [];
-    let pushingSum = `сумма: ${finallSum.textContent}`;
-    let UpdatedStorageWithSum = UpdatedStorage.concat(pushingSum);
-
-    if (!UpdatedStorage.includes(pushingSum) && UpdatedStorage.length > 0) {
-      localStorage.setItem(
-        "userOrderInf",
-        JSON.stringify(UpdatedStorageWithSum)
-      );
-    }
   } else {
     finallSum.textContent = countTottalPrice();
     deliverySum.textContent = 0;
@@ -129,5 +108,34 @@ courier.addEventListener("change", () => {
     courier.checked = false;
   }
 });
-
+payPallCheck.addEventListener("change", () => {
+  if (visaCheck.checked && payPallCheck.checked) {
+    alert("выберите один метод оплаты")
+    payPallCheck.checked = false;
+  }
+  if(AfterCheck.checked && payPallCheck.checked){
+    alert("выберите один метод оплаты")
+    payPallCheck.checked = false;
+  }
+});
+AfterCheck.addEventListener("change" , () => {
+  if(payPallCheck.checked && AfterCheck.checked){
+    alert("выберите один метод оплаты")
+    AfterCheck.checked = false;
+  }
+  if(visaCheck.checked && AfterCheck.checked){
+    alert("выберите один метод оплаты")
+    AfterCheck.checked = false;
+  }
+})
+visaCheck.addEventListener("change" , () => {
+  if(payPallCheck.checked && visaCheck.checked){
+    alert("выберите один метод оплаты")
+    visaCheck.checked = false;
+  }
+  if(AfterCheck.checked && visaCheck.checked){
+    alert("выберите один метод оплаты")
+    visaCheck.checked = false;
+  }
+})
 countTottalPrice();
