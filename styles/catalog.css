@@ -56,12 +56,18 @@ header {
     height:24px;
 }
 .filter-and-product-blocks .left-filter-list {
-    list-style: none;
-    max-width: 274px;
+    top: 20px;
     width: 100%;
+    z-index:100;
+    max-width: 274px;
+    list-style: none;
     position: sticky;
-    top:20px;
     transition: transform 0.5s ease-in;
+    transform: translateX(0);
+}
+
+.filter-and-product-blocks .left-filter-list.active {
+    transform: translateX(40px);
 }
 
 .left-filter-list .filter-list button {
@@ -333,9 +339,6 @@ li .discription-for-product-numbers {
     .filter-and-product-blocks .left-filter-list{
         position:fixed;
         transform: translateX(-120%);
-        z-index:100;
-        top:20px;
-        transition: transform 0.4s ease-in-out;
     }
     .filter-and-product-blocks .product-block-wrap{
         justify-content: center;

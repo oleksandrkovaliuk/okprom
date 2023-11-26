@@ -25,6 +25,10 @@ img {
     max-width: 100%;
 }
 
+html.active {
+    overflow: hidden;
+}
+
 .page-width {
     max-width: 1280px;
     margin: auto;
@@ -32,23 +36,25 @@ img {
 
 /* mobile menu */
  .mobile-menu-wrap {
-    max-width: 320px;
     max-height:568px;
     background-color: var(--text-white);
     padding: 24px 16px;
     position: fixed;
     top: 80px;
-    right: 0;
+    right: 16px;
+    left: 16px;
     bottom:0;
     transform: translateX(100%);
     transition: transform 0.3s ease-in;
     z-index: 10;
     border-radius: 8px;
 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
 }
-.mobile-menu-wrap img{
-    margin-bottom:28px;
-}
+
 .mobile-menu-wrap .close-btn {
     padding: 10px 10px 7px;
     border: unset;
@@ -75,9 +81,6 @@ ul .page-list {
     line-height: 16px;
     text-decoration: none;
 }
-ul .page-list:last-child{
-    margin-bottom:132px;
-}
 .mobile-menu-wrap .ask-for-support{
     border:unset;
     padding:14px 20px;
@@ -97,10 +100,12 @@ ul .page-list:last-child{
     opacity: 0.8;
     transform: translateX(100%);
     transition: transform 0.4s ease-in-out;
-    visibility: hidden;
 }
 .blur-background-black{
     background-color: var(--background-black); 
+}
+.blur-background.active {
+    transform: translateX(0);
 }
 .main-text {
     font-family: var(--font-Golos);
