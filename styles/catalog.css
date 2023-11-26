@@ -326,7 +326,7 @@ li .discription-for-product-numbers {
 }
 /* section 2 */
 
-@media(max-width:500px){
+@media(max-width:410px){
     .filter-and-product-blocks .filter-btn{
         display:block;
     }

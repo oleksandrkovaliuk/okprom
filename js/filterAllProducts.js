@@ -55,9 +55,12 @@ let isClosed = false;
 
 function updateFilterButton() {
   const OffsetY = window.pageYOffset;
-if(mobileFilterBtn && window.innerWidth < 500){
-const filterBtnsContainer = document.querySelector('.left-filter-list');
+  const filterBtnsContainer = document.querySelector('.left-filter-list');
+  const productsContainer = document.querySelector('.right-products-blocks-container');
+  const blockHeigh = productsContainer.getBoundingClientRect().height;
+  console.log(blockHeigh);
 const background = document.querySelector('.blur-background');
+if(mobileFilterBtn && window.innerWidth < 410){
 if (OffsetY < 380 || OffsetY > 4600) {
   mobileFilterBtn.style.pointerEvents = "none";
   mobileFilterBtn.innerHTML = `<svg class="filter-icon" version="1.0" xmlns="http://www.w3.org/2000/svg"
@@ -159,6 +162,9 @@ mobileFilterBtn.addEventListener("click", () => {
   isClosed = !isClosed;
 });
 }
+if(window.innerWidth > 410){
+filterBtnsContainer.style.transform = "translateX(0)";
+}
 }
 updateFilterButton();
-window.addEventListener('scroll' , updateFilterButton);
+window.addEventListener('scroll' , updateFilterButton)

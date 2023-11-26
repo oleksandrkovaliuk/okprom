@@ -62,6 +62,10 @@ img {
 }
 
 ul .page-list {
+    padding-block:16px;
+    border-bottom:1px solid #E9E9E9;
+}
+.page-list a {
     color: var(--text-black);
 
     font-family: var(--font-Golos);
@@ -69,8 +73,7 @@ ul .page-list {
     font-style: normal;
     font-weight: 400;
     line-height: 16px;
-    padding-block:16px;
-    border-bottom:1px solid #E9E9E9;
+    text-decoration: none;
 }
 ul .page-list:last-child{
     margin-bottom:132px;
