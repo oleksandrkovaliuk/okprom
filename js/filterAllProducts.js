@@ -61,9 +61,11 @@ mobileFilterBtn.addEventListener("click", () => {
     html.classList.remove('active');
     background.classList.remove("active");
     filterBtnsContainer.classList.remove("active");
+    mobileFilterBtn.classList.remove("active");
   } else {
     html.classList.add('active');
     background.classList.add("active");
     filterBtnsContainer.classList.add("active");
+    mobileFilterBtn.classList.add("active");
   }
 });

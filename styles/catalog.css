@@ -51,12 +51,21 @@ header {
     background-color: transparent;
     z-index:9;
 }
-.filter-btn .filter-icon , .filter-btn .filter-icon.close{
+.filter-btn .filter-icon-close , .filter-btn .filter-icon-open{
     width:24px;
     height:24px;
 }
+.filter-btn .filter-icon-close{
+    display:none;
+}
+.filter-btn.active .filter-icon-open{
+    display:none;
+}
+.filter-btn.active .filter-icon-close{
+display:block;
+}
 .filter-and-product-blocks .left-filter-list {
-    top: 20px;
+    top: 25%;
     width: 100%;
     z-index:100;
     max-width: 274px;

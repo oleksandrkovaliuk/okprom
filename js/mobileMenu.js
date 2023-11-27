@@ -8,6 +8,6 @@ blurManuBg.style.visibility = "visible";
 blurManuBg.style.transform = "translateX(0)";
 })
 closeBtnMenu.addEventListener('click' , () => {
-  mobileMenu.style.transform = "translateX(100%)"
-blurManuBg.style.transform = "translateX(100%)";
+  mobileMenu.style.transform = "translateX(120%)"
+blurManuBg.style.transform = "translateX(120%)";
 })
