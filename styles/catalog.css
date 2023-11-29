@@ -14,8 +14,22 @@ header {
 /* section 2 */
 .section-2 {
     margin-bottom:120px;
+    position:relative;
+    overflow: scroll;
 }
-
+.section-2 .move-up{
+    position: fixed;
+    bottom: 20px;
+    width: 35px;
+    height: 35px;
+    right: 12%;
+    display:none;
+    background:unset;
+    border:unset;
+}
+.section-2 .move-up.active{
+    display:block;
+}
 .section-2 .top-text {
     padding-inline: 40px;
     display: flex;

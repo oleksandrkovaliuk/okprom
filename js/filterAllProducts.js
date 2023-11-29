@@ -1,6 +1,7 @@
 const filterBtns = document.querySelectorAll(".filter-list button");
 const showMore = document.querySelector(".show-more");
-
+const moveUp = document.querySelector(".move-up");
+const productWrap = document.querySelector('.section-2');
 import {
   filterCards,
   bindEventOnBuyBtn,
@@ -38,11 +39,25 @@ function toggleActiveButtonCls(activeBtn) {
 
 showMore.addEventListener("click", () => {
   showMore.classList.toggle("active");
-
-  if (showMore.classList.contains("active")) {
+  console.log("click");
+  if (!showMore.classList.contains("active")) {
     filterCards.setUpLimit(9);
+    console.log("setUpLimit");
+    moveUp.classList.remove("active");
+    const infoH = productWrap.getBoundingClientRect().height;
+    if(window.innerHeight > infoH && window.innerHeight < infoH){
+      moveUp.classList.remove("active");
+    }
   } else {
     filterCards.setUpLimit(ourProduct.length);
+    moveUp.classList.add("active");
+    moveUp.addEventListener("click", () => {
+      const info = productWrap.getBoundingClientRect().top;
+      window.scrollTo({
+        top: window.scrollY + info,
+        behavior: "smooth",
+      });
+    });
   }
   document.querySelector(".product-block-wrap").innerHTML =
     generateMarkupProducts(filterCards.getFilteredItems());
@@ -50,20 +65,19 @@ showMore.addEventListener("click", () => {
   bindEventOnBuyBtn(document.querySelectorAll(".buyBtn"));
   checkItemInCart();
 });
-
-const html = document.querySelector('html');
+const html = document.querySelector("html");
 const mobileFilterBtn = document.querySelector(".filter-btn");
 const background = document.querySelector(".blur-background");
 const filterBtnsContainer = document.querySelector(".left-filter-list");
 
 mobileFilterBtn.addEventListener("click", () => {
   if (filterBtnsContainer.classList.contains("active")) {
-    html.classList.remove('active');
+    html.classList.remove("active");
     background.classList.remove("active");
     filterBtnsContainer.classList.remove("active");
     mobileFilterBtn.classList.remove("active");
   } else {
-    html.classList.add('active');
+    html.classList.add("active");
     background.classList.add("active");
     filterBtnsContainer.classList.add("active");
     mobileFilterBtn.classList.add("active");
