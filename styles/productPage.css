@@ -1,0 +1,143 @@
+.main-product {
+  padding-inline: 40px;
+  margin-bottom: 120px;
+}
+.main-product .main-product-wrap {
+  padding-block: 16px 40px;
+  border-radius: 16px;
+  background-color: var(--background-gray);
+}
+.main-product-wrap .img-and-info-wrap {
+  display: flex;
+  padding-inline: 40px 16px;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+.img-and-info-wrap .card-left-block {
+  padding-bottom: 32px;
+  border-bottom: 1px solid #e9e9e9;
+  max-width: 552px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.card-left-block .main-text {
+  color: var(--text-black);
+  margin-bottom: 32px;
+}
+
+.card-left-block ul {
+  list-style: none;
+  margin-bottom: 88px;
+  max-width: 451px;
+  margin-right: auto;
+  width: 100%;
+}
+
+.card-left-block ul li {
+  display: flex;
+  justify-content: space-between;
+  padding-block: 12px;
+  border-bottom: 1px solid #e9e9e9;
+}
+
+.card-left-block ul li .discription-for-product,
+.card-left-block ul li .discription-for-product-numbers {
+  color: var(--text-gray-dark-bg);
+
+  font-family: var(--font-Golos);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.card-left-block .price {
+  color: var(--text-black);
+
+  font-feature-settings: "liga" off;
+  font-family: var(--font-Golos);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0.24px;
+}
+
+.img-and-info-wrap .card-left-img {
+  flex-grow: 1;
+  position: relative;
+}
+
+.card-left-img img {
+  width: 100%;
+  border-radius: 12px;
+}
+.main-product-wrap .numbers-and-help {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 40px;
+  max-width: 881px;
+}
+.numbers-and-help .more-info-btn {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.more-info-btn button {
+  padding: 12px 20px;
+  color: var(--text-white);
+  font-family: var(--font-Golos);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  background-color: var(--background-black);
+  border: unset;
+  border-radius: 8px;
+}
+.more-info-btn .add-to-cart {
+  color: var(--text-black);
+  background-color: transparent;
+  border: 1px solid var(--text-black);
+}
+.add-to-cart:disabled{
+    pointer-events: none;
+    cursor: not-allowed;
+    background-color:var(--background-black);
+}
+.connect-with-support .connect {
+  color: var(--text-gray-light-bg);
+  font-family: var(--font-Golos);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+.connect-with-support .numbers-for-connect {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+.numbers-for-connect span {
+  color: var(--text-black);
+
+  font-family: var(--font-Golos);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+.numbers-for-connect .left-number {
+  position: relative;
+}
+.numbers-for-connect .left-number::after {
+  content: "";
+  position: absolute;
+  right: -12px;
+  top: 25%;
+  height: 12px;
+  width: 1px;
+  background-color: #e9e9e9;
+}

@@ -38,6 +38,7 @@ function generateMarkupProducts(ourProduct) {
   let allMarkUp = "";
   ourProduct.forEach((element) => {
     allMarkUp += `<div class="products-block ${element.type}">
+          <a href="./productPage.html?productId=${element.id}">
           <div class="img-block">
               <img src="${element.img}">
               <div class="article-for-block">
@@ -45,7 +46,8 @@ function generateMarkupProducts(ourProduct) {
                   <button class="type">Броня</button>
                   <button class="press">Пресс</button>
               </div>
-          </div>
+              </div>
+          </a>
           <h2 class="name-of-the-product">${element.name}</h2>
           <ul>
               <li>
@@ -75,24 +77,24 @@ function generateMarkupProducts(ourProduct) {
   return allMarkUp;
 }
 // generate product in cart
-function generateProductInCart(ourProduct){
-  let cartMarkUp = '';
+// function generateProductInCart(ourProduct){
+//   let cartMarkUp = '';
 
-  ourProduct.forEach((element) => {
-    cartMarkUp += `<tr class="product">
-    <td class="img"><img src="${element.img}"></img></td>
-    <td>${element.name}</td>
-    <td class="id">${element.id}</td>
-    <td class="plus-number">
-      <input type="text" value="1" class="total-item"/>
-      <div class="plus-minus">
-          <span class="plus">+</span>
-          <span class="minus">-</span>
-      </div>
-  </td>
-  <td class="price">${element.price}</td>
-  <td class="total-price">${element.price}</td>
-  </tr>`
-  })
-}
-export { renderingSliderProductCards, generateMarkupProducts , generateProductInCart};
+//   ourProduct.forEach((element) => {
+//     cartMarkUp += `<tr class="product">
+//     <td class="img"><img src="${element.img}"></img></td>
+//     <td>${element.name}</td>
+//     <td class="id">${element.id}</td>
+//     <td class="plus-number">
+//       <input type="text" value="1" class="total-item"/>
+//       <div class="plus-minus">
+//           <span class="plus">+</span>
+//           <span class="minus">-</span>
+//       </div>
+//   </td>
+//   <td class="cart-price">${element.price}</td>
+//   <td class="total-price">${element.price}</td>
+//   </tr>`
+//   })
+// }
+export { renderingSliderProductCards, generateMarkupProducts};

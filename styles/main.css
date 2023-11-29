@@ -222,6 +222,7 @@ header .header-bottom-block {
 .cart-search-btn .searching-input {
     position: absolute;
     right: 4px;
+    top:0px;
 }
 
 .searching-input .input-for-seacrh {
@@ -597,6 +598,83 @@ footer .copyright-info {
 }
 
 /* footer end */
+/* article marks for producet */
+.article-for-block {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  position: absolute;
+  left: 8px;
+  top: 8px;
+}
+
+.article-for-block button {
+  padding: 4px 8px;
+  border-radius: 8px;
+  border: unset;
+
+  color: var(--text-white);
+
+  font-family: var(--font-Golos);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.article-for-block button.sale {
+  background-color: var(--tags-red);
+}
+
+.article-for-block button.type {
+  background-color: var(--tags-blue);
+}
+
+.article-for-block button.press {
+  background-color: var(--tags-green);
+}
+.price {
+  display: flex;
+  gap: 8px;
+  align-items: flex-end;
+  margin-bottom: 20px;
+  padding-inline: 12px;
+}
+.price h3 {
+  color: var(--text-black);
+  font-family: var(--font-Golos);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.6px;
+}
+
+.price a {
+  color: var(--text-gray-light-bg);
+  font-family: var(--font-Golos);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  text-decoration: line-through;
+}
+
+.regular .article-for-block button {
+  display: none;
+}
+
+.regular .price a {
+  display: none;
+}
+
+.guard-press .price a {
+  display: none;
+}
+
+.guard-press .article-for-block button.sale {
+  display: none;
+}
 
 @media (max-width: 1024px) {
   header .header-bottom-block {
