@@ -14,7 +14,6 @@ class Cart {
       this.items.length &&
       this.items.find((cartItem) => cartItem.id === item.id)
     ) {
-      return;
     }
 
     this.countItems += 1;
@@ -30,4 +29,4 @@ class Cart {
   }
 }
 
-export { Cart};
+export { Cart };

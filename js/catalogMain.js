@@ -42,7 +42,6 @@ counter.textContent = cart.countItems;
 
 bindEventOnBuyBtn(document.querySelectorAll(".buyBtn"));
 
-export { filterCards, bindEventOnBuyBtn, checkItemInCart };
 checkItemInCart();
 
 // set product in product Page
@@ -52,8 +51,9 @@ const searchPar = new URLSearchParams(searchProduct);
 const searchProductId = parseInt(searchPar.get("productId"));
 
 const correctProduct = ourProduct.filter((item) => item.id === searchProductId);
+console.log(correctProduct.discription);
 
-function renderCorrectProductForePare(){
+function renderCorrectProductForePare() {
   let markUp = "";
   markUp += ` <div class="main-product-wrap ${correctProduct[0].type}">
   <div class="img-and-info-wrap">
@@ -97,33 +97,41 @@ function renderCorrectProductForePare(){
           <button class="add-to-cart">Добавить в корзину</button>
       </div>
       <div class="connect-with-support">
-          <h2 class="connect">Связаться со специалистом</h2>
-          <div class="numbers-for-connect">
-              <span class="left-number">+7 (800) 707-31-01</span>
-              <span>+7 (963) 656-66-26</span>
-          </div>
-      </div>
+      <h2 class="connect">Связаться со специалистом</h2>
+      <div class="numbers-for-connect">
+          <span class="left-number">+7 (800) 707-31-01</span>
+          <span>+7 (963) 656-66-26</span>
   </div>
-</div>`
-return markUp;
+</div>`;
+  return markUp;
 }
-const mainProductContainer = document.querySelector('.main-product');
-if(mainProductContainer){
+const mainProductContainer = document.querySelector(".main-product");
+if (mainProductContainer) {
   mainProductContainer.innerHTML = renderCorrectProductForePare();
 }
+const productPageAddToCart = document.querySelector(".add-to-cart");
+function checkItemOnProductPage(){
+  const currentStorage = JSON.parse(localStorage.getItem("cart")) || [];
+  const checkIfProductIdIncluded = currentStorage.find(
+    (item) => item.id === correctProduct[0].id
+  );
+  
+  if (productPageAddToCart) {
+  
+    if(checkIfProductIdIncluded){
+      productPageAddToCart.setAttribute("disabled", true);
+    }
+    productPageAddToCart.addEventListener("click", () => {
+      if (!checkIfProductIdIncluded) {
+        cart.addItem(correctProduct[0]);
+        counter.textContent = cart.countItems;
+        productPageAddToCart.setAttribute("disabled", true);
+      }
+    });
+  }
+}
+if(productPageAddToCart){
+  checkItemOnProductPage();
+}
 
-// function checkMainProduct(){
-//   const productPageAddToCart = document.querySelector('.add-to-cart');
-//   const currentStorage = JSON.parse(localStorage.getItem('cart')) ||  [];
-//   const checkIfProductIdIncludec = currentStorage.find((item) => item.id === correctProduct[0]);
-//   if(!checkIfProductIdIncludec){
-//     productPageAddToCart.addEventListener('click' , () => {
-//       cart.addItem(correctProduct[0]);
-//     })
-//   }else{
-//     productPageAddToCart.setAttribute("disabled", true);
-//   }
-// }
-// productPageAddToCart.addEventListener('click' , () => {
-
-// })
+export { filterCards, bindEventOnBuyBtn, checkItemInCart };

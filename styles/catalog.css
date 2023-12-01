@@ -15,7 +15,6 @@ header {
 .section-2 {
     margin-bottom:120px;
     position:relative;
-    overflow: scroll;
 }
 .section-2 .move-up{
     position: fixed;
@@ -161,9 +160,10 @@ display:block;
     gap: 15px;
     flex-wrap: wrap;
     max-height:unset;
-    overflow: unset;
+    /* overflow: auto; */
     max-width:897px;
     transition: all 0.5s ease-in;
+    
 }
 
 .product-block-wrap .products-block {

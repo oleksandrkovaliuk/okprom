@@ -44,10 +44,6 @@ showMore.addEventListener("click", () => {
     filterCards.setUpLimit(9);
     console.log("setUpLimit");
     moveUp.classList.remove("active");
-    const infoH = productWrap.getBoundingClientRect().height;
-    if(window.innerHeight > infoH && window.innerHeight < infoH){
-      moveUp.classList.remove("active");
-    }
   } else {
     filterCards.setUpLimit(ourProduct.length);
     moveUp.classList.add("active");
@@ -65,6 +61,15 @@ showMore.addEventListener("click", () => {
   bindEventOnBuyBtn(document.querySelectorAll(".buyBtn"));
   checkItemInCart();
 });
+// console.log(window.scrollY , "windowScroll")
+// console.log(infoH, "block height")
+// window.addEventListener("scroll" , () => {
+//   console.log(window.scrollY , "windowScroll")
+// // console.log(infoH, "block height")
+// })
+
+
+
 const html = document.querySelector("html");
 const mobileFilterBtn = document.querySelector(".filter-btn");
 const background = document.querySelector(".blur-background");
@@ -76,10 +81,14 @@ mobileFilterBtn.addEventListener("click", () => {
     background.classList.remove("active");
     filterBtnsContainer.classList.remove("active");
     mobileFilterBtn.classList.remove("active");
+    if(showMore.classList.contains("active")){
+      moveUp.classList.add("active");
+    }
   } else {
     html.classList.add("active");
     background.classList.add("active");
     filterBtnsContainer.classList.add("active");
     mobileFilterBtn.classList.add("active");
+    moveUp.classList.remove("active");
   }
 });
