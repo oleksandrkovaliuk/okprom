@@ -21,10 +21,11 @@ header {
     bottom: 20px;
     width: 35px;
     height: 35px;
-    right: 12%;
+    right: 1%;
     display:none;
     background:unset;
     border:unset;
+    z-index:1090;
 }
 .section-2 .move-up.active{
     display:block;
@@ -287,6 +288,9 @@ li .discription-for-product-numbers {
     }
     .filter-and-product-blocks .product-block-wrap{
         justify-content: center;
+    }
+    .section-2 .move-up{
+        right:unset;
     }
 }
 @media(max-width:400px){

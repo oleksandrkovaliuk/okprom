@@ -46,7 +46,6 @@ showMore.addEventListener("click", () => {
     moveUp.classList.remove("active");
   } else {
     filterCards.setUpLimit(ourProduct.length);
-    moveUp.classList.add("active");
     moveUp.addEventListener("click", () => {
       const info = productWrap.getBoundingClientRect().top;
       window.scrollTo({
@@ -61,13 +60,22 @@ showMore.addEventListener("click", () => {
   bindEventOnBuyBtn(document.querySelectorAll(".buyBtn"));
   checkItemInCart();
 });
-// console.log(window.scrollY , "windowScroll")
-// console.log(infoH, "block height")
-// window.addEventListener("scroll" , () => {
-//   console.log(window.scrollY , "windowScroll")
-// // console.log(infoH, "block height")
-// })
 
+window.addEventListener('scroll' , () => {
+ const productBlock = document.querySelector('.product-block-wrap').getBoundingClientRect().height;
+ const windowHeight = window.innerHeight;
+ const scrollY = window.scrollY;
+
+ const procentOfScrolled = Math.trunc((scrollY / (productBlock - windowHeight)) * 100);
+console.log(procentOfScrolled)
+if(showMore.classList.contains('active')){
+  if(procentOfScrolled <= 30 || procentOfScrolled > 100){
+    moveUp.classList.remove("active");
+   }else{
+    moveUp.classList.add("active");
+   }
+  }
+})
 
 
 const html = document.querySelector("html");
