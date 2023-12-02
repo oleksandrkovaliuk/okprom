@@ -1,7 +1,4 @@
-
-
 const storedOurProduct = JSON.parse(localStorage.getItem("cart")) || [];
-// const storedDeliverInfo = JSON.parse(localStorage.getItem("userOrderInfo")) || []; 
 
 const plus = document.querySelectorAll(".plus");
 const minus = document.querySelectorAll(".minus");
