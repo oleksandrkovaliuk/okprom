@@ -249,3 +249,14 @@ tr .plus-number input {
 }
 
 /* form */
+@media(max-width:1024px){
+    .all-information{
+        flex-direction: column;
+        gap:50px;
+    }
+}
+@media(max-width:768px){
+    .table-cart{
+        overflow:auto;
+    }
+}

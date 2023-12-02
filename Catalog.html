@@ -218,7 +218,7 @@
         </div>
         <div class="filter-and-product-blocks">
           <button class="filter-btn">
-            <svg class="filter-icon" version="1.0" xmlns="http://www.w3.org/2000/svg" width="512.000000pt"
+            <svg class="filter-icon-open" version="1.0" xmlns="http://www.w3.org/2000/svg" width="512.000000pt"
               height="512.000000pt" viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
 
               <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
@@ -250,7 +250,34 @@ c213 -48 358 -263 322 -475 -21 -122 -85 -223 -183 -288 -195 -130 -463 -75
 -589 121 -136 210 -58 499 164 608 101 50 177 59 286 34z" />
               </g>
             </svg>
+
+            <svg class="filter-icon-close" version="1.0" xmlns="http://www.w3.org/2000/svg" width="512.000000pt"
+              height="512.000000pt" viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
+
+              <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
+                <path d="M3515 5100 c-44 -18 -189 -159 -1228 -1197 -952 -951 -1184 -1188
+-1203 -1228 -18 -37 -24 -67 -24 -115 0 -132 -74 -50 1223 -1346 1123 -1123
+1174 -1173 1230 -1193 73 -27 131 -27 204 1 48 17 77 40 174 137 144 143 163
+177 164 286 0 58 -5 91 -19 120 -13 27 -333 355 -995 1018 l-976 977 977 978
+c537 537 984 993 994 1012 9 19 19 67 22 106 7 110 -20 160 -166 305 -98 97
+-127 119 -175 137 -71 27 -136 27 -202 2z" />
+              </g>
+            </svg>
+
           </button>
+          <svg class="move-up" version="1.0" xmlns="http://www.w3.org/2000/svg" width="512.000000pt" height="512.000000pt"
+          viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
+
+          <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
+            <path d="M1309 4021 c-47 -48 -37 -130 21 -164 26 -16 127 -17 1230 -17 1103
+0 1204 1 1230 17 58 34 68 116 21 164 l-29 29 -1222 0 -1222 0 -29 -29z" />
+            <path d="M2534 3303 c-11 -2 -167 -151 -347 -331 l-327 -328 0 -43 c0 -62 41
+-101 106 -101 l47 0 219 217 218 217 0 -674 c0 -765 -3 -732 76 -759 48 -17
+84 -4 118 42 21 28 21 38 26 708 l5 679 200 -201 c110 -110 212 -207 227 -215
+46 -24 86 -18 124 20 27 27 34 42 34 72 0 36 -13 51 -312 354 -281 284 -357
+353 -385 349 -4 -1 -17 -4 -29 -6z" />
+          </g>
+        </svg>
           <ul class="left-filter-list">
             <li class="filter-list">
               <button class="active">
@@ -324,7 +351,7 @@ c213 -48 358 -263 322 -475 -21 -122 -85 -223 -183 -288 -195 -130 -463 -75
               всем интересующим вопросам
             </h3>
           </div>
-          <form class="send-message-form" onsubmit="return checkingForm(event)">
+          <form class="send-message-form">
             <div class="form-field-wrap">
               <input placeholder="" type="text" id="name" name="name" class="send-message-input" />
               <label class="send-message-label" for="name">Ваше имя</label>
@@ -338,7 +365,7 @@ c213 -48 358 -263 322 -475 -21 -122 -85 -223 -183 -288 -195 -130 -463 -75
               <input placeholder="" type="email" id="email" name="email" class="send-message-input" />
               <label class="send-message-label" for="email">E-mail (необязательно)</label>
             </div>
-            <button type="submit" onclick="showConfeti()">Отправить</button>
+            <button type="button" id='submit-user-feedback'>Отправить</button>
           </form>
         </div>
       </div>
@@ -429,6 +456,7 @@ c213 -48 358 -263 322 -475 -21 -122 -85 -223 -183 -288 -195 -130 -463 -75
   <script type="module" src="./js/catalogMain.js"></script>
 
   <script type="module" src="./js/filterAllProducts.js"></script>
+  <script type='module' defer src="./js/sendMessageForm.js"></script>
 
   <script src="./js/showSearchingInput.js"></script>
   <script src="./js/mobileMenu.js"></script>
