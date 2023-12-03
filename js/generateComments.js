@@ -57,4 +57,6 @@ const getTenNumber = async () => {
     return markUpComment;
   }
   commentWraper.innerHTML = renderedComment();
+}).catch((err) => {
+  console.log(err , "failed!")
 })
