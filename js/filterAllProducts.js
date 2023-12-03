@@ -1,7 +1,7 @@
 const filterBtns = document.querySelectorAll(".filter-list button");
 const showMore = document.querySelector(".show-more");
 const moveUp = document.querySelector(".move-up");
-const productWrap = document.querySelector('.section-2');
+const productWrap = document.querySelector(".section-2");
 import {
   filterCards,
   bindEventOnBuyBtn,
@@ -61,22 +61,24 @@ showMore.addEventListener("click", () => {
   checkItemInCart();
 });
 
-window.addEventListener('scroll' , () => {
- const productBlock = document.querySelector('.product-block-wrap').getBoundingClientRect().height;
- const windowHeight = window.innerHeight;
- const scrollY = window.scrollY;
+window.addEventListener("scroll", () => {
+  const productBlock = document
+    .querySelector(".product-block-wrap")
+    .getBoundingClientRect().height;
+  const windowHeight = window.innerHeight;
+  const scrollY = window.scrollY;
 
- const procentOfScrolled = Math.trunc((scrollY / (productBlock - windowHeight)) * 100);
-console.log(procentOfScrolled)
-if(showMore.classList.contains('active')){
-  if(procentOfScrolled <= 30 || procentOfScrolled > 100){
-    moveUp.classList.remove("active");
-   }else{
-    moveUp.classList.add("active");
-   }
+  const procentOfScrolled = Math.trunc(
+    (scrollY / (productBlock - windowHeight)) * 100
+  );
+  if (showMore.classList.contains("active")) {
+    if (procentOfScrolled <= 30 || procentOfScrolled > 100) {
+      moveUp.classList.remove("active");
+    } else {
+      moveUp.classList.add("active");
+    }
   }
-})
-
+});
 
 const html = document.querySelector("html");
 const mobileFilterBtn = document.querySelector(".filter-btn");
@@ -89,7 +91,7 @@ mobileFilterBtn.addEventListener("click", () => {
     background.classList.remove("active");
     filterBtnsContainer.classList.remove("active");
     mobileFilterBtn.classList.remove("active");
-    if(showMore.classList.contains("active")){
+    if (showMore.classList.contains("active")) {
       moveUp.classList.add("active");
     }
   } else {
