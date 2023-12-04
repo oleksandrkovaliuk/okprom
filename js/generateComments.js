@@ -47,14 +47,12 @@ const getComments = async () => {
 };
 
 const commentWraper = document.querySelector(".comments-wrap");
-
 const renderedComment = (data) => {
   let markUpComment = "";
 
-  data.forEach((user, index) => {
-    const marginLeft = 20 + index * 20;
-
-    markUpComment += `<div class="comments ${user.postId}" style="margin-left:${marginLeft}px">
+  data.forEach((user) => {
+    markUpComment += ` <div class="wrapper"> <div class="comments ${user.postId} top">
+    <div class="text-and-img">
     <img src="${user.url}">
     <div class="text-wrap">
     <div class="user-info">
@@ -65,14 +63,64 @@ const renderedComment = (data) => {
     </div>
       <p class="comment-text">${user.body}</p>
   </div>
+  </div>
+  </div>
+  <div class="all-comment">
+  <div class="comments ${user.postId} Alltop">
+    <div class="text-and-img">
+    <img src="${user.url}">
+    <div class="text-wrap">
+    <div class="user-info">
+      <span class="name">${user.name}</span>
+      <span class="email">${user.email}</span>
+      <span class="nick">${user.username}</span>
+      <span class="phone">${user.phone}</span>
+    </div>
+      <p class="comment-text">${user.body}</p>
+  </div>
+  </div>
+  </div>
+  <div class="comments ${user.postId} Allbottom">
+    <div class="text-and-img">
+    <img src="${user.url}">
+    <div class="text-wrap">
+    <div class="user-info">
+      <span class="name">${user.name}</span>
+      <span class="email">${user.email}</span>
+      <span class="nick">${user.username}</span>
+      <span class="phone">${user.phone}</span>
+    </div>
+      <p class="comment-text">${user.body}</p>
+  </div>
+  </div>
+  </div>
+  </div>
+  <button class="show-more-comm"><span>Показать еще</span>
+  
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+width="512.000000pt" height="512.000000pt" viewBox="0 0 512.000000 512.000000"
+preserveAspectRatio="xMidYMid meet">
+
+<g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
+fill="#000000" stroke="none">
+<path d="M725 4477 c-96 -32 -162 -90 -204 -177 -21 -44 -26 -70 -26 -130 0
+-149 -52 -89 972 -1111 1016 -1013 947 -953 1093 -954 147 0 82 -57 1102 963
+1019 1019 963 955 963 1102 0 90 -30 162 -91 224 -62 61 -134 91 -224 91 -145
+-1 -91 46 -967 -829 l-783 -781 -782 781 c-702 700 -789 783 -838 804 -66 27
+-160 35 -215 17z"/>
+<path d="M683 3012 c-138 -49 -222 -180 -211 -326 11 -125 -28 -82 972 -1083
+1035 -1036 968 -978 1116 -978 147 0 83 -56 1102 963 1019 1019 963 955 963
+1102 0 90 -30 162 -91 224 -62 61 -134 91 -224 91 -145 -1 -91 46 -968 -829
+l-782 -781 -793 791 c-646 645 -801 795 -842 814 -69 32 -173 37 -242 12z"/>
+</g>
+</svg>
+</button>
   </div>`;
   });
   return markUpComment;
 };
 
-commentWraper.innerHTML = "Loading ...";
-
-
+commentWraper.innerHTML = `<div class="loader"></div>`;
 
 Promise.all([fetchUsers(), getComments(), fetchUserPhoto()])
   .then(() => {
@@ -83,9 +131,37 @@ Promise.all([fetchUsers(), getComments(), fetchUserPhoto()])
     }));
 
     commentWraper.innerHTML = renderedComment(resultArray);
+    const showMoreBtn = document.querySelectorAll(".show-more-comm");
+    const closestComment = document.querySelectorAll('.comments.top');
+
+    closestComment.forEach((com) => {
+      const Topheight = com.offsetHeight + 40;
+      const heightForBottom = Topheight + Topheight;
+      const closeTopComment = com.closest('.wrapper').querySelector('.comments.Alltop');
+      const closestBottom = com.closest('.wrapper').querySelector('.comments.Allbottom');
+      closestBottom.style.transform = `translateY(-${heightForBottom}px)`;
+      closeTopComment.style.transform = `translateY(-${Topheight}px)`;
+    });
+    showMoreBtn.forEach((btn) => {
+      btn.addEventListener('click' , () => {
+      const btnclosestCommentTop = btn.closest('.wrapper').querySelector('.comments.Alltop')
+      const btnclosestCommentBottom = btn.closest('.wrapper').querySelector('.comments.Allbottom')
+       const closestAllComment = btn.closest('.wrapper').querySelector('.all-comment')
+        if(!btn.classList.contains('active')){
+          btn.classList.add('active');
+          closestAllComment.classList.add('active');
+          btnclosestCommentTop.classList.add('active');
+          btnclosestCommentBottom.classList.add('active');
+        }else{
+          btn.classList.remove('active');
+          setTimeout(() => closestAllComment.classList.remove('active'), 255)
+          btnclosestCommentTop.classList.remove('active');
+          btnclosestCommentBottom.classList.remove('active');
+        }
+      })
+    })
   })
   .catch((err) => {
     console.log(err, "failed fetching data!");
     commentWraper.innerHTML = "Loading is failed";
-  })
-  .finally(() => {});
+  });
