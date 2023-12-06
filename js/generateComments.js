@@ -3,9 +3,15 @@ import { fetchData } from "./helpers.js";
 const allComment = [];
 const allPhoto = [];
 let allUsers = [];
-
+let randomNumCheck = [];
 const generateRandomNumber = (size = 500) => {
-  return Math.floor(Math.random() * size + 1);
+  const randomNum = Math.floor(Math.random() * size + 1);
+  if (!randomNumCheck.includes(randomNum)) {
+    randomNumCheck.push(randomNum);
+    return randomNum;
+  } else {
+      return generateRandomNumber(size);
+  }
 };
 
 const fetchUsers = async () => {
@@ -22,6 +28,7 @@ const fetchUserPhoto = async () => {
   for (let i = 0; i < 10; i++) {
     try {
       const randomNum = generateRandomNumber();
+
       const urlPhoto = `https://jsonplaceholder.typicode.com/photos/${randomNum}`;
       const avatar = await fetchData(urlPhoto);
       allPhoto.push(avatar);
@@ -36,7 +43,6 @@ const getComments = async () => {
     try {
       const randomNum = generateRandomNumber();
       const urlComment = `https://jsonplaceholder.typicode.com/comments/${randomNum}`;
-
       const comment = await fetchData(urlComment);
       allComment.push(comment);
     } catch (error) {
@@ -49,7 +55,9 @@ const getComments = async () => {
 const commentWraper = document.querySelector(".comments-wrap");
 const renderedComment = (data) => {
   let markUpComment = "";
+
   data.forEach((user) => {
+
     markUpComment += ` <div class="wrapper"> <div class="comments ${user.id} top">
     <div class="text-and-img">
     <img src="${user.url}">
@@ -63,106 +71,50 @@ const renderedComment = (data) => {
       <p class="comment-text">${user.body}</p>
   </div>
   </div>
-  </div>
-  <div class="all-comment">
-        <div class="comments ${user.postId} Allcomm">
-          <div class="text-and-img">
-            <img src="${user.url}">
-            <div class="text-wrap">
-              <div class="user-info">
-                <span class="name">${user.name}</span>
-                <span class="email">${user.email}</span>
-                <span class="nick">${user.username}</span>
-                <span class="phone">${user.phone}</span>
-              </div>
-              <p class="comment-text">${user.body}</p>
-            </div>
-          </div>
-        </div>
-        <div class="comments ${user.postId} Allcomm">
-          <div class="text-and-img">
-            <img src="${user.url}">
-            <div class="text-wrap">
-              <div class="user-info">
-                <span class="name">${user.name}</span>
-                <span class="email">${user.email}</span>
-                <span class="nick">${user.username}</span>
-                <span class="phone">${user.phone}</span>
-              </div>
-              <p class="comment-text">${user.body}</p>
-            </div>
-          </div>
-        </div>
-        <div class="comments ${user.postId} Allcomm">
-          <div class="text-and-img">
-            <img src="${user.url}">
-            <div class="text-wrap">
-              <div class="user-info">
-                <span class="name">${user.name}</span>
-                <span class="email">${user.email}</span>
-                <span class="nick">${user.username}</span>
-                <span class="phone">${user.phone}</span>
-              </div>
-              <p class="comment-text">${user.body}</p>
-            </div>
-          </div>
-        </div>
-        <div class="comments ${user.postId} Allcomm">
-          <div class="text-and-img">
-            <img src="${user.url}">
-            <div class="text-wrap">
-              <div class="user-info">
-                <span class="name">${user.name}</span>
-                <span class="email">${user.email}</span>
-                <span class="nick">${user.username}</span>
-                <span class="phone">${user.phone}</span>
-              </div>
-              <p class="comment-text">${user.body}</p>
-            </div>
-          </div>
-        </div>
-        <div class="comments ${user.postId} Allcomm">
-          <div class="text-and-img">
-            <img src="${user.url}">
-            <div class="text-wrap">
-              <div class="user-info">
-                <span class="name">${user.name}</span>
-                <span class="email">${user.email}</span>
-                <span class="nick">${user.username}</span>
-                <span class="phone">${user.phone}</span>
-              </div>
-              <p class="comment-text">${user.body}</p>
-            </div>
-          </div>
-        </div>
-        <div class="comments ${user.postId} Allcomm">
-        <div class="text-and-img">
-          <img src="${user.url}">
-          <div class="text-wrap">
-            <div class="user-info">
-              <span class="name">${user.name}</span>
-              <span class="email">${user.email}</span>
-              <span class="nick">${user.username}</span>
-              <span class="phone">${user.phone}</span>
-            </div>
-            <p class="comment-text">${user.body}</p>
-          </div>
-        </div>
-      </div>        <div class="comments ${user.postId} Allcomm">
-      <div class="text-and-img">
-        <img src="${user.url}">
-        <div class="text-wrap">
-          <div class="user-info">
-            <span class="name">${user.name}</span>
-            <span class="email">${user.email}</span>
-            <span class="nick">${user.username}</span>
-            <span class="phone">${user.phone}</span>
-          </div>
-          <p class="comment-text">${user.body}</p>
-        </div>
-      </div>
+  </div>  <div class="all-comment">
+<div class="comments ${user.postId} Allcomm">
+<div class="text-and-img">
+  <img src="${user.url}">
+  <div class="text-wrap">
+    <div class="user-info">
+      <span class="name">${user.name}</span>
+      <span class="email">${user.email}</span>
+      <span class="nick">${user.username}</span>
+      <span class="phone">${user.phone}</span>
     </div>
-        </div>
+    <p class="comment-text">${user.body}</p>
+  </div>
+</div>
+</div>
+<div class="comments ${user.postId} Allcomm">
+<div class="text-and-img">
+  <img src="${user.url}">
+  <div class="text-wrap">
+    <div class="user-info">
+      <span class="name">${user.name}</span>
+      <span class="email">${user.email}</span>
+      <span class="nick">${user.username}</span>
+      <span class="phone">${user.phone}</span>
+    </div>
+    <p class="comment-text">${user.body}</p>
+  </div>
+</div>
+</div>
+<div class="comments ${user.postId} Allcomm">
+<div class="text-and-img">
+  <img src="${user.url}">
+  <div class="text-wrap">
+    <div class="user-info">
+      <span class="name">${user.name}</span>
+      <span class="email">${user.email}</span>
+      <span class="nick">${user.username}</span>
+      <span class="phone">${user.phone}</span>
+    </div>
+    <p class="comment-text">${user.body}</p>
+  </div>
+</div>
+</div>
+</div>
         <button class="show-more-comm"><span>Показать еще</span>
   
         <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
