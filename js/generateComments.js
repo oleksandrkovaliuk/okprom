@@ -3,15 +3,9 @@ import { fetchData } from "./helpers.js";
 const allComment = [];
 const allPhoto = [];
 let allUsers = [];
-let randomNumCheck = [];
+
 const generateRandomNumber = (size = 500) => {
-  const randomNum = Math.floor(Math.random() * size + 1);
-  if (!randomNumCheck.includes(randomNum)) {
-    randomNumCheck.push(randomNum);
-    return randomNum;
-  } else {
-      return generateRandomNumber(size);
-  }
+  return Math.floor(Math.random() * size + 1);
 };
 
 const fetchUsers = async () => {
@@ -28,7 +22,6 @@ const fetchUserPhoto = async () => {
   for (let i = 0; i < 10; i++) {
     try {
       const randomNum = generateRandomNumber();
-
       const urlPhoto = `https://jsonplaceholder.typicode.com/photos/${randomNum}`;
       const avatar = await fetchData(urlPhoto);
       allPhoto.push(avatar);
@@ -43,6 +36,7 @@ const getComments = async () => {
     try {
       const randomNum = generateRandomNumber();
       const urlComment = `https://jsonplaceholder.typicode.com/comments/${randomNum}`;
+
       const comment = await fetchData(urlComment);
       allComment.push(comment);
     } catch (error) {
@@ -53,11 +47,10 @@ const getComments = async () => {
 };
 
 const commentWraper = document.querySelector(".comments-wrap");
+const allCommentWrap = document.querySelector(".all-comment");
 const renderedComment = (data) => {
   let markUpComment = "";
-
   data.forEach((user) => {
-
     markUpComment += ` <div class="wrapper"> <div class="comments ${user.id} top">
     <div class="text-and-img">
     <img src="${user.url}">
@@ -71,50 +64,25 @@ const renderedComment = (data) => {
       <p class="comment-text">${user.body}</p>
   </div>
   </div>
-  </div>  <div class="all-comment">
-<div class="comments ${user.postId} Allcomm">
-<div class="text-and-img">
-  <img src="${user.url}">
-  <div class="text-wrap">
-    <div class="user-info">
-      <span class="name">${user.name}</span>
-      <span class="email">${user.email}</span>
-      <span class="nick">${user.username}</span>
-      <span class="phone">${user.phone}</span>
-    </div>
-    <p class="comment-text">${user.body}</p>
   </div>
-</div>
-</div>
-<div class="comments ${user.postId} Allcomm">
-<div class="text-and-img">
-  <img src="${user.url}">
-  <div class="text-wrap">
-    <div class="user-info">
-      <span class="name">${user.name}</span>
-      <span class="email">${user.email}</span>
-      <span class="nick">${user.username}</span>
-      <span class="phone">${user.phone}</span>
+  <div class="all-comment">`;
+    data.forEach((user, index) => {
+      markUpComment += `<div class="comments ${user.postId} Allcomm">
+    <div class="text-and-img">
+      <img src="${user.url}">
+      <div class="text-wrap">
+        <div class="user-info">
+          <span class="name">${user.name}</span>
+          <span class="email">${user.email}</span>
+          <span class="nick">${user.username}</span>
+          <span class="phone">${user.phone}</span>
+        </div>
+        <p class="comment-text">${user.body}</p>
+      </div>
     </div>
-    <p class="comment-text">${user.body}</p>
-  </div>
-</div>
-</div>
-<div class="comments ${user.postId} Allcomm">
-<div class="text-and-img">
-  <img src="${user.url}">
-  <div class="text-wrap">
-    <div class="user-info">
-      <span class="name">${user.name}</span>
-      <span class="email">${user.email}</span>
-      <span class="nick">${user.username}</span>
-      <span class="phone">${user.phone}</span>
-    </div>
-    <p class="comment-text">${user.body}</p>
-  </div>
-</div>
-</div>
-</div>
+  </div>`;
+    });
+    markUpComment += `</div>
         <button class="show-more-comm"><span>Показать еще</span>
   
         <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
@@ -154,6 +122,8 @@ Promise.all([fetchUsers(), getComments(), fetchUserPhoto()])
 
     const mainComment = document.querySelectorAll(".comments.top");
     mainComment.forEach((com) => {
+      const mainCommentHeight = com.offsetHeight;
+
       const topheight = com.offsetHeight + 40;
       const findClosestAllCom = com
         .closest(".wrapper")
@@ -163,6 +133,7 @@ Promise.all([fetchUsers(), getComments(), fetchUserPhoto()])
       );
       let startValue = topheight;
       for (let i = 0; i < elementInsideAllCom.length; i++) {
+        elementInsideAllCom[i].style.height = `${mainCommentHeight}px`;
         elementInsideAllCom[i].style.transform = `translateY(-${startValue}px)`;
         startValue += topheight;
       }
@@ -180,7 +151,11 @@ Promise.all([fetchUsers(), getComments(), fetchUserPhoto()])
           closestAllComment.classList.add("active");
           findcommentsInAllComm.forEach((elem, index) => {
             elem.classList.add("active");
-            elem.style.marginLeft = 10 * (index + 1) * 2 + "px";
+            if(window.innerWidth < 768){
+              elem.style.marginLeft = 5 * (index + 1) + "px";
+            }else{
+              elem.style.marginLeft = 10 * (index + 1) * 2 + "px";
+            }
           });
         } else {
           btn.classList.remove("active");

@@ -1,0 +1,233 @@
+header .header-bottom-block {
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--border-or-devider-light-bg);
+}
+/* about us */
+.about-us {
+    padding-bottom: 120px;
+    margin-bottom: 40px;
+    margin-inline: 40px;
+    border-bottom: 1px solid var(--border-or-devider-light-bg);
+}
+.about-us-wrap {
+  max-width: 592px;
+}
+.about-us .main-text {
+  margin-bottom: 40px;
+  color: var(--text-black);
+}
+.about-us .discription {
+  color: var(--text-black);
+}
+/* our accomplishment */
+.our-accomplishment {
+  margin-bottom: 120px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding-inline: 40px;
+}
+.our-accomplishment .acomplish-block {
+  max-width: 389px;
+}
+.acomplish-block .discription {
+  margin-bottom: 20px;
+}
+.acomplish-block .main-text {
+  margin-bottom: 12px;
+}
+.acomplish-block h4 {
+  color: var(--text-black);
+}
+/* why choosing us */
+.why-chosing-us {
+  padding-inline: 40px;
+  margin-bottom: 120px;
+}
+
+.why-chosing-us .our-clients-container {
+  display: flex;
+  gap: 16px;
+}
+
+.our-clients-container .why-we {
+  max-width: 592px;
+  min-height: 390px;
+  width: 100%;
+  border-radius: 16px;
+  background-color: var(--background-gray);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.why-we .discription {
+  color: var(--text-gray-light-bg);
+
+  font-family: var(--font-Golos);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.our-clients-container .our-clients-blocks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.our-clients-blocks .our-client-block {
+  max-width: 187px;
+  width: 100%;
+  max-height: 187px;
+  border-radius: 16px;
+  padding: 32px;
+  background-color: var(--background-gray);
+}
+
+.our-client-block.withtxt {
+  padding-inline: 0px;
+  display: flex;
+  flex-direction: column;
+  max-width: 186px;
+}
+
+.our-client-block.withtxt img {
+  max-width: 89px;
+  margin: auto;
+  margin-bottom: 12px;
+}
+
+.our-client-block.withtxt .company-group {
+  color: var(--text-black);
+  text-align: center;
+  font-family: var(--font-Roboto);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 16px;
+}
+
+.our-client-block.withtxt .company-name {
+  color: var(--text-black);
+  text-align: center;
+  font-family: var(--font-Roboto);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px;
+}
+
+.our-client-block.stadium {
+  padding: 0px;
+  display: flex;
+}
+
+.our-client-block.stadium img {
+  margin: auto;
+}
+
+.our-client-block.vtm {
+  padding-inline: 41px;
+}
+
+.our-client-block.vtm img {
+  margin-bottom: 12px;
+}
+
+.our-client-block.vtm .company-name {
+  color: var(--text-black);
+  text-align: center;
+  font-family: var(--font-Roboto);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+.our-client-block.onlytxt {
+  padding-inline: 29px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: center;
+  max-width: 186px;
+}
+
+.our-client-block.onlytxt .company-name {
+  color: var(--text-black);
+  text-align: center;
+  font-family: var(--font-Roboto);
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.our-client-block.onlytxt .company-discription {
+  color: var(--text-black);
+  text-align: center;
+  font-family: var(--font-Roboto);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 14px;
+}
+
+.our-client-block.vtor4ment {
+  padding-block: 65px 64px;
+  padding-inline: 19px 18px;
+}
+/* your grow */
+.your-grow {
+  padding-inline: 40px;
+  margin-bottom: 120px;
+}
+.your-grow .main-text {
+  margin-bottom: 60px;
+}
+.your-grow .img-with-explenetion {
+  display: flex;
+  gap: clamp(16px , 5vw , 117px);
+  justify-content: space-between;
+  align-items: center;
+}
+.img-with-explenetion .img-for-grow{
+    width:100%;
+    min-width:464px;
+}
+.explanetion{
+    max-width:491px;
+}
+.explanetion .title {
+  color: var(--text-black, #161616);
+
+  font-family: var(--font-Golos);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0.24px;
+  margin-bottom:24px;
+}
+.explanetion .discription:not(:last-of-type){
+margin-bottom:60px;
+}
+@media(max-width:1024px){
+    .img-with-explenetion .img-for-grow {
+        display:none;
+    }
+    .your-grow .main-text {
+        margin-bottom: 40px;
+      }
+    .explanetion .discription:not(:last-of-type){
+        margin-bottom:40px;
+        }
+}
+@media (max-width: 500px) {
+  .why-chosing-us {
+    padding-inline: 16px;
+  }
+}

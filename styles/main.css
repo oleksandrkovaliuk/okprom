@@ -164,7 +164,7 @@ header .header-top-block {
 header .header-bottom-block {
   display: flex;
   justify-content: space-between;
-  padding-inline: 40px;
+  margin-inline: 40px;
   margin-bottom: 32px;
 }
 
@@ -220,9 +220,9 @@ header .header-bottom-block {
   margin: 10px;
 }
 .cart-search-btn .searching-input {
-    position: absolute;
-    right: 4px;
-    top:0px;
+  position: absolute;
+  right: 4px;
+  top: 0px;
 }
 
 .searching-input .input-for-seacrh {
@@ -516,7 +516,7 @@ footer .information-container {
   margin-bottom: 8px;
 }
 
-.left-block-with-info .social-media-btn {
+.social-media-btn {
   display: flex;
   gap: 9px;
   margin-bottom: 60px;
@@ -537,7 +537,7 @@ footer .information-container {
   cursor: pointer;
 }
 
-.left-block-with-info .subscribe-on-our-social {
+.subscribe-on-our-social {
   display: flex;
 }
 
@@ -689,23 +689,31 @@ footer .copyright-info {
   .header-bottom-block .ask-for-support {
     display: block;
   }
-}
+  .section-4 .our-clients-container,
+  .why-chosing-us .our-clients-container {
+    flex-direction: column;
+    align-items: center;
+  }
 
-@media (max-width: 768px) {
-    .cart-search-btn .searching-input {
+  .our-clients-container .our-clients-blocks {
+    justify-content: center;
+  }
+}
+@media (max-width: 900px) {
+  .cart-search-btn .searching-input {
     transform: translateX(40px);
-    position:unset;
+    position: unset;
   }
   .searching-input .input-for-seacrh {
-    padding:0;
+    padding: 0;
     padding-left: 10px;
     transform: translateX(-40px);
-  }     
+  }
   .searching-input .label-for-search {
     left: -20px;
   }
-  .cart-search-btn .search{
-    margin-left:0;
+  .cart-search-btn .search {
+    margin-left: 0;
   }
   .information ul {
     flex-direction: column;
@@ -718,6 +726,27 @@ footer .copyright-info {
     gap: 8px;
   }
 
+  .header-bottom-block ul.menu-list {
+    display: none;
+  }
+
+  .information ul.deliver-atc {
+    display: none;
+  }
+
+  header .header-bottom-block {
+    justify-content: space-between;
+    margin-inline: 16px;
+  }
+  .header-bottom-block .ask-for-support {
+    display: none;
+  }
+
+  .burger {
+    display: block;
+  }
+}
+@media (max-width: 768px) {
   footer .information-container {
     flex-direction: column;
     row-gap: 62px;
@@ -733,6 +762,9 @@ footer .copyright-info {
 
   .form .send-message-container {
     flex-direction: column;
+    padding-inline: 16px;
+  }
+  .our-clients-container .why-we {
     padding-inline: 16px;
   }
 }
@@ -752,26 +784,6 @@ footer .copyright-info {
     font-style: normal;
     font-weight: 400;
     line-height: 16px;
-  }
-
-  .header-bottom-block ul.menu-list {
-    display: none;
-  }
-
-  .information ul.deliver-atc {
-    display: none;
-  }
-
-  header .header-bottom-block {
-    justify-content: space-between;
-    padding-inline: 16px;
-  }
-  .header-bottom-block .ask-for-support {
-    display: none;
-  }
-
-  .burger {
-    display: block;
   }
 }
 
@@ -806,5 +818,80 @@ footer .copyright-info {
     flex-direction: column;
     padding-inline: 0px;
     gap: 8px;
+  }
+}
+@media (max-width: 500px) {
+  .our-clients-container .our-clients-blocks {
+    gap: 9px;
+  }
+
+  .our-clients-blocks .our-client-block {
+    max-width: 90px;
+    max-height: 82px;
+  }
+
+  .our-clients-blocks .our-client-block.iff {
+    padding-inline: 14px;
+    padding-block: 18px;
+  }
+
+  .our-client-block.iff img {
+    max-width: 45px;
+    margin: auto;
+  }
+
+  .our-client-block.withtxt {
+    padding-block: 14px;
+  }
+
+  .our-client-block.withtxt img {
+    max-width: 38px;
+    margin-bottom: 6px;
+  }
+
+  .our-client-block.withtxt .company-group {
+    font-size: 6px;
+    line-height: 6px;
+  }
+
+  .our-client-block.withtxt .company-name {
+    font-size: 8px;
+    line-height: 8px;
+  }
+
+  .our-client-block.stadium img {
+    padding: 10px;
+  }
+
+  .our-client-block.vtm {
+    padding: 14px;
+  }
+
+  .our-client-block.vtm img {
+    max-width: 42px;
+    margin: auto;
+  }
+
+  .our-client-block.vtm .company-name {
+    font-size: 7px;
+    line-height: 8px;
+  }
+
+  .our-client-block.onlytxt {
+    padding-inline: 11px;
+  }
+
+  .our-client-block.onlytxt .company-name {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .our-client-block.onlytxt .company-discription {
+    font-size: 6px;
+    line-height: 6px;
+  }
+
+  .our-client-block.vtor4ment {
+    padding-block: 28px;
   }
 }

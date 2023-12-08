@@ -1,5 +1,6 @@
 const filterBtns = document.querySelectorAll(".filter-list button");
 const showMore = document.querySelector(".show-more");
+const showMoreTxt = document.querySelector('.show-more button')
 const moveUp = document.querySelector(".move-up");
 const productWrap = document.querySelector(".section-2");
 import {
@@ -39,11 +40,11 @@ function toggleActiveButtonCls(activeBtn) {
 
 showMore.addEventListener("click", () => {
   showMore.classList.toggle("active");
-  console.log("click");
   if (!showMore.classList.contains("active")) {
     filterCards.setUpLimit(9);
     console.log("setUpLimit");
     moveUp.classList.remove("active");
+    showMoreTxt.textContent = 'Показать еще';
   } else {
     filterCards.setUpLimit(ourProduct.length);
     moveUp.addEventListener("click", () => {
@@ -53,6 +54,7 @@ showMore.addEventListener("click", () => {
         behavior: "smooth",
       });
     });
+    showMoreTxt.textContent = 'Скрыть';
   }
   document.querySelector(".product-block-wrap").innerHTML =
     generateMarkupProducts(filterCards.getFilteredItems());

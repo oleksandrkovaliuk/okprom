@@ -1,0 +1,121 @@
+header .header-bottom-block {
+    padding-bottom: 32px;
+    border-bottom: 1px solid var(--border-or-devider-light-bg);
+  }
+/* contacts */
+.contacts-wrap {
+  margin-bottom: 80px;
+  padding-inline: 40px;
+}
+.contacts-wrap .main-text {
+  margin-bottom: 40px;
+  color: var(--text-black);
+}
+.contacts-wrap .contacts-info {
+  display: flex;
+  justify-content: space-between;
+  gap: clamp(40px, 5vw, 117px);
+}
+.contacts-info ul {
+  list-style: none;
+  max-width: 491px;
+}
+ul .contacts-all-information:not(:last-of-type) {
+  margin-bottom: 40px;
+}
+.contacts-all-information .discription {
+  margin-bottom: 8px;
+}
+.contacts-all-information span {
+  color: var(--text-black);
+  font-family: var(--font-Golos);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+.contacts-all-information .schedule {
+  display: flex;
+  gap: 31px;
+}
+.contacts-all-information .schedule:not(:last-of-type) {
+  margin-bottom: 8px;
+}
+.contacts-all-information.social .discription {
+  margin-bottom: 12px;
+}
+.contacts-info .map {
+  max-width: 592px;
+  border-radius: 16px;
+  height: 95vh;
+}
+/* legal companyInfo */
+.legal-company-info {
+  padding-inline: 40px;
+  margin-bottom: 100px;
+}
+
+.legal-company-info .main-text {
+  margin-bottom: 40px;
+  color: var(--text-black);
+}
+.legal-company-wrap {
+  display: flex;
+  justify-content: space-between;
+  gap:16px;
+}
+.legal-company-wrap .legal {
+  max-width: 492px;
+}
+.legal .legal-title {
+  color: var(--text-black);
+
+  font-family: var(--font-Golos);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.6px;
+  margin-bottom: 8px;
+}
+.legal ul {
+  list-style: none;
+}
+ul .legal-text {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap:16px;
+  padding-block: 20px;
+  border-bottom: 1px solid var(--border-or-devider-light-bg);
+}
+.legal-text .discription.title{
+    max-width:187px;
+    width:100%;
+}
+.legal-text .discription.inf {
+  color: var(--text-black);
+  flex-grow:1;
+  text-align: left;
+}
+@media (max-width: 1024px) {
+  .contacts-wrap {
+    margin-bottom: 100px;
+  }
+  .contacts-wrap .contacts-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .legal-company-wrap {
+    flex-direction: column;
+  }
+  .legal-company-wrap .legal {
+    max-width: 624px;
+  }
+}
+@media (max-width: 768px) {
+  .contacts-wrap,
+  .legal-company-info {
+    padding-inline: 20px;
+  }
+}

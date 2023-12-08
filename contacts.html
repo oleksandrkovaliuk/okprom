@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="./styles/contacts.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Golos+Text&family=Roboto:wght@500&display=swap"
+        rel="stylesheet" />
+    <title>MainPage</title>
+</head>
+
+<body>
+    <main>
+        <div class="page-width">
+            <div class="blur-background-black"></div>
+            <header>
+                <div class="header-top-block">
+                    <a class="logo" href="./index.html">
+                        <img src="./img/Logo.png" alt="logo" />
+                    </a>
+                    <div class="information">
+                        <ul>
+                            <li>okoprom@gmail.com</li>
+                            <li>+7 (800) 707-31-01</li>
+                        </ul>
+                        <ul class="deliver-atc">
+                            <li>Доставка и оплата</li>
+                            <li>Гарантия</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="header-bottom-block">
+                    <ul class="menu-list">
+                        <li>
+                            <button><a href="./Catalog.html">Каталог</a></button>
+                        </li>
+                        <li>
+                            <button><a href="#">Наше производство</a></button>
+                        </li>
+                        <li>
+                            <button><a href="./aboutCompany.html">О компании</a></button>
+                        </li>
+                        <li>
+                            <button><a href="./contacts.html">Контакты</a></button>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <button class="cart-search-btn searching follow-cursor non-clickable">
+                                <div class="searching-input">
+                                    <input placeholder="" type="text" id="search" name="search"
+                                        class="input-for-seacrh" />
+                                    <label for="search" class="label-for-search">...</label>
+                                </div>
+                                <svg class="search" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g id="Search" clip-path="url(#clip0_6353_385)">
+                                        <path id="Vector"
+                                            d="M18.031 16.617L22.314 20.899L20.899 22.314L16.617 18.031C15.0237 19.3082 13.042 20.0029 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2C15.968 2 20 6.032 20 11C20.0029 13.042 19.3082 15.0237 18.031 16.617ZM16.025 15.875C17.2941 14.5699 18.0029 12.8204 18 11C18 7.132 14.867 4 11 4C7.132 4 4 7.132 4 11C4 14.867 7.132 18 11 18C12.8204 18.0029 14.5699 17.2941 15.875 16.025L16.025 15.875Z"
+                                            fill="#161616" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_6353_385">
+                                            <rect width="24" height="24" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </button>
+                        </li>
+                        <li>
+                            <a href="./cart.html" id="cart" class="cart-search-btn">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g id="Cart" clip-path="url(#clip0_6353_380)">
+                                        <path id="Vector"
+                                            d="M3.99984 6.41481L0.756836 3.17281L2.17184 1.75781L5.41384 5.00081H20.6558C20.8117 5.0008 20.9654 5.03723 21.1047 5.10718C21.244 5.17713 21.365 5.27868 21.4581 5.40371C21.5511 5.52874 21.6137 5.6738 21.6407 5.8273C21.6678 5.9808 21.6586 6.1385 21.6138 6.28781L19.2138 14.2878C19.1521 14.4939 19.0255 14.6746 18.853 14.803C18.6804 14.9315 18.471 15.0008 18.2558 15.0008H5.99984V17.0008H16.9998V19.0008H4.99984C4.73462 19.0008 4.48027 18.8955 4.29273 18.7079C4.10519 18.5204 3.99984 18.266 3.99984 18.0008V6.41481ZM5.99984 7.00081V13.0008H17.5118L19.3118 7.00081H5.99984ZM5.49984 23.0008C5.10201 23.0008 4.72048 22.8428 4.43918 22.5615C4.15787 22.2802 3.99984 21.8986 3.99984 21.5008C3.99984 21.103 4.15787 20.7215 4.43918 20.4402C4.72048 20.1588 5.10201 20.0008 5.49984 20.0008C5.89766 20.0008 6.27919 20.1588 6.5605 20.4402C6.8418 20.7215 6.99984 21.103 6.99984 21.5008C6.99984 21.8986 6.8418 22.2802 6.5605 22.5615C6.27919 22.8428 5.89766 23.0008 5.49984 23.0008ZM17.4998 23.0008C17.102 23.0008 16.7205 22.8428 16.4392 22.5615C16.1579 22.2802 15.9998 21.8986 15.9998 21.5008C15.9998 21.103 16.1579 20.7215 16.4392 20.4402C16.7205 20.1588 17.102 20.0008 17.4998 20.0008C17.8977 20.0008 18.2792 20.1588 18.5605 20.4402C18.8418 20.7215 18.9998 21.103 18.9998 21.5008C18.9998 21.8986 18.8418 22.2802 18.5605 22.5615C18.2792 22.8428 17.8977 23.0008 17.4998 23.0008Z"
+                                            fill="#161616" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_6353_380">
+                                            <rect width="24" height="24" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <span id="counter"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <button class="ask-for-support-inUl">
+                                Запросить консультацию
+                            </button>
+                        </li>
+                    </ul>
+                    <button class="ask-for-support">Запросить консультацию</button>
+                    <svg class="burger" width="44" height="44" viewBox="0 0 44 44" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <rect width="44" height="44" rx="8" fill="#F4F5F8" />
+                        <g clip-path="url(#clip0_6501_4664)">
+                            <path d="M13 14H31V16H13V14ZM13 21H31V23H13V21ZM13 28H31V30H13V28Z" fill="#161616" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_6501_4664">
+                                <rect width="24" height="24" fill="white" transform="translate(10 10)" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </div>
+                <div class="mobile-menu-wrap">
+                    <div class='mobile-logo-wrap'>
+                        <img src="./img/Logo.png" alt="mobile-logo">
+                    </div>
+                    <button class="close-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="Close" clip-path="url(#clip0_6879_7159)">
+                                <path id="Vector"
+                                    d="M12.0002 10.5862L16.9502 5.63623L18.3642 7.05023L13.4142 12.0002L18.3642 16.9502L16.9502 18.3642L12.0002 13.4142L7.05023 18.3642L5.63623 16.9502L10.5862 12.0002L5.63623 7.05023L7.05023 5.63623L12.0002 10.5862Z"
+                                    fill="#161616" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_6879_7159">
+                                    <rect width="24" height="24" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+
+                    </button>
+                    <ul>
+                        <li class="page-list"><a href="./Catalog.html">Каталог</a></li>
+                        <li class="page-list"><a href="#">Наше производство</a></li>
+                        <li class="page-list"><a href="./aboutCompany.html">О компании</a></li>
+                        <li class="page-list"><a href="./contacts.html">Контакты</a></li>
+                        <li class="page-list"><a href="#">Доставка и оплата</a></li>
+                        <li class="page-list"><a href="#">Гарантия</a></li>
+                    </ul>
+                    <button class="ask-for-support">
+                        Запросить консультацию
+                    </button>
+                </div>
+            </header>
+            <div class="contacts-wrap">
+                <h2 class="main-text">Контакты</h2>
+                <div class="contacts-info">
+                    <ul>
+                        <li class="contacts-all-information">
+                            <h3 class="discription">Адресс</h3>
+                            <span>Тураевское шоссе дом 17, д. Островцы, Раменский район, МО, Россия</span>
+                        </li>
+                        <li class="contacts-all-information">
+                            <h3 class="discription">Рабочее время</h3>
+                            <div class="schedule">
+                                <span>Пн - Пт</span>
+                                <span>8:00 до 22:00</span>
+                            </div>
+                            <div class="schedule">
+                                <span>Пн - Пт</span>
+                                <span>8:00 до 22:00</span>
+                            </div>
+                        </li>
+                        <li class="contacts-all-information">
+                            <h3 class="discription">Email</h3>
+                            <span>okoprom@gmail.com</span>
+                        </li>
+                        <li class="contacts-all-information">
+                            <h3 class="discription">Телефон</h3>
+                            <span>+7 (800) 707-31-01</span>
+                        </li>
+                        <li class="contacts-all-information social">
+                            <h3 class="discription">Мессенджеры</h3>
+                            <div class="social-media-btn">
+                                <button>Whatsapp</button>
+                                <button>Telegram</button>
+                            </div>
+                        </li>
+                        <li class="contacts-all-information social">
+                            <h3 class="discription">Мы в социальных сетях</h3>
+                            <div class="subscribe-on-our-social">
+                                <a href="#">
+                                    <svg width="44" height="44" viewBox="0 0 44 44" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="0.5" y="0.5" width="43" height="43" rx="7.5" stroke="#E9E9E9" />
+                                        <g clip-path="url(#clip0_6475_3570)">
+                                            <path
+                                                d="M22 12C24.717 12 25.056 12.01 26.122 12.06C27.187 12.11 27.912 12.277 28.55 12.525C29.21 12.779 29.766 13.123 30.322 13.678C30.8305 14.1779 31.224 14.7826 31.475 15.45C31.722 16.087 31.89 16.813 31.94 17.878C31.987 18.944 32 19.283 32 22C32 24.717 31.99 25.056 31.94 26.122C31.89 27.187 31.722 27.912 31.475 28.55C31.2247 29.2178 30.8311 29.8226 30.322 30.322C29.822 30.8303 29.2173 31.2238 28.55 31.475C27.913 31.722 27.187 31.89 26.122 31.94C25.056 31.987 24.717 32 22 32C19.283 32 18.944 31.99 17.878 31.94C16.813 31.89 16.088 31.722 15.45 31.475C14.7823 31.2245 14.1775 30.8309 13.678 30.322C13.1694 29.8222 12.7759 29.2175 12.525 28.55C12.277 27.913 12.11 27.187 12.06 26.122C12.013 25.056 12 24.717 12 22C12 19.283 12.01 18.944 12.06 17.878C12.11 16.812 12.277 16.088 12.525 15.45C12.7752 14.7822 13.1688 14.1773 13.678 13.678C14.1777 13.1692 14.7824 12.7757 15.45 12.525C16.088 12.277 16.812 12.11 17.878 12.06C18.944 12.013 19.283 12 22 12ZM22 17C20.6739 17 19.4021 17.5268 18.4645 18.4645C17.5268 19.4021 17 20.6739 17 22C17 23.3261 17.5268 24.5979 18.4645 25.5355C19.4021 26.4732 20.6739 27 22 27C23.3261 27 24.5979 26.4732 25.5355 25.5355C26.4732 24.5979 27 23.3261 27 22C27 20.6739 26.4732 19.4021 25.5355 18.4645C24.5979 17.5268 23.3261 17 22 17ZM28.5 16.75C28.5 16.4185 28.3683 16.1005 28.1339 15.8661C27.8995 15.6317 27.5815 15.5 27.25 15.5C26.9185 15.5 26.6005 15.6317 26.3661 15.8661C26.1317 16.1005 26 16.4185 26 16.75C26 17.0815 26.1317 17.3995 26.3661 17.6339C26.6005 17.8683 26.9185 18 27.25 18C27.5815 18 27.8995 17.8683 28.1339 17.6339C28.3683 17.3995 28.5 17.0815 28.5 16.75ZM22 19C22.7956 19 23.5587 19.3161 24.1213 19.8787C24.6839 20.4413 25 21.2044 25 22C25 22.7956 24.6839 23.5587 24.1213 24.1213C23.5587 24.6839 22.7956 25 22 25C21.2044 25 20.4413 24.6839 19.8787 24.1213C19.3161 23.5587 19 22.7956 19 22C19 21.2044 19.3161 20.4413 19.8787 19.8787C20.4413 19.3161 21.2044 19 22 19Z"
+                                                fill="#161616" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_6475_3570">
+                                                <rect width="24" height="24" fill="white"
+                                                    transform="translate(10 10)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </a>
+                                <a href="#">
+                                    <svg width="44" height="44" viewBox="0 0 44 44" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="0.5" y="0.5" width="43" height="43" rx="7.5" stroke="#E9E9E9" />
+                                        <g clip-path="url(#clip0_0_32)">
+                                            <path
+                                                d="M31.543 16.498C32 18.28 32 22 32 22C32 22 32 25.72 31.543 27.502C31.289 28.487 30.546 29.262 29.605 29.524C27.896 30 22 30 22 30C22 30 16.107 30 14.395 29.524C13.45 29.258 12.708 28.484 12.457 27.502C12 25.72 12 22 12 22C12 22 12 18.28 12.457 16.498C12.711 15.513 13.454 14.738 14.395 14.476C16.107 14 22 14 22 14C22 14 27.896 14 29.605 14.476C30.55 14.742 31.292 15.516 31.543 16.498ZM20 25.5L26 22L20 18.5V25.5Z"
+                                                fill="#161616" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_0_32">
+                                                <rect width="24" height="24" fill="white"
+                                                    transform="translate(10 10)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d72158.25787799027!2d37.871949822225275!3d55.58555567963666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414abbd1df2a9401%3A0xa211f6afb46cf181!2sTurayevskoye%20Shosse%2C%2017%2C%20Lytkarino%2C%20Moskovskaya%20oblast&#39;%2C%20Russia%2C%20140123!5e0!3m2!1sen!2sca!4v1702011774616!5m2!1sen!2sca"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="legal-company-info">
+                <h2 class="main-text">Юридическая информация</h2>
+                <div class="legal-company-wrap">
+                    <div class="legal">
+                        <h3 class="legal-title">Производство</h3>
+                        <ul>
+                            <li class="legal-text"><span class="discription title">Наименование комании</span><span
+                                    class="discription inf">Общество с ограниченной ответственностью «Окопром»</span>
+                            </li>
+                            <li class="legal-text"><span class="discription title">ОГРН</span><span
+                                    class="discription inf">1205000045821</span>
+                            </li>
+                            <li class="legal-text"><span class="discription title">ИНН</span><span
+                                    class="discription inf">5032318518</span>
+                            </li>
+                            <li class="legal-text"><span class="discription title">Адрес производства</span><span
+                                    class="discription inf">Россия, Московская область, д. Островцы, Тураевская улица,
+                                    дом 58</span>
+                            </li>
+                            <li class="legal-text"><span class="discription title">Почтовый адрес</span><span
+                                    class="discription inf">143072, Московская обл., р-н Одинцовский, п. ВНИИССОК, ул.
+                                    Дружбы, д. 4</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="legal">
+                        <h3 class="legal-title">Продажи</h3>
+                        <ul>
+                            <li class="legal-text"><span class="discription title">Наименование комании</span><span
+                                    class="discription inf">Общество с ограниченной ответственностью «Сином
+                                    Групп»</span>
+                            </li>
+                            <li class="legal-text"><span class="discription title">ОГРН</span><span
+                                    class="discription inf">1177746129010</span>
+                            </li>
+                            <li class="legal-text"><span class="discription title">ИНН</span><span
+                                    class="discription inf">7726396387</span>
+                            </li>
+                            <li class="legal-text"><span class="discription title">Адрес производства</span><span
+                                    class="discription inf">Россия, Московская область, д. Островцы, Тураевская улица,
+                                    дом 58</span>
+                            </li>
+                            <li class="legal-text"><span class="discription title">Почтовый адрес</span><span
+                                    class="discription inf">115191, г. Москва, пер. Духовской, д. 17, пом. 1</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="form">
+                <div class="send-message-container">
+                  <div class="send-message-text">
+                    <h2 class="main-text">
+                      Будем рады ответить на все интересующие вопросы
+                    </h2>
+                    <h3 class="discription">
+                      Оставьте заявку и мы вам вскоре позвоним и проконсультируем по
+                      всем интересующим вопросам
+                    </h3>
+                  </div>
+                  <form class="send-message-form">
+                    <div class="form-field-wrap">
+                      <input placeholder="" type="text" id="name" name="name" class="send-message-input" />
+                      <label class="send-message-label" for="name">Ваше имя</label>
+                    </div>
+                    <div class="form-field-wrap phone">
+                      <input placeholder="+ 7 (___) __ __" max-length="16" type="tel" id="number" name="number"
+                        class="send-message-input" />
+                      <label class="send-message-label" for="number"></label>
+                    </div>
+                    <div class="form-field-wrap">
+                      <input placeholder="" type="email" id="email" name="email" class="send-message-input" />
+                      <label class="send-message-label" for="email">E-mail (необязательно)</label>
+                    </div>
+                    <button type="button" id='submit-user-feedback'>Отправить</button>
+                  </form>
+                </div>
+              </div>
+            <footer>
+                <div class="logo">
+                    <img src="./img/Logo.png" alt="okprom" />
+                </div>
+                <div class="information-container">
+                    <div class="left-block-with-info">
+                        <h2 class="adress-number-email">
+                            Тураевское шоссе дом 17, д. Островцы, Раменский район, МО,
+                            Россия
+                        </h2>
+                        <h3 class="adress-number-email number">+7 (800) 707-31-01</h3>
+                        <h4 class="adress-number-email">okoprom@gmail.com</h4>
+                        <div class="social-media-btn">
+                            <button>Whatsapp</button>
+                            <button>Telegram</button>
+                        </div>
+                        <div class="subscribe-on-our-social">
+                            <a href="#">
+                                <svg width="44" height="44" viewBox="0 0 44 44" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="0.5" y="0.5" width="43" height="43" rx="7.5" stroke="#E9E9E9" />
+                                    <g clip-path="url(#clip0_6475_3570)">
+                                        <path
+                                            d="M22 12C24.717 12 25.056 12.01 26.122 12.06C27.187 12.11 27.912 12.277 28.55 12.525C29.21 12.779 29.766 13.123 30.322 13.678C30.8305 14.1779 31.224 14.7826 31.475 15.45C31.722 16.087 31.89 16.813 31.94 17.878C31.987 18.944 32 19.283 32 22C32 24.717 31.99 25.056 31.94 26.122C31.89 27.187 31.722 27.912 31.475 28.55C31.2247 29.2178 30.8311 29.8226 30.322 30.322C29.822 30.8303 29.2173 31.2238 28.55 31.475C27.913 31.722 27.187 31.89 26.122 31.94C25.056 31.987 24.717 32 22 32C19.283 32 18.944 31.99 17.878 31.94C16.813 31.89 16.088 31.722 15.45 31.475C14.7823 31.2245 14.1775 30.8309 13.678 30.322C13.1694 29.8222 12.7759 29.2175 12.525 28.55C12.277 27.913 12.11 27.187 12.06 26.122C12.013 25.056 12 24.717 12 22C12 19.283 12.01 18.944 12.06 17.878C12.11 16.812 12.277 16.088 12.525 15.45C12.7752 14.7822 13.1688 14.1773 13.678 13.678C14.1777 13.1692 14.7824 12.7757 15.45 12.525C16.088 12.277 16.812 12.11 17.878 12.06C18.944 12.013 19.283 12 22 12ZM22 17C20.6739 17 19.4021 17.5268 18.4645 18.4645C17.5268 19.4021 17 20.6739 17 22C17 23.3261 17.5268 24.5979 18.4645 25.5355C19.4021 26.4732 20.6739 27 22 27C23.3261 27 24.5979 26.4732 25.5355 25.5355C26.4732 24.5979 27 23.3261 27 22C27 20.6739 26.4732 19.4021 25.5355 18.4645C24.5979 17.5268 23.3261 17 22 17ZM28.5 16.75C28.5 16.4185 28.3683 16.1005 28.1339 15.8661C27.8995 15.6317 27.5815 15.5 27.25 15.5C26.9185 15.5 26.6005 15.6317 26.3661 15.8661C26.1317 16.1005 26 16.4185 26 16.75C26 17.0815 26.1317 17.3995 26.3661 17.6339C26.6005 17.8683 26.9185 18 27.25 18C27.5815 18 27.8995 17.8683 28.1339 17.6339C28.3683 17.3995 28.5 17.0815 28.5 16.75ZM22 19C22.7956 19 23.5587 19.3161 24.1213 19.8787C24.6839 20.4413 25 21.2044 25 22C25 22.7956 24.6839 23.5587 24.1213 24.1213C23.5587 24.6839 22.7956 25 22 25C21.2044 25 20.4413 24.6839 19.8787 24.1213C19.3161 23.5587 19 22.7956 19 22C19 21.2044 19.3161 20.4413 19.8787 19.8787C20.4413 19.3161 21.2044 19 22 19Z"
+                                            fill="#161616" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_6475_3570">
+                                            <rect width="24" height="24" fill="white" transform="translate(10 10)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </a>
+                            <a href="#">
+                                <svg width="44" height="44" viewBox="0 0 44 44" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="0.5" y="0.5" width="43" height="43" rx="7.5" stroke="#E9E9E9" />
+                                    <g clip-path="url(#clip0_0_32)">
+                                        <path
+                                            d="M31.543 16.498C32 18.28 32 22 32 22C32 22 32 25.72 31.543 27.502C31.289 28.487 30.546 29.262 29.605 29.524C27.896 30 22 30 22 30C22 30 16.107 30 14.395 29.524C13.45 29.258 12.708 28.484 12.457 27.502C12 25.72 12 22 12 22C12 22 12 18.28 12.457 16.498C12.711 15.513 13.454 14.738 14.395 14.476C16.107 14 22 14 22 14C22 14 27.896 14 29.605 14.476C30.55 14.742 31.292 15.516 31.543 16.498ZM20 25.5L26 22L20 18.5V25.5Z"
+                                            fill="#161616" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_0_32">
+                                            <rect width="24" height="24" fill="white" transform="translate(10 10)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </a>
+                            <h2 class="discription">
+                                Подписывайтесь на нас в социальных сетях
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="right-block-with-info">
+                        <ul>
+                            <li class="product-and-info main">Наша продукция</li>
+                            <li class="product-and-info">Станки для разделки кабеля</li>
+                            <li class="product-and-info">Сепараторы</li>
+                            <li class="product-and-info">
+                                Станок для разделки теплообменников
+                            </li>
+                            <li class="product-and-info">Разделка радиаторов</li>
+                            <li class="product-and-info">Запасные части</li>
+                            <li class="product-and-info">Другое</li>
+                        </ul>
+                        <ul>
+                            <li class="product-and-info main">Информация</li>
+                            <li class="product-and-info">Доставка и оплата</li>
+                            <li class="product-and-info">Гарантия</li>
+                            <li class="product-and-info">Служба контроля качества</li>
+                            <li class="product-and-info">Наше производство</li>
+                            <li class="product-and-info">О компании</li>
+                            <li class="product-and-info">Контакты</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="copyright-info">
+                    <h3 class="discription">
+                        Интернет магазин "Окопром" © 2021 Все права защищены
+                    </h3>
+                    <h4 class="discription">Политика конфиденциальности</h4>
+                </div>
+            </footer>
+        </div>
+    </main>
+    <script type="module" src="./js/catalogMain.js"></script>
+    <script type='module' defer src="./js/sendMessageForm.js"></script>
+    <script src="./js/showSearchingInput.js"></script>
+    <script src="./js/mobileMenu.js"></script>
+</body>
+
+</html>

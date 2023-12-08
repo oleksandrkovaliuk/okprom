@@ -1,3 +1,7 @@
+header .header-bottom-block {
+    padding-bottom: 32px;
+    border-bottom: 1px solid var(--border-or-devider-light-bg);
+  }
 .section-1 {
     padding-inline: 40px;
 }

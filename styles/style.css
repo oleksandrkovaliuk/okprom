@@ -340,15 +340,6 @@
     .glide__slide {
         align-items: center;
     }
-
-    .section-4 .our-clients-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .our-clients-container .our-clients-blocks {
-        justify-content: center;
-    }
 }
 
 @media(max-width:768px) {
@@ -359,9 +350,6 @@
     .product-types-container .product-types-wrap {
         flex-wrap: wrap;
         justify-content: center;
-    }
-    .our-clients-container .why-we {
-        padding-inline: 16px;
     }
 }
 
@@ -387,79 +375,5 @@
     .product-types-wrap .product-card {
         max-width: unset !important;
         width: 100%;
-    }
-
-    .our-clients-container .our-clients-blocks {
-        gap: 9px;
-    }
-
-    .our-clients-blocks .our-client-block {
-        max-width: 90px;
-        max-height: 82px;
-    }
-
-    .our-clients-blocks .our-client-block.iff {
-        padding-inline: 14px;
-        padding-block: 18px;
-    }
-
-    .our-client-block.iff img {
-        max-width: 45px;
-        margin: auto;
-    }
-
-    .our-client-block.withtxt {
-        padding-block: 14px;
-    }
-
-    .our-client-block.withtxt img {
-        max-width: 38px;
-        margin-bottom: 6px;
-    }
-
-    .our-client-block.withtxt .company-group {
-        font-size: 6px;
-        line-height: 6px;
-    }
-
-    .our-client-block.withtxt .company-name {
-        font-size: 8px;
-        line-height: 8px;
-    }
-
-    .our-client-block.stadium img {
-        padding: 10px;
-    }
-
-    .our-client-block.vtm {
-        padding: 14px
-    }
-
-    .our-client-block.vtm img {
-        max-width: 42px;
-        margin: auto;
-    }
-
-    .our-client-block.vtm .company-name {
-        font-size: 7px;
-        line-height: 8px;
-    }
-
-    .our-client-block.onlytxt {
-        padding-inline: 11px;
-    }
-
-    .our-client-block.onlytxt .company-name {
-        font-size: 20px;
-        line-height: 20px;
-    }
-
-    .our-client-block.onlytxt .company-discription {
-        font-size: 6px;
-        line-height: 6px;
-    }
-
-    .our-client-block.vtor4ment {
-        padding-block: 28px;
     }
 }

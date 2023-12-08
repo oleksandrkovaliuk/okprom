@@ -1,5 +1,6 @@
-header {
-  margin-bottom: 60px;
+header .header-bottom-block {
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--border-or-devider-light-bg);
 }
 
 /* section 1 */
@@ -25,6 +26,7 @@ header {
   background: unset;
   border: unset;
   z-index: 1090;
+  cursor: pointer;
 }
 .section-2 .move-up.active {
   display: block;
@@ -294,7 +296,7 @@ li .discription-for-product-numbers {
 }
 .wrapper {
   position: relative;
-   max-width: 700px;
+   max-width: 1200px;
 }
 .wrapper:not(:last-of-type) {
   margin-bottom: 40px;
@@ -318,6 +320,8 @@ li .discription-for-product-numbers {
 .wrapper .comments {
   margin-bottom: 40px;
   position: relative;
+  max-height:134px;
+  max-width:700px
 }
 .wrapper .comments.top{
   z-index:5;
@@ -330,6 +334,7 @@ li .discription-for-product-numbers {
   border: unset;
   padding: 10px;
   border-radius: 8px;
+  cursor: pointer;
 }
 .show-more-comm span {
   color: var(--text-black);
@@ -345,18 +350,20 @@ li .discription-for-product-numbers {
 }
 .text-and-img {
   display: flex;
-  display: flex;
   gap: 10px;
+  height:124px;
 }
 .comments img {
   width: 40px;
   height: 40px;
   border: 1px solid var(--border-or-devider-light-bg);
   border-radius: 50%;
+  flex-shrink: 0;
 }
 .comments .text-wrap {
   display: flex;
   flex-direction: column-reverse;
+  justify-content: space-between;
   gap: 20px;
   background-color: var(--background-gray);
   padding: 10px 20px;
@@ -402,6 +409,22 @@ li .discription-for-product-numbers {
   }
   .section-2 .move-up {
     right: unset;
+  }
+  .comments-container{
+    padding-inline:20px;
+  }
+  .wrapper .comments{
+    min-height:350px;
+  }
+  .text-and-img {
+    height:350px;
+  }
+  .comments .text-wrap{
+    padding-inline:10px;
+  }
+  .comments .user-info{
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 @media (max-width: 400px) {

@@ -1,21 +1,21 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/main.css" />
-    <link rel="stylesheet" href="./styles/productPage.css" />
+    <link rel="stylesheet" href="./styles/aboutCompany.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Golos+Text&family=Roboto:wght@500&display=swap"
         rel="stylesheet" />
-    <title>Catalog</title>
+    <title>MainPage</title>
 </head>
 
 <body>
     <main>
         <div class="page-width">
-            <div class="blur-background"></div>
             <div class="blur-background-black"></div>
             <header>
                 <div class="header-top-block">
@@ -51,13 +51,11 @@
                     <ul>
                         <li>
                             <button class="cart-search-btn searching follow-cursor non-clickable">
-                                <form class="searching-form">
-                                    <div class="searching-input">
-                                        <input placeholder="" type="text" id="search" name="search"
-                                            class="input-for-seacrh" />
-                                        <label for="search" class="label-for-search">...</label>
-                                    </div>
-                                </form>
+                                <div class="searching-input">
+                                    <input placeholder="" type="text" id="search" name="search"
+                                        class="input-for-seacrh" />
+                                    <label for="search" class="label-for-search">...</label>
+                                </div>
                                 <svg class="search" width="24" height="24" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <g id="Search" clip-path="url(#clip0_6353_385)">
@@ -134,7 +132,7 @@
                         <li class="page-list"><a href="./Catalog.html">Каталог</a></li>
                         <li class="page-list"><a href="#">Наше производство</a></li>
                         <li class="page-list"><a href="./aboutCompany.html">О компании</a></li>
-                        <li class="page-list"><a href="./contacts.html">Контакты</a></li>
+                        <li class="page-list"><a href="#">Контакты</a></li>
                         <li class="page-list"><a href="#">Доставка и оплата</a></li>
                         <li class="page-list"><a href="#">Гарантия</a></li>
                     </ul>
@@ -143,27 +141,132 @@
                     </button>
                 </div>
             </header>
-            <div class="main-product">
-            </div>
-            <div class="rest-information">
-                <ul class="nav-for-information">
-                    <li class="type-of-info">
-                        <span>Описание</span>
-                    </li>
-                    <li class="type-of-info">
-                        <span>Описание</span>
-                    </li>
-                    <li class="type-of-info">
-                        <span>Описание</span>
-                    </li>
-                    <li class="type-of-info">
-                        <span>Описание</span>
-                    </li>
-                </ul>
-                <div class="information-wrap">
+            <div class="about-us">
+                <div class="about-us-wrap">
+                    <h2 class="main-text">О нас</h2>
+                    <p class="discription">Наша история начинается с 2015 года когда мы в первые занялись переработкой
+                        небольших объемов кабелей, которые у нас были накоплены со временем. В то время еще не былы так
+                        распространены станки для переработки кабеля и различные сепараторы. Мы начали с торговли такими
+                        аппаратами, параллельно организовав прием кабелей и различного вторсырья. Накопив большой опыт и
+                        знание проблем наших клиентов, большая часть которых так же занимались переработкой, и добавив ко
+                        всему этому наш личный опыт в этой сфере мы решили предложить некоторые свои решения этому рынку. В
+                        данный момент мы занимаемся производством оборудования для сепарации, автомобильных весов и
+                        периферии для линий.</p>
                 </div>
             </div>
-            <footer>
+            <div class="our-accomplishment">
+                <div class="acomplish-block">
+                    <h2 class="discription">Клиентов</h2>
+                    <h3 class="main-text">1200+</h3>
+                    <h4 class="discription">За время работы в этой области у нас более одной тысячи клиентов в базе в
+                        том числе и представленные ниже</h4>
+                </div>
+                <div class="acomplish-block">
+                    <h2 class="discription">Лет в области</h2>
+                    <h3 class="main-text">6</h3>
+                    <h4 class="discription">Что дает контакты и прямое общение с предпринимателями, выявление прямых
+                        потребностей.</h4>
+                </div>
+                <div class="acomplish-block">
+                    <h2 class="discription">Пробуем новое</h2>
+                    <h3 class="main-text">24/7</h3>
+                    <h4 class="discription">Всегда ищем новые решения, которые будут полезны нашим клиентам</h4>
+                </div>
+            </div>
+            <div class="why-chosing-us">
+                <div class="our-clients-container">
+                    <div class="why-we">
+                        <h2 class="main-text">Почему именно мы?</h2>
+                        <p class="discription">
+                            За долгое время работы в этой области у нас более одной тысячи
+                            клиентов в базе в том числе и представленные выше. В основном
+                            это компании по переработке вторсырья. Мы уже прошли тот путь
+                            который вам предстоит пройти после приобретения нашей продукции
+                            и лучше подскажем: что вам лучше подойдет, чего надо избегать и
+                            как более эффективно использовать то что есть.
+                        </p>
+                    </div>
+                    <div class="our-clients-blocks">
+                        <div class="our-client-block iff">
+                            <img src="./img/iff-logo.png" alt="iff-logo" />
+                        </div>
+                        <div class="our-client-block withtxt">
+                            <img src="./img/logo-mkm.png" alt="logo-mkm" />
+                            <h2 class="company-group">Группа компаний</h2>
+                            <h3 class="company-name">МОСКАБЕЛЬМЕТ</h3>
+                        </div>
+                        <div class="our-client-block stadium">
+                            <img src="./img/stadium-logo.png" alt="stadium" />
+                        </div>
+                        <div class="our-client-block vtm">
+                            <img src="./img/Logo-VTM-1-_1_ 2.png" alt="logo-vtm" />
+                            <h2 class="company-name">ВторТехМикс</h2>
+                        </div>
+                        <div class="our-client-block onlytxt">
+                            <h2 class="company-name">УМЗ</h2>
+                            <h3 class="company-discription">
+                                Урюпинский машиностроительный завод
+                            </h3>
+                        </div>
+                        <div class="our-client-block vtor4ment">
+                            <img src="./img/vto4ermet.png" alt="vto4ermet" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="your-grow">
+                <h2 class="main-text">Ваша рос – наш интерес, ведь тогда нам будет к чему стремиться</h2>
+                <div class="img-with-explenetion">
+                    <div class="img-for-grow">
+                        <img src="./img/yuorgrow.png" alt="img-for-grow">
+                    </div>
+                    <div class="explanetion">
+                        <h2 class="title">Мы надежный партнер</h2>
+                        <p class="discription">За все это время работы не найдется клиент который был бы оставлен или
+                            проигнорирован, столкнувшись с какой либо проблемой товара который у нас приобрел. Мы на
+                            связи всегда и разберемся с любыми вопросами возникшими во время эксплуатации нашего
+                            оборудования.</p>
+                        <h2 class="title">Меняем рынок</h2>
+                        <p class="discription">В 2015 году было очень мало компаний занимающихся продажей или
+                            производством оборудования для переработки кабеля. Например по статистике запросов в Яндекс
+                            в то время по словам связанными с этими значениями, такие как “переработка кабеля”, “станки
+                            для разделки кабеля” и прочее было ~200 и ~350 соответсвенно. Сейчас эти показатели выросли
+                            в разы до 550 и 1500. Так же сейчас компаний продающих больше в разы, но производителей так
+                            же мало. Мы хотели бы это тоже изменить, развивать производство важнейшая задача в данной
+                            период времени для России.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="form">
+                <div class="send-message-container">
+                  <div class="send-message-text">
+                    <h2 class="main-text">
+                      Будем рады ответить на все интересующие вопросы
+                    </h2>
+                    <h3 class="discription">
+                      Оставьте заявку и мы вам вскоре позвоним и проконсультируем по
+                      всем интересующим вопросам
+                    </h3>
+                  </div>
+                  <form class="send-message-form">
+                    <div class="form-field-wrap">
+                      <input placeholder="" type="text" id="name" name="name" class="send-message-input" />
+                      <label class="send-message-label" for="name">Ваше имя</label>
+                    </div>
+                    <div class="form-field-wrap phone">
+                      <input placeholder="+ 7 (___) __ __" max-length="16" type="tel" id="number" name="number"
+                        class="send-message-input" />
+                      <label class="send-message-label" for="number"></label>
+                    </div>
+                    <div class="form-field-wrap">
+                      <input placeholder="" type="email" id="email" name="email" class="send-message-input" />
+                      <label class="send-message-label" for="email">E-mail (необязательно)</label>
+                    </div>
+                    <button type="button" id='submit-user-feedback'>Отправить</button>
+                  </form>
+                </div>
+              </div>
+              <footer>
                 <div class="logo">
                   <img src="./img/Logo.png" alt="okprom" />
                 </div>
@@ -210,7 +313,9 @@
                           </defs>
                         </svg>
                       </a>
-                      <h2 class="discription">Подписывайтесь на нас в социальных сетях</h2>
+                      <h2 class="discription">
+                        Подписывайтесь на нас в социальных сетях
+                      </h2>
                     </div>
                   </div>
                   <div class="right-block-with-info">
@@ -218,7 +323,9 @@
                       <li class="product-and-info main">Наша продукция</li>
                       <li class="product-and-info">Станки для разделки кабеля</li>
                       <li class="product-and-info">Сепараторы</li>
-                      <li class="product-and-info">Станок для разделки теплообменников</li>
+                      <li class="product-and-info">
+                        Станок для разделки теплообменников
+                      </li>
                       <li class="product-and-info">Разделка радиаторов</li>
                       <li class="product-and-info">Запасные части</li>
                       <li class="product-and-info">Другое</li>
@@ -235,14 +342,16 @@
                   </div>
                 </div>
                 <div class="copyright-info">
-                  <h3 class="discription">Интернет магазин "Окопром" © 2021 Все права защищены</h3>
+                  <h3 class="discription">
+                    Интернет магазин "Окопром" © 2021 Все права защищены
+                  </h3>
                   <h4 class="discription">Политика конфиденциальности</h4>
                 </div>
               </footer>
         </div>
     </main>
     <script type="module" src="./js/catalogMain.js"></script>
-    
+    <script type='module' defer src="./js/sendMessageForm.js"></script>
     <script src="./js/showSearchingInput.js"></script>
     <script src="./js/mobileMenu.js"></script>
 </body>
