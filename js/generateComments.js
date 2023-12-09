@@ -47,7 +47,7 @@ const getComments = async () => {
 };
 
 const commentWraper = document.querySelector(".comments-wrap");
-const allCommentWrap = document.querySelector(".all-comment");
+
 const renderedComment = (data) => {
   let markUpComment = "";
   data.forEach((user) => {
@@ -122,8 +122,6 @@ Promise.all([fetchUsers(), getComments(), fetchUserPhoto()])
 
     const mainComment = document.querySelectorAll(".comments.top");
     mainComment.forEach((com) => {
-      const mainCommentHeight = com.offsetHeight;
-
       const topheight = com.offsetHeight + 40;
       const findClosestAllCom = com
         .closest(".wrapper")
@@ -132,9 +130,8 @@ Promise.all([fetchUsers(), getComments(), fetchUserPhoto()])
         findClosestAllCom.querySelectorAll(".comments")
       );
       let startValue = topheight;
-      for (let i = 0; i < elementInsideAllCom.length; i++) {
-        elementInsideAllCom[i].style.height = `${mainCommentHeight}px`;
-        elementInsideAllCom[i].style.transform = `translateY(-${startValue}px)`;
+      for (const element of elementInsideAllCom) {
+        element.style.transform = `translateY(-${startValue}px)`;
         startValue += topheight;
       }
     });
