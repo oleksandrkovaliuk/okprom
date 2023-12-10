@@ -320,7 +320,6 @@ li .discription-for-product-numbers {
 .wrapper .comments {
   margin-bottom: 40px;
   position: relative;
-  max-height: 134px;
   max-width: 700px;
 }
 .wrapper .comments.top {
@@ -343,6 +342,9 @@ li .discription-for-product-numbers {
   font-style: normal;
   font-weight: 400;
   line-height: 14px;
+}
+.show-more-comm.active svg{
+  rotate:180deg;
 }
 .show-more-comm svg {
   width: 20px;
@@ -411,12 +413,6 @@ li .discription-for-product-numbers {
   }
   .comments-container {
     padding-inline: 20px;
-  }
-  .wrapper .comments {
-    min-height: 350px;
-  }
-  .text-and-img {
-    height: 350px;
   }
   .comments .text-wrap {
     padding-inline: 10px;

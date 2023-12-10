@@ -145,6 +145,7 @@ Promise.all([fetchUsers(), getComments(), fetchUserPhoto()])
           .querySelector(".all-comment");
         if (!btn.classList.contains("active")) {
           btn.classList.add("active");
+          btn.querySelector('span').textContent = 'Скрыть';
           closestAllComment.classList.add("active");
           findcommentsInAllComm.forEach((elem, index) => {
             elem.classList.add("active");
@@ -156,6 +157,7 @@ Promise.all([fetchUsers(), getComments(), fetchUserPhoto()])
           });
         } else {
           btn.classList.remove("active");
+         btn.querySelector('span').textContent = 'Показать еще';
           setTimeout(() => closestAllComment.classList.remove("active"), 255);
           findcommentsInAllComm.forEach((elem) => {
             elem.classList.remove("active");

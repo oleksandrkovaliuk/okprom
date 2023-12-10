@@ -13,7 +13,6 @@
   --tags-blue: #2949b5;
   --tags-green: #308d77;
 }
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -159,6 +158,7 @@ header .header-top-block {
   font-style: normal;
   font-weight: 400;
   line-height: 16px;
+  cursor: pointer;
 }
 
 header .header-bottom-block {
@@ -181,8 +181,77 @@ header .header-bottom-block {
   border-radius: 8px;
   cursor: pointer;
   border: none;
+  position: relative;
 }
-
+button span:nth-child(1)::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 6px;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 0.2s;
+  border-radius: 8px;
+}
+button:hover span:nth-child(1)::after {
+  border-top: 2px solid var(--background-black);
+  transform: scaleX(1);
+}
+button span:nth-child(2)::after {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 0;
+  width: 6px;
+  height: 100%;
+  transform-origin: top;
+  transform: scaleY(0);
+  transition: transform 0.2s;
+  border-radius: 8px;
+}
+button:hover span:nth-child(2)::after {
+  transform: scaleY(1);
+  transition-delay: 0.1s;
+  border-right: 2px solid var(--background-black);
+}
+button span:nth-child(3)::after {
+  position: absolute;
+  content: "";
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 6px;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.2s;
+  border-radius: 8px;
+}
+button:hover span:nth-child(3)::after {
+  transform: scaleX(1);
+  transition-delay: 0.2s;
+  border-bottom: 2px solid var(--background-black);
+}
+button span:nth-child(4)::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  width: 6px;
+  height: 100%;
+  transform-origin: bottom;
+  transform: scaleY(0);
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+button:hover span:nth-child(4)::after {
+  transform: scaleY(1);
+  transition-delay: 0.3s;
+  border-left: 2px solid var(--background-black);
+}
 .header-bottom-block button a {
   text-decoration: none;
   color: var(--text-black);
@@ -198,8 +267,12 @@ header .header-bottom-block {
   display: flex;
   align-items: center;
   position: relative;
+  transform: scale(1);
+  transition:  transform 0.1s ease-in-out;
 }
-
+.header-bottom-block ul .cart-search-btn:hover{
+  transform: scale(1.05);
+}
 .header-bottom-block ul .cart-search-btn.searching {
   padding: 0px;
   outline: none;
