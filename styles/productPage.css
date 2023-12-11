@@ -72,6 +72,8 @@ header .header-bottom-block {
 .img-and-info-wrap .card-left-img {
   flex-grow: 1;
   position: relative;
+  border-radius: 8px;
+  background-color: #fff;
 }
 
 .card-left-img img {
